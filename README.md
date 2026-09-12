@@ -1,2 +1,4 @@
-# Analise-de-Dados-Python-Projeto-Avaliativo-M1W07
-Mini projeto avaliativo do Curso de Analise de Dados com Python SCTECH SENAI
+# Analise de Dados com Python  MINI-Projeto Avaliativo  Módulo 01 Semana 07
+
+
+
