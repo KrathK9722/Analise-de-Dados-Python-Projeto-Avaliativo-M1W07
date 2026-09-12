@@ -1,0 +1,3498 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP7O5KvR8EmaZmGObr0Dqjg",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/KrathK9722/Analise-de-Dados-Python-Projeto-Avaliativo-M1W07/blob/main/ARQUIVOS/Analise_Google_COLAB.py\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **1 - Importação das bibliotecas:**"
+      ],
+      "metadata": {
+        "id": "ch52YtWrQn3q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 741,
+      "metadata": {
+        "id": "xYQZIpp_Qk8A"
+      },
+      "outputs": [],
+      "source": [
+        "import pandas as pd\n",
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import seaborn as sns\n",
+        "from matplotlib.ticker import FuncFormatter"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "---\n",
+        "## 2 - **Carregamento dos dados**:"
+      ],
+      "metadata": {
+        "id": "eNxTTmbIQ2eF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id_arquivo = \"1iNVCXfu2iFVVHlffBz-fky7U28NhhNv9\"\n",
+        "\n",
+        "url = f\"https://drive.google.com/uc?export=download&id={id_arquivo}\"\n",
+        "\n",
+        "dados_originais = pd.read_csv(url,sep=\";\", encoding=\"latin1\")"
+      ],
+      "metadata": {
+        "id": "CyQS-LsMQ7xB"
+      },
+      "execution_count": 742,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Sepação feita por \";\" porque o padrão estava como \",\" o que fazia com que o CSV fosse importado com somente uma coluna."
+      ],
+      "metadata": {
+        "id": "QVOn5fWOWFlF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **3 - Visualização dos dados brutos:**"
+      ],
+      "metadata": {
+        "id": "T1eT1vdQSZa5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_originais.head(30)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 991
+        },
+        "id": "_uZHDHBdScWl",
+        "outputId": "6b1bd2ca-5c7b-474e-d59e-1c2578e46213"
+      },
+      "execution_count": 743,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "          DATA  CO_ID  CL_ID CL_GENERO  CL_EC  CL_FHL CL_SEG  PR_ID  \\\n",
+              "0   01/02/2019   1000    534         M      4       1      C     67   \n",
+              "1   01/02/2019   1000    534         M      4       1      C     70   \n",
+              "2   01/02/2019   1000    534         M      4       1      C    178   \n",
+              "3   01/02/2019   1000    534         M      4       1      C      4   \n",
+              "4   01/02/2019   1000    534         M      4       1      C    175   \n",
+              "5   01/02/2019   1000    534         M      4       1      C    187   \n",
+              "6   01/02/2019   1000    534         M      4       1      C    163   \n",
+              "7   01/02/2019   1000    534         M      4       1      C     11   \n",
+              "8   01/02/2019   1000    534         M      4       1      C     95   \n",
+              "9   01/02/2019   1000    534         M      4       1      C    198   \n",
+              "10  01/02/2019   1000    534         M      4       1      C    182   \n",
+              "11  01/02/2019   1000    534         M      4       1      C     86   \n",
+              "12  01/02/2019   1000    534         M      4       1      C    221   \n",
+              "13  01/02/2019   1000    534         M      4       1      C    200   \n",
+              "14  01/02/2019   1000    534         M      4       1      C     13   \n",
+              "15  01/02/2019   1000    534         M      4       1      C    218   \n",
+              "16  01/02/2019   1000    534         M      4       1      C     84   \n",
+              "17  01/02/2019   1000    534         M      4       1      C    121   \n",
+              "18  01/02/2019   1000    534         M      4       1      C    176   \n",
+              "19  01/02/2019   1000    534         M      4       1      C     13   \n",
+              "20  01/02/2019   1000    534         M      4       1      C    136   \n",
+              "21  01/02/2019   1000    534         M      4       1      C    108   \n",
+              "22  01/02/2019   1000    534         M      4       1      C     69   \n",
+              "23  01/02/2019   1000    534         M      4       1      C    143   \n",
+              "24  01/02/2019   1000    534         M      4       1      C    149   \n",
+              "25  01/02/2019   1000    534         M      4       1      C     61   \n",
+              "26  01/02/2019   1000    534         M      4       1      C     64   \n",
+              "27  01/02/2019   1000    534         M      4       1      C    191   \n",
+              "28  01/02/2019   1000    534         M      4       1      C    189   \n",
+              "29  01/02/2019   1000    534         M      4       1      C    135   \n",
+              "\n",
+              "       PR_CAT               PR_NOME  Unnamed: 10  Unnamed: 11  Unnamed: 12  \\\n",
+              "0     BEBIDAS  REFRIGERANTE GUARANA          NaN          NaN          NaN   \n",
+              "1     BEBIDAS   REFRIGERANTE OUTROS          NaN          NaN          NaN   \n",
+              "2     HIGIENE       LENCO UMEDECIDO          NaN          NaN          NaN   \n",
+              "3   ALIMENTOS               ABACAXI          NaN          NaN          NaN   \n",
+              "4     LIMPEZA     LIMPADOR MULTIUSO          NaN          NaN          NaN   \n",
+              "5     HIGIENE      HASTES FLEXIVEIS          NaN          NaN          NaN   \n",
+              "6   ALIMENTOS             MORTADELA          NaN          NaN          NaN   \n",
+              "7   ALIMENTOS                AZEITE          NaN          NaN          NaN   \n",
+              "8     LIMPEZA             AMACIANTE          NaN          NaN          NaN   \n",
+              "9     BEBIDAS            ENERGETICO          NaN          NaN          NaN   \n",
+              "10  ALIMENTOS       LATA DE ERVILHA          NaN          NaN          NaN   \n",
+              "11    HIGIENE          PRESERVATIVO          NaN          NaN          NaN   \n",
+              "12  ALIMENTOS                BANANA          NaN          NaN          NaN   \n",
+              "13    LIMPEZA            DETERGENTE          NaN          NaN          NaN   \n",
+              "14  ALIMENTOS                BANANA          NaN          NaN          NaN   \n",
+              "15  ALIMENTOS    BIFE DE COXAO MOLE          NaN          NaN          NaN   \n",
+              "16    HIGIENE       PAPEL HIGIENICO          NaN          NaN          NaN   \n",
+              "17  ALIMENTOS                   UVA          NaN          NaN          NaN   \n",
+              "18    LIMPEZA          LIMPA VIDROS          NaN          NaN          NaN   \n",
+              "19  ALIMENTOS                BANANA          NaN          NaN          NaN   \n",
+              "20  ALIMENTOS                RICOTA          NaN          NaN          NaN   \n",
+              "21    LIMPEZA             REMOVEDOR          NaN          NaN          NaN   \n",
+              "22    BEBIDAS    REFRIGERANTE LIMaO          NaN          NaN          NaN   \n",
+              "23    BEBIDAS  REFRIGERANTE GUARANA          NaN          NaN          NaN   \n",
+              "24  ALIMENTOS      QUEIJO MUSSARELA          NaN          NaN          NaN   \n",
+              "25  ALIMENTOS              SARDINHA          NaN          NaN          NaN   \n",
+              "26  ALIMENTOS                   UVA          NaN          NaN          NaN   \n",
+              "27    HIGIENE                FRALDA          NaN          NaN          NaN   \n",
+              "28  ALIMENTOS               GRANOLA          NaN          NaN          NaN   \n",
+              "29    LIMPEZA                  RODO          NaN          NaN          NaN   \n",
+              "\n",
+              "    Unnamed: 13  \n",
+              "0           NaN  \n",
+              "1           NaN  \n",
+              "2           NaN  \n",
+              "3           NaN  \n",
+              "4           NaN  \n",
+              "5           NaN  \n",
+              "6           NaN  \n",
+              "7           NaN  \n",
+              "8           NaN  \n",
+              "9           NaN  \n",
+              "10          NaN  \n",
+              "11          NaN  \n",
+              "12          NaN  \n",
+              "13          NaN  \n",
+              "14          NaN  \n",
+              "15          NaN  \n",
+              "16          NaN  \n",
+              "17          NaN  \n",
+              "18          NaN  \n",
+              "19          NaN  \n",
+              "20          NaN  \n",
+              "21          NaN  \n",
+              "22          NaN  \n",
+              "23          NaN  \n",
+              "24          NaN  \n",
+              "25          NaN  \n",
+              "26          NaN  \n",
+              "27          NaN  \n",
+              "28          NaN  \n",
+              "29          NaN  "
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188\" class=\"colab-df-container\">\n",
+              "    <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>DATA</th>\n",
+              "      <th>CO_ID</th>\n",
+              "      <th>CL_ID</th>\n",
+              "      <th>CL_GENERO</th>\n",
+              "      <th>CL_EC</th>\n",
+              "      <th>CL_FHL</th>\n",
+              "      <th>CL_SEG</th>\n",
+              "      <th>PR_ID</th>\n",
+              "      <th>PR_CAT</th>\n",
+              "      <th>PR_NOME</th>\n",
+              "      <th>Unnamed: 10</th>\n",
+              "      <th>Unnamed: 11</th>\n",
+              "      <th>Unnamed: 12</th>\n",
+              "      <th>Unnamed: 13</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>67</td>\n",
+              "      <td>BEBIDAS</td>\n",
+              "      <td>REFRIGERANTE GUARANA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>70</td>\n",
+              "      <td>BEBIDAS</td>\n",
+              "      <td>REFRIGERANTE OUTROS</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>178</td>\n",
+              "      <td>HIGIENE</td>\n",
+              "      <td>LENCO UMEDECIDO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>4</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>ABACAXI</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>175</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>LIMPADOR MULTIUSO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>5</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>187</td>\n",
+              "      <td>HIGIENE</td>\n",
+              "      <td>HASTES FLEXIVEIS</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>6</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>163</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>MORTADELA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>7</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>11</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>AZEITE</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>8</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>95</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>AMACIANTE</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>9</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>198</td>\n",
+              "      <td>BEBIDAS</td>\n",
+              "      <td>ENERGETICO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>10</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>182</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>LATA DE ERVILHA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>11</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>86</td>\n",
+              "      <td>HIGIENE</td>\n",
+              "      <td>PRESERVATIVO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>12</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>221</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BANANA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>13</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>200</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>DETERGENTE</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>14</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>13</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BANANA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>15</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>218</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BIFE DE COXAO MOLE</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>16</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>84</td>\n",
+              "      <td>HIGIENE</td>\n",
+              "      <td>PAPEL HIGIENICO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>17</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>121</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>UVA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>18</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>176</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>LIMPA VIDROS</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>19</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>13</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BANANA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>20</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>136</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>RICOTA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>21</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>108</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>REMOVEDOR</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>22</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>69</td>\n",
+              "      <td>BEBIDAS</td>\n",
+              "      <td>REFRIGERANTE LIMaO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>23</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>143</td>\n",
+              "      <td>BEBIDAS</td>\n",
+              "      <td>REFRIGERANTE GUARANA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>24</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>149</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>QUEIJO MUSSARELA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>25</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>61</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>SARDINHA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>26</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>64</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>UVA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>27</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>191</td>\n",
+              "      <td>HIGIENE</td>\n",
+              "      <td>FRALDA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>28</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>189</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>GRANOLA</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>29</th>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>135</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>RODO</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "      <td>NaN</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "    <div class=\"colab-df-buttons\">\n",
+              "\n",
+              "  <div class=\"colab-df-container\">\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188')\"\n",
+              "            title=\"Convert this dataframe to an interactive table.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
+              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "\n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-buttons div {\n",
+              "      margin-bottom: 4px;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "    <script>\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188 button.colab-df-convert');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      async function convertToInteractive(key) {\n",
+              "        const element = document.querySelector('#df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188');\n",
+              "        const dataTable =\n",
+              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                    [key], {});\n",
+              "        if (!dataTable) return;\n",
+              "\n",
+              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "          + ' to learn more about interactive tables.';\n",
+              "        element.innerHTML = '';\n",
+              "        dataTable['output_type'] = 'display_data';\n",
+              "        await google.colab.output.renderOutput(dataTable, element);\n",
+              "        const docLink = document.createElement('div');\n",
+              "        docLink.innerHTML = docLinkHtml;\n",
+              "        element.appendChild(docLink);\n",
+              "      }\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "\n",
+              "    </div>\n",
+              "  </div>\n"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "dataframe",
+              "variable_name": "dados_originais"
+            }
+          },
+          "metadata": {},
+          "execution_count": 743
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **3.1 - Quantide de Colunas e linhas**"
+      ],
+      "metadata": {
+        "id": "mw0MlQITSu-U"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "linhas, colunas = dados_originais.shape\n",
+        "\n",
+        "print(f\"O número de colunas da tabela é {colunas} e o número total de linhas/registros é {linhas}.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yTAyrzKlS0Wy",
+        "outputId": "f8638189-dd47-4397-f67e-02b6944e1b62"
+      },
+      "execution_count": 744,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O número de colunas da tabela é 14 e o número total de linhas/registros é 830000.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "-----\n",
+        "\n",
+        "### O QUE É CADA COLUNA?\n",
+        "\n",
+        "1. DATA: Data da compra;\n",
+        "2. CO_ID: Identificação do número de compra (número da nota fiscal);\n",
+        "3. CL_ID: Identificação do cliente (número do cliente);\n",
+        "4. CL_GENERO: Sexo biológico informado pelo cliente;\n",
+        "5. CL_EC: Estado civil do cliente:\n",
+        "    \n",
+        "    1: Casado ou união estával;\n",
+        "    \n",
+        "    2: Divorciado;\n",
+        "    \n",
+        "    3: Separado;\n",
+        "    \n",
+        "    4: Solteiro;\n",
+        "    \n",
+        "    5: Viúvo.\n",
+        "6. CL_FHL: Número de filhos do cliente;\n",
+        "7. CL_SEG: Segmentação econômica do cliente (classe A, B ou C);\n",
+        "8. PR_ID: Código do produto (SKU) adquirido;\n",
+        "9. PR_CAT: Categoria do produto adquirido;\n",
+        "10. PR_NOME: Nome do produto adquirido.\n",
+        "\n",
+        "\n",
+        "Demais colunas não contem dados e devem ser removidas no processo de limpeza.\n",
+        "\n",
+        "***`Informações retiradas do documento de analise exploratoria da base de varejo.csv`***\n",
+        "\n",
+        "-----"
+      ],
+      "metadata": {
+        "id": "8xL_QWCouRvq"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **3.2 - Tipos de dados e outras informações:**"
+      ],
+      "metadata": {
+        "id": "EjGu6HZDSlcj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_originais.info()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q1hZdqq8Sh_U",
+        "outputId": "306076aa-3fa5-4ffa-a91e-8d1c16333462"
+      },
+      "execution_count": 745,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'pandas.core.frame.DataFrame'>\n",
+            "RangeIndex: 830000 entries, 0 to 829999\n",
+            "Data columns (total 14 columns):\n",
+            " #   Column       Non-Null Count   Dtype  \n",
+            "---  ------       --------------   -----  \n",
+            " 0   DATA         830000 non-null  object \n",
+            " 1   CO_ID        830000 non-null  int64  \n",
+            " 2   CL_ID        830000 non-null  int64  \n",
+            " 3   CL_GENERO    830000 non-null  object \n",
+            " 4   CL_EC        830000 non-null  int64  \n",
+            " 5   CL_FHL       830000 non-null  int64  \n",
+            " 6   CL_SEG       830000 non-null  object \n",
+            " 7   PR_ID        830000 non-null  int64  \n",
+            " 8   PR_CAT       830000 non-null  object \n",
+            " 9   PR_NOME      830000 non-null  object \n",
+            " 10  Unnamed: 10  0 non-null       float64\n",
+            " 11  Unnamed: 11  0 non-null       float64\n",
+            " 12  Unnamed: 12  0 non-null       float64\n",
+            " 13  Unnamed: 13  0 non-null       float64\n",
+            "dtypes: float64(4), int64(5), object(5)\n",
+            "memory usage: 88.7+ MB\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#**4 - Limpeza e Validação dos dados**"
+      ],
+      "metadata": {
+        "id": "vXs_ed2y0Se7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Copia do banco de dados original para garantir que os dados originais não sejam modificados e possam ser acessados assim como vieram, permitindo que a tabela seja modificada na nova copia."
+      ],
+      "metadata": {
+        "id": "w9aU3ADc1349"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_modificados = pd.read_csv(url,sep=\";\", encoding=\"latin1\", na_values=[\"#N/D\"])"
+      ],
+      "metadata": {
+        "id": "3VM05EqR1jnl"
+      },
+      "execution_count": 746,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Modificação na nova tabela para que o pandas entenda que #N/D é nulo e some ao procurar pelos valores nulos."
+      ],
+      "metadata": {
+        "id": "Cn8_wSkY6B1a"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **4.1 - Linhas Duplicadas**"
+      ],
+      "metadata": {
+        "id": "TGbyGKyNDVfy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "duplicados = dados_modificados.duplicated()\n",
+        "print(f\"Linhas duplicadas: {duplicados.sum()}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QToTzakz2nJ9",
+        "outputId": "8df562ce-14d6-497b-ca99-617cc7ec1511"
+      },
+      "execution_count": 747,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Linhas duplicadas: 96553\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Agora que observados que existem registros duplicados precisamos entender se eles realmente são registros duplicados ou apenas registros de um mesmo produto comprado 2 vezes pela mesma pessoa."
+      ],
+      "metadata": {
+        "id": "C0gDsj_7qcYX"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "repeticoes_legitimas = dados_modificados.groupby([\"CO_ID\", \"PR_ID\"]).size()\n",
+        "print(repeticoes_legitimas[repeticoes_legitimas > 1].head(10))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Kle1l8Rpnax9",
+        "outputId": "3bbffd42-2905-413d-ae42-c30e8b2c2957"
+      },
+      "execution_count": 748,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "CO_ID  PR_ID\n",
+            "1000   4        2\n",
+            "       11       2\n",
+            "       13       2\n",
+            "       69       2\n",
+            "       218      2\n",
+            "       225      2\n",
+            "1078   21       2\n",
+            "       23       2\n",
+            "       25       2\n",
+            "       36       2\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Aqui visualizamos registros de notas fiscais com o mesmo produto agora precisamos ver se o resto dos dados nesse registro são identicos."
+      ],
+      "metadata": {
+        "id": "xIEIt4vAqmaF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "exemplo = dados_modificados[(dados_modificados[\"CO_ID\"] == 1000) & (dados_modificados[\"PR_ID\"] == 4)]\n",
+        "print(exemplo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "EyvJj9d4oz3B",
+        "outputId": "fe740b85-2c19-4890-9a29-33f15033526f"
+      },
+      "execution_count": 749,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "          DATA  CO_ID  CL_ID CL_GENERO  CL_EC  CL_FHL CL_SEG  PR_ID  \\\n",
+            "3   01/02/2019   1000    534         M      4       1      C      4   \n",
+            "40  01/02/2019   1000    534         M      4       1      C      4   \n",
+            "\n",
+            "       PR_CAT  PR_NOME  Unnamed: 10  Unnamed: 11  Unnamed: 12  Unnamed: 13  \n",
+            "3   ALIMENTOS  ABACAXI          NaN          NaN          NaN          NaN  \n",
+            "40  ALIMENTOS  ABACAXI          NaN          NaN          NaN          NaN  \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Diversos dados duplicados foram encontrados isso nos trás algumas questões, podemos remover os dados supondo que são erros de registro ou levando em consideração que a tabela não tem a coluna quantidade podemos entender que as linhas duplicadas de um mesmo registro da compra de produto esta relacionado a quantidade de produtos compradas sendo cada linha um poroduto. Como solução resolvi levar em consideração a segunda opção e criar uma coluna de quantidades removendo as linhas duplicadas para facilitar a análise.\n",
+        "\n",
+        "Obs: Vi depois no desafio que a segunda opção era realmente a correta a se seguir."
+      ],
+      "metadata": {
+        "id": "Q-BvyHE78GKr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_com_quantidade = dados_modificados.groupby(\n",
+        "    [\"CO_ID\", \"CL_ID\",\"CL_GENERO\",\"CL_EC\",\"CL_FHL\",\"CL_SEG\", \"PR_ID\", \"PR_CAT\", \"PR_NOME\",\"DATA\"],\n",
+        "    as_index=False,\n",
+        "    dropna=False\n",
+        ").size()\n",
+        "\n",
+        "dados_com_quantidade = dados_com_quantidade.rename(columns={\n",
+        "    \"DATA\":\"DATA_BR\"\n",
+        "})\n",
+        "\n",
+        "# Renomeia a coluna criada pelo .size() pra um nome mais claro\n",
+        "dados_com_quantidade = dados_com_quantidade.rename(columns={\"size\": \"QUANTIDADE\"})\n",
+        "coluna_data = dados_com_quantidade.pop(\"DATA_BR\")\n",
+        "dados_com_quantidade[\"DATA_BR\"] = coluna_data"
+      ],
+      "metadata": {
+        "id": "a7yXT6hjta0-"
+      },
+      "execution_count": 750,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Criação de uma nova tabela com coluna quantidades juntando os itens comprados mais de uma vez pela mesma pessoa em uma só compra na coluna \"QUANTIDADE\" a partir da função groupby que automaticamente ja junta linhas iguais, nome \"DATA\" alterado para \"DATA_BR\" para facilitar o entendimento futuro e separação de data internacional e data brasileira na conversão da data para tipo DATE_TIME.\n",
+        "Também mudei a posição da coluna \"DATA_BR\" para posição de ultima coluna por preferencia pessoal de organização.\n",
+        "\n",
+        "Observação: O comando GroupBy no pandas remove automaticamente as linhas com valores nulos então para garantir que isso não ocorresse sem as devidas verificações decidi deixar o atributo dropna como false para que o pandas não fizesse isso automaticamente, assim como removi as colunas sem nome ao criar a coluna quantidade ja que colunas sem nome são inuteis para nossa análise ainda mais sabendo que todos os seus valores eram vázios."
+      ],
+      "metadata": {
+        "id": "MGQY5AtzxffT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_com_quantidade = dados_com_quantidade.drop_duplicates()"
+      ],
+      "metadata": {
+        "id": "l51nSGM07b3o"
+      },
+      "execution_count": 751,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "duplicados_limpos = dados_com_quantidade.duplicated()\n",
+        "print(f\"Linhas duplicadas: {duplicados_limpos.sum()}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UznbbEE_7eQZ",
+        "outputId": "360a72cc-8599-4b0e-ab0b-2c6d9b6316cd"
+      },
+      "execution_count": 752,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Linhas duplicadas: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_com_quantidade"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 424
+        },
+        "id": "VTFD3WgiuAGt",
+        "outputId": "7cf889fa-ef65-44a7-8213-07177c63544a"
+      },
+      "execution_count": 753,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "         CO_ID  CL_ID CL_GENERO  CL_EC  CL_FHL CL_SEG  PR_ID     PR_CAT  \\\n",
+              "0         1000    534         M      4       1      C      4  ALIMENTOS   \n",
+              "1         1000    534         M      4       1      C     11  ALIMENTOS   \n",
+              "2         1000    534         M      4       1      C     13  ALIMENTOS   \n",
+              "3         1000    534         M      4       1      C     23  ALIMENTOS   \n",
+              "4         1000    534         M      4       1      C     24  ALIMENTOS   \n",
+              "...        ...    ...       ...    ...     ...    ...    ...        ...   \n",
+              "733442  919822    155         F      2       0      B    212    LIMPEZA   \n",
+              "733443  919822    155         F      2       0      B    214  ALIMENTOS   \n",
+              "733444  919822    155         F      2       0      B    225  ALIMENTOS   \n",
+              "733445  919822    155         F      2       0      B    227  ALIMENTOS   \n",
+              "733446  919822    155         F      2       0      B    228    LIMPEZA   \n",
+              "\n",
+              "           PR_NOME  QUANTIDADE     DATA_BR  \n",
+              "0          ABACAXI           2  01/02/2019  \n",
+              "1           AZEITE           2  01/02/2019  \n",
+              "2           BANANA           2  01/02/2019  \n",
+              "3        COGUMELOS           1  01/02/2019  \n",
+              "4       COPA SUINA           1  01/02/2019  \n",
+              "...            ...         ...         ...  \n",
+              "733442        CERA           2  19/08/2022  \n",
+              "733443      CEBOLA           1  19/08/2022  \n",
+              "733444        ATUM           1  19/08/2022  \n",
+              "733445       ARROZ           2  19/08/2022  \n",
+              "733446   AMACIANTE           1  19/08/2022  \n",
+              "\n",
+              "[733447 rows x 11 columns]"
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9\" class=\"colab-df-container\">\n",
+              "    <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>CO_ID</th>\n",
+              "      <th>CL_ID</th>\n",
+              "      <th>CL_GENERO</th>\n",
+              "      <th>CL_EC</th>\n",
+              "      <th>CL_FHL</th>\n",
+              "      <th>CL_SEG</th>\n",
+              "      <th>PR_ID</th>\n",
+              "      <th>PR_CAT</th>\n",
+              "      <th>PR_NOME</th>\n",
+              "      <th>QUANTIDADE</th>\n",
+              "      <th>DATA_BR</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>4</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>ABACAXI</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>11</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>AZEITE</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>13</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BANANA</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>3</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>23</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>COGUMELOS</td>\n",
+              "      <td>1</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>4</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>24</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>COPA SUINA</td>\n",
+              "      <td>1</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>...</th>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "      <td>...</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>733442</th>\n",
+              "      <td>919822</td>\n",
+              "      <td>155</td>\n",
+              "      <td>F</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0</td>\n",
+              "      <td>B</td>\n",
+              "      <td>212</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>CERA</td>\n",
+              "      <td>2</td>\n",
+              "      <td>19/08/2022</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>733443</th>\n",
+              "      <td>919822</td>\n",
+              "      <td>155</td>\n",
+              "      <td>F</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0</td>\n",
+              "      <td>B</td>\n",
+              "      <td>214</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>CEBOLA</td>\n",
+              "      <td>1</td>\n",
+              "      <td>19/08/2022</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>733444</th>\n",
+              "      <td>919822</td>\n",
+              "      <td>155</td>\n",
+              "      <td>F</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0</td>\n",
+              "      <td>B</td>\n",
+              "      <td>225</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>ATUM</td>\n",
+              "      <td>1</td>\n",
+              "      <td>19/08/2022</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>733445</th>\n",
+              "      <td>919822</td>\n",
+              "      <td>155</td>\n",
+              "      <td>F</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0</td>\n",
+              "      <td>B</td>\n",
+              "      <td>227</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>ARROZ</td>\n",
+              "      <td>2</td>\n",
+              "      <td>19/08/2022</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>733446</th>\n",
+              "      <td>919822</td>\n",
+              "      <td>155</td>\n",
+              "      <td>F</td>\n",
+              "      <td>2</td>\n",
+              "      <td>0</td>\n",
+              "      <td>B</td>\n",
+              "      <td>228</td>\n",
+              "      <td>LIMPEZA</td>\n",
+              "      <td>AMACIANTE</td>\n",
+              "      <td>1</td>\n",
+              "      <td>19/08/2022</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "<p>733447 rows × 11 columns</p>\n",
+              "</div>\n",
+              "    <div class=\"colab-df-buttons\">\n",
+              "\n",
+              "  <div class=\"colab-df-container\">\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9')\"\n",
+              "            title=\"Convert this dataframe to an interactive table.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
+              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "\n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-buttons div {\n",
+              "      margin-bottom: 4px;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "    <script>\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9 button.colab-df-convert');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      async function convertToInteractive(key) {\n",
+              "        const element = document.querySelector('#df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9');\n",
+              "        const dataTable =\n",
+              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                    [key], {});\n",
+              "        if (!dataTable) return;\n",
+              "\n",
+              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "          + ' to learn more about interactive tables.';\n",
+              "        element.innerHTML = '';\n",
+              "        dataTable['output_type'] = 'display_data';\n",
+              "        await google.colab.output.renderOutput(dataTable, element);\n",
+              "        const docLink = document.createElement('div');\n",
+              "        docLink.innerHTML = docLinkHtml;\n",
+              "        element.appendChild(docLink);\n",
+              "      }\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "\n",
+              "  <div id=\"id_a0569e60-3d11-43f2-84cd-17e30065293a\">\n",
+              "    <style>\n",
+              "      .colab-df-generate {\n",
+              "        background-color: #E8F0FE;\n",
+              "        border: none;\n",
+              "        border-radius: 50%;\n",
+              "        cursor: pointer;\n",
+              "        display: none;\n",
+              "        fill: #1967D2;\n",
+              "        height: 32px;\n",
+              "        padding: 0 0 0 0;\n",
+              "        width: 32px;\n",
+              "      }\n",
+              "\n",
+              "      .colab-df-generate:hover {\n",
+              "        background-color: #E2EBFA;\n",
+              "        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "        fill: #174EA6;\n",
+              "      }\n",
+              "\n",
+              "      [theme=dark] .colab-df-generate {\n",
+              "        background-color: #3B4455;\n",
+              "        fill: #D2E3FC;\n",
+              "      }\n",
+              "\n",
+              "      [theme=dark] .colab-df-generate:hover {\n",
+              "        background-color: #434B5C;\n",
+              "        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "        fill: #FFFFFF;\n",
+              "      }\n",
+              "    </style>\n",
+              "    <button class=\"colab-df-generate\" onclick=\"generateWithVariable('dados_com_quantidade')\"\n",
+              "            title=\"Generate code using this dataframe.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\"viewBox=\"0 0 24 24\"\n",
+              "       width=\"24px\">\n",
+              "    <path d=\"M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "    <script>\n",
+              "      (() => {\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#id_a0569e60-3d11-43f2-84cd-17e30065293a button.colab-df-generate');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      buttonEl.onclick = () => {\n",
+              "        google.colab.notebook.generateWithVariable('dados_com_quantidade');\n",
+              "      }\n",
+              "      })();\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "    </div>\n",
+              "  </div>\n"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "dataframe",
+              "variable_name": "dados_com_quantidade"
+            }
+          },
+          "metadata": {},
+          "execution_count": 753
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Feita a limpeza agrupamento e remoção das linhas duplicadas agora seguimos para\n",
+        "a validação de valores nulos."
+      ],
+      "metadata": {
+        "id": "-NyMKxML7kY_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **4.2 - Valores Nulos**"
+      ],
+      "metadata": {
+        "id": "2BtCjY5-Db1Z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nulos = dados_com_quantidade.isna().sum()\n",
+        "print(f\"Valores nulos: \\n{nulos}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xLMQhQPS4EaV",
+        "outputId": "42397a02-0140-4af9-c7ca-d3b42301db0f"
+      },
+      "execution_count": 754,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Valores nulos: \n",
+            "CO_ID            0\n",
+            "CL_ID            0\n",
+            "CL_GENERO        0\n",
+            "CL_EC            0\n",
+            "CL_FHL           0\n",
+            "CL_SEG           0\n",
+            "PR_ID            0\n",
+            "PR_CAT        3228\n",
+            "PR_NOME       3228\n",
+            "QUANTIDADE       0\n",
+            "DATA_BR          0\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Podemos ver que existem diversas categorias e nome de produto nulos, sabendo disso precisamos descobrir se conseguimos preencher esses valores corretamente ou se é necessários remover eles."
+      ],
+      "metadata": {
+        "id": "fRFTPOOO-UY9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mapa_categoria = dados_com_quantidade.dropna(subset=[\"PR_CAT\"]).drop_duplicates(\"PR_ID\").set_index(\"PR_ID\")[\"PR_CAT\"]\n",
+        "\n",
+        "dados_com_quantidade[\"PR_CAT\"] = dados_com_quantidade[\"PR_CAT\"].fillna(dados_com_quantidade[\"PR_ID\"].map(mapa_categoria))"
+      ],
+      "metadata": {
+        "id": "26Qwgn-T9Vd8"
+      },
+      "execution_count": 755,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Criação de um dicionário para tentar preencher as categorias e nomes nulos com o valor correto de acordo com o ID do produto procurnado produtos de mesmo ID na tabela para coletar os nomes e categorias referentes ao ID."
+      ],
+      "metadata": {
+        "id": "schrk4o6-pD6"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pega quantos produtos unicos tem categoria única\n",
+        "ids_com_nulo = dados_com_quantidade.loc[dados_com_quantidade[\"PR_CAT\"].isna(), \"PR_ID\"].unique()\n",
+        "print(f\"Quantidade de produtos únicos com categoria nula: {len(ids_com_nulo)}\")\n",
+        "\n",
+        "# Procura quantos desses produtos tem essa categoria preenchida em outra linha\n",
+        "ids_recuperaveis = dados_com_quantidade.loc[dados_com_quantidade[\"PR_ID\"].isin(ids_com_nulo) & dados_com_quantidade[\"PR_CAT\"].notna(), \"PR_ID\"].unique()\n",
+        "print(f\"Desses, quantos têm categoria em outra linha: {len(ids_recuperaveis)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wmKOOELr9X5e",
+        "outputId": "e64b10b0-393f-4881-9d7f-1c5d5d5004c4"
+      },
+      "execution_count": 756,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantidade de produtos únicos com categoria nula: 1\n",
+            "Desses, quantos têm categoria em outra linha: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Pega quantos produtos únicos têm nome nulo\n",
+        "ids_com_nulo_nome = dados_com_quantidade.loc[dados_com_quantidade[\"PR_NOME\"].isna(), \"PR_ID\"].unique()\n",
+        "print(f\"Quantidade de produtos únicos com nome nulo: {len(ids_com_nulo_nome)}\")\n",
+        "\n",
+        "# Desses produtos, quantos têm o nome preenchido em outra linha\n",
+        "ids_recuperaveis_nome = dados_com_quantidade.loc[dados_com_quantidade[\"PR_ID\"].isin(ids_com_nulo_nome) & dados_com_quantidade[\"PR_NOME\"].notna(), \"PR_ID\"].unique()\n",
+        "print(f\"Desses, quantos têm nome em outra linha: {len(ids_recuperaveis_nome)}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "77kULYCYAb3o",
+        "outputId": "2107bd84-638f-4414-88a7-9669cf873cad"
+      },
+      "execution_count": 757,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantidade de produtos únicos com nome nulo: 1\n",
+            "Desses, quantos têm nome em outra linha: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ao fazer essa visualização dos IDS unicos que tem categoria e nomes nulos podemos entender que todas essas categorias nulas vem de um mesmo produto então precisamos descobrir qual é esse produto."
+      ],
+      "metadata": {
+        "id": "6lpfV0ni_ewW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "pr_id_desconhecido = dados_com_quantidade.loc[dados_com_quantidade[\"PR_CAT\"].isna(), \"PR_ID\"].unique()[0]\n",
+        "print(f\"PR_ID: {pr_id_desconhecido}\")\n",
+        "\n",
+        "# Confirma que o nome do produto também está nulo\n",
+        "print(dados_com_quantidade.loc[dados_com_quantidade[\"PR_ID\"] == pr_id_desconhecido, [\"PR_ID\", \"PR_CAT\", \"PR_NOME\"]].head())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DqgaeYB9-KTd",
+        "outputId": "0ee535de-9b0a-40b3-912a-36a5fa17bfb5"
+      },
+      "execution_count": 758,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "PR_ID: 107\n",
+            "     PR_ID PR_CAT PR_NOME\n",
+            "93     107    NaN     NaN\n",
+            "190    107    NaN     NaN\n",
+            "548    107    NaN     NaN\n",
+            "730    107    NaN     NaN\n",
+            "791    107    NaN     NaN\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Agora que descobrimos o produto entendemos que esse produto em especifíco esta com algum problema em seus registros que faz com que o seu nome e categoria não estejam informados. Por isso para facilitar visualizações futuras vamos trocar os dados nesses espaços por \"Sem Categoria\" e por \"Sem Nome\" para que qualquer um consiga entender ao visualizar os dados."
+      ],
+      "metadata": {
+        "id": "z0rd5D9iAo_2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_limpos = dados_com_quantidade.copy()\n",
+        "linhas, colunas = dados_limpos.shape\n",
+        "categorias_corrigidas = False\n",
+        "nomes_corrigidos = False\n",
+        "n_linha=0\n",
+        "for i in range(linhas):\n",
+        "  if pd.isna(dados_limpos.loc[i, \"PR_CAT\"]) and categorias_corrigidas == False:\n",
+        "    dados_limpos[\"PR_CAT\"] = dados_limpos[\"PR_CAT\"].fillna(\"Sem Categoria\")\n",
+        "    categorias_corrigidas = True\n",
+        "  if pd.isna(dados_limpos.loc[i, \"PR_NOME\"]) and nomes_corrigidos == False:\n",
+        "    dados_limpos[\"PR_NOME\"] = dados_limpos[\"PR_NOME\"].fillna(\"Sem Nome\")\n",
+        "    nomes_corrigidos = True\n",
+        "  if categorias_corrigidas == True and nomes_corrigidos == True:\n",
+        "    print(\"Correção concluida\")\n",
+        "  else:\n",
+        "    n_linha += 1\n",
+        "    continue\n",
+        "  print(f\"Número de linhas válidadas até a conclusão: {n_linha}\")\n",
+        "  break"
+      ],
+      "metadata": {
+        "id": "WVuPgAa6BAyH",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ea2122dc-4773-4cea-c413-ad3f07c14789"
+      },
+      "execution_count": 759,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Correção concluida\n",
+            "Número de linhas válidadas até a conclusão: 93\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Validação feita para procurar se algum valor em categoria ou em nome é nulo mesmo e após isso trocar todos os valores vazios por um aviso de \"Sem Categoria\" ou \"Sem Nome\" com um if final para verificar se as alterações ja foram feitas e cancelar o loop que levaria muito tempo para passar por todos os valores considerando o grande número de registros.\n",
+        "\n",
+        "Obs: Essa etapa poderia ter sido feita utilizando apenas \"dados_limpos[\"PR_CAT\"] = dados_limpos[\"PR_CAT\"].fillna(\"Sem Categoria\")\" e \"dados_limpos[\"PR_NOME\"] = dados_limpos[\"PR_NOME\"].fillna(\"Sem Nome\")\" no entanto como o documento pede que seja feito o uso de If e Else achei interessante criar um loop que diga quantas linhas precisaram ser validadas para encontrar ao menos um nome nulo e uma categoria nula."
+      ],
+      "metadata": {
+        "id": "sYLIWhzC2N_s"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(dados_limpos.loc[dados_com_quantidade[\"PR_ID\"] == pr_id_desconhecido, [\"PR_ID\", \"PR_CAT\", \"PR_NOME\"]].head())"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WO_IHwWb2IoS",
+        "outputId": "1f03c5d2-af5a-4d5f-965d-7c91efc519d6"
+      },
+      "execution_count": 760,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "     PR_ID         PR_CAT   PR_NOME\n",
+            "93     107  Sem Categoria  Sem Nome\n",
+            "190    107  Sem Categoria  Sem Nome\n",
+            "548    107  Sem Categoria  Sem Nome\n",
+            "730    107  Sem Categoria  Sem Nome\n",
+            "791    107  Sem Categoria  Sem Nome\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nulos = dados_limpos.isna().sum()\n",
+        "print(f\"Valores nulos: \\n{nulos}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "iHUNVH7J7ofc",
+        "outputId": "7a2c69d6-5d1f-4d96-988f-fcfa41fcca3e"
+      },
+      "execution_count": 761,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Valores nulos: \n",
+            "CO_ID         0\n",
+            "CL_ID         0\n",
+            "CL_GENERO     0\n",
+            "CL_EC         0\n",
+            "CL_FHL        0\n",
+            "CL_SEG        0\n",
+            "PR_ID         0\n",
+            "PR_CAT        0\n",
+            "PR_NOME       0\n",
+            "QUANTIDADE    0\n",
+            "DATA_BR       0\n",
+            "dtype: int64\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Podemos ver que a alteração dos valores foi muito bem sucedida. Após a limpeza e validação de valores nulos e duplicados precisamos validas e converter as Datas de Registro."
+      ],
+      "metadata": {
+        "id": "I5Mk6EqpCWII"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **4.3 - Conversão e Validação das Datas**"
+      ],
+      "metadata": {
+        "id": "xy8yoMEdDxq5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_data = dados_limpos.copy()\n",
+        "\n",
+        "dados_data[\"DATA_INT\"] = pd.to_datetime(dados_data[\"DATA_BR\"], format=\"%d/%m/%Y\", errors=\"coerce\")"
+      ],
+      "metadata": {
+        "id": "YWd_ueLVD1tb"
+      },
+      "execution_count": 762,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_data.head(3)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        },
+        "id": "w-IEaWYBEQR1",
+        "outputId": "f0856b51-132f-46a4-9518-0db2fe969470"
+      },
+      "execution_count": 763,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "   CO_ID  CL_ID CL_GENERO  CL_EC  CL_FHL CL_SEG  PR_ID     PR_CAT  PR_NOME  \\\n",
+              "0   1000    534         M      4       1      C      4  ALIMENTOS  ABACAXI   \n",
+              "1   1000    534         M      4       1      C     11  ALIMENTOS   AZEITE   \n",
+              "2   1000    534         M      4       1      C     13  ALIMENTOS   BANANA   \n",
+              "\n",
+              "   QUANTIDADE     DATA_BR   DATA_INT  \n",
+              "0           2  01/02/2019 2019-02-01  \n",
+              "1           2  01/02/2019 2019-02-01  \n",
+              "2           2  01/02/2019 2019-02-01  "
+            ],
+            "text/html": [
+              "\n",
+              "  <div id=\"df-f70ea81a-c377-48cd-8efd-9aac7b7578c2\" class=\"colab-df-container\">\n",
+              "    <div>\n",
+              "<style scoped>\n",
+              "    .dataframe tbody tr th:only-of-type {\n",
+              "        vertical-align: middle;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe tbody tr th {\n",
+              "        vertical-align: top;\n",
+              "    }\n",
+              "\n",
+              "    .dataframe thead th {\n",
+              "        text-align: right;\n",
+              "    }\n",
+              "</style>\n",
+              "<table border=\"1\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr style=\"text-align: right;\">\n",
+              "      <th></th>\n",
+              "      <th>CO_ID</th>\n",
+              "      <th>CL_ID</th>\n",
+              "      <th>CL_GENERO</th>\n",
+              "      <th>CL_EC</th>\n",
+              "      <th>CL_FHL</th>\n",
+              "      <th>CL_SEG</th>\n",
+              "      <th>PR_ID</th>\n",
+              "      <th>PR_CAT</th>\n",
+              "      <th>PR_NOME</th>\n",
+              "      <th>QUANTIDADE</th>\n",
+              "      <th>DATA_BR</th>\n",
+              "      <th>DATA_INT</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <th>0</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>4</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>ABACAXI</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>2019-02-01</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>1</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>11</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>AZEITE</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>2019-02-01</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <th>2</th>\n",
+              "      <td>1000</td>\n",
+              "      <td>534</td>\n",
+              "      <td>M</td>\n",
+              "      <td>4</td>\n",
+              "      <td>1</td>\n",
+              "      <td>C</td>\n",
+              "      <td>13</td>\n",
+              "      <td>ALIMENTOS</td>\n",
+              "      <td>BANANA</td>\n",
+              "      <td>2</td>\n",
+              "      <td>01/02/2019</td>\n",
+              "      <td>2019-02-01</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n",
+              "</div>\n",
+              "    <div class=\"colab-df-buttons\">\n",
+              "\n",
+              "  <div class=\"colab-df-container\">\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-f70ea81a-c377-48cd-8efd-9aac7b7578c2')\"\n",
+              "            title=\"Convert this dataframe to an interactive table.\"\n",
+              "            style=\"display:none;\">\n",
+              "\n",
+              "  <svg xmlns=\"http://www.w3.org/2000/svg\" height=\"24px\" viewBox=\"0 -960 960 960\">\n",
+              "    <path d=\"M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z\"/>\n",
+              "  </svg>\n",
+              "    </button>\n",
+              "\n",
+              "  <style>\n",
+              "    .colab-df-container {\n",
+              "      display:flex;\n",
+              "      gap: 12px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert {\n",
+              "      background-color: #E8F0FE;\n",
+              "      border: none;\n",
+              "      border-radius: 50%;\n",
+              "      cursor: pointer;\n",
+              "      display: none;\n",
+              "      fill: #1967D2;\n",
+              "      height: 32px;\n",
+              "      padding: 0 0 0 0;\n",
+              "      width: 32px;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-convert:hover {\n",
+              "      background-color: #E2EBFA;\n",
+              "      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);\n",
+              "      fill: #174EA6;\n",
+              "    }\n",
+              "\n",
+              "    .colab-df-buttons div {\n",
+              "      margin-bottom: 4px;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert {\n",
+              "      background-color: #3B4455;\n",
+              "      fill: #D2E3FC;\n",
+              "    }\n",
+              "\n",
+              "    [theme=dark] .colab-df-convert:hover {\n",
+              "      background-color: #434B5C;\n",
+              "      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n",
+              "      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));\n",
+              "      fill: #FFFFFF;\n",
+              "    }\n",
+              "  </style>\n",
+              "\n",
+              "    <script>\n",
+              "      const buttonEl =\n",
+              "        document.querySelector('#df-f70ea81a-c377-48cd-8efd-9aac7b7578c2 button.colab-df-convert');\n",
+              "      buttonEl.style.display =\n",
+              "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
+              "\n",
+              "      async function convertToInteractive(key) {\n",
+              "        const element = document.querySelector('#df-f70ea81a-c377-48cd-8efd-9aac7b7578c2');\n",
+              "        const dataTable =\n",
+              "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
+              "                                                    [key], {});\n",
+              "        if (!dataTable) return;\n",
+              "\n",
+              "        const docLinkHtml = 'Like what you see? Visit the ' +\n",
+              "          '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'\n",
+              "          + ' to learn more about interactive tables.';\n",
+              "        element.innerHTML = '';\n",
+              "        dataTable['output_type'] = 'display_data';\n",
+              "        await google.colab.output.renderOutput(dataTable, element);\n",
+              "        const docLink = document.createElement('div');\n",
+              "        docLink.innerHTML = docLinkHtml;\n",
+              "        element.appendChild(docLink);\n",
+              "      }\n",
+              "    </script>\n",
+              "  </div>\n",
+              "\n",
+              "\n",
+              "    </div>\n",
+              "  </div>\n"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "dataframe",
+              "variable_name": "dados_data"
+            }
+          },
+          "metadata": {},
+          "execution_count": 763
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "datas_invalidas = dados_data[\"DATA_INT\"].isna().sum()\n",
+        "print(f\"Datas inválidas: {datas_invalidas}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "bHVyvG15EIva",
+        "outputId": "aee7e2f6-f1ce-421a-bc19-636d322aea43"
+      },
+      "execution_count": 764,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Datas inválidas: 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Após validar as datas agora e converter elas separando em DATA_BR(STRING) que facilita entendimento de brasileiros e DATA_INT(DATE_TIME) em formato internacional que facilita análises podemos ir para a próxima etapa que é o agrupamento de informações relevantes e separação correta dos dados para análise."
+      ],
+      "metadata": {
+        "id": "eOiS81JMENV3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **6 - Agrupamento de Dados**"
+      ],
+      "metadata": {
+        "id": "NfyRvQc7Dl6q"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO DE COMPRAS:**"
+      ],
+      "metadata": {
+        "id": "iVWZFTd758Tm"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "compras_agrupadas = dados_data.groupby(\"CO_ID\", as_index=False).agg(\n",
+        "    CL_ID=(\"CL_ID\", \"first\"),           # O cliente é sempre o mesmo então podemos pegar somente o primeiro\n",
+        "    DATA_INT=(\"DATA_INT\", \"first\"),       # A data da compra também é a mesma então podemos pegar o primeiro\n",
+        "    QTD_TOTAL_ITENS=(\"QUANTIDADE\", \"sum\"),      # Soma quantidade total de itens comprados\n",
+        "    QTD_PRODUTOS_DIFERENTES=(\"PR_ID\", \"nunique\"),# Soma quantidade de itens diferentes na compra\n",
+        "    PRODUTOS=(\"PR_NOME\", list),         # Lista o nome de todos os produtos comprados\n",
+        "    DATA_COMPRA=(\"DATA_INT\", \"first\")\n",
+        ")\n",
+        "\n",
+        "compras_agrupadas.head(10).style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 780
+        },
+        "id": "F8KP9PTsDqwA",
+        "outputId": "726058e4-b8ba-4c07-b633-8bc5e7d5b62c"
+      },
+      "execution_count": 765,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27bae9e50>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_0f10e\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_0f10e_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
+              "      <th id=\"T_0f10e_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
+              "      <th id=\"T_0f10e_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
+              "      <th id=\"T_0f10e_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
+              "      <th id=\"T_0f10e_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
+              "      <th id=\"T_0f10e_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
+              "      <th id=\"T_0f10e_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
+              "      <td id=\"T_0f10e_row0_col1\" class=\"data row0 col1\" >534</td>\n",
+              "      <td id=\"T_0f10e_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row0_col3\" class=\"data row0 col3\" >52</td>\n",
+              "      <td id=\"T_0f10e_row0_col4\" class=\"data row0 col4\" >46</td>\n",
+              "      <td id=\"T_0f10e_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_0f10e_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
+              "      <td id=\"T_0f10e_row1_col1\" class=\"data row1 col1\" >279</td>\n",
+              "      <td id=\"T_0f10e_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row1_col3\" class=\"data row1 col3\" >15</td>\n",
+              "      <td id=\"T_0f10e_row1_col4\" class=\"data row1 col4\" >15</td>\n",
+              "      <td id=\"T_0f10e_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
+              "      <td id=\"T_0f10e_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
+              "      <td id=\"T_0f10e_row2_col1\" class=\"data row2 col1\" >290</td>\n",
+              "      <td id=\"T_0f10e_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row2_col3\" class=\"data row2 col3\" >82</td>\n",
+              "      <td id=\"T_0f10e_row2_col4\" class=\"data row2 col4\" >63</td>\n",
+              "      <td id=\"T_0f10e_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
+              "      <td id=\"T_0f10e_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
+              "      <td id=\"T_0f10e_row3_col1\" class=\"data row3 col1\" >323</td>\n",
+              "      <td id=\"T_0f10e_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row3_col3\" class=\"data row3 col3\" >71</td>\n",
+              "      <td id=\"T_0f10e_row3_col4\" class=\"data row3 col4\" >62</td>\n",
+              "      <td id=\"T_0f10e_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_0f10e_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
+              "      <td id=\"T_0f10e_row4_col1\" class=\"data row4 col1\" >957</td>\n",
+              "      <td id=\"T_0f10e_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row4_col3\" class=\"data row4 col3\" >6</td>\n",
+              "      <td id=\"T_0f10e_row4_col4\" class=\"data row4 col4\" >6</td>\n",
+              "      <td id=\"T_0f10e_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
+              "      <td id=\"T_0f10e_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
+              "      <td id=\"T_0f10e_row5_col1\" class=\"data row5 col1\" >49</td>\n",
+              "      <td id=\"T_0f10e_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row5_col3\" class=\"data row5 col3\" >64</td>\n",
+              "      <td id=\"T_0f10e_row5_col4\" class=\"data row5 col4\" >54</td>\n",
+              "      <td id=\"T_0f10e_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_0f10e_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
+              "      <td id=\"T_0f10e_row6_col1\" class=\"data row6 col1\" >906</td>\n",
+              "      <td id=\"T_0f10e_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row6_col3\" class=\"data row6 col3\" >78</td>\n",
+              "      <td id=\"T_0f10e_row6_col4\" class=\"data row6 col4\" >67</td>\n",
+              "      <td id=\"T_0f10e_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_0f10e_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
+              "      <td id=\"T_0f10e_row7_col1\" class=\"data row7 col1\" >653</td>\n",
+              "      <td id=\"T_0f10e_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row7_col3\" class=\"data row7 col3\" >81</td>\n",
+              "      <td id=\"T_0f10e_row7_col4\" class=\"data row7 col4\" >70</td>\n",
+              "      <td id=\"T_0f10e_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
+              "      <td id=\"T_0f10e_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
+              "      <td id=\"T_0f10e_row8_col1\" class=\"data row8 col1\" >842</td>\n",
+              "      <td id=\"T_0f10e_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row8_col3\" class=\"data row8 col3\" >37</td>\n",
+              "      <td id=\"T_0f10e_row8_col4\" class=\"data row8 col4\" >33</td>\n",
+              "      <td id=\"T_0f10e_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_0f10e_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_0f10e_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
+              "      <td id=\"T_0f10e_row9_col1\" class=\"data row9 col1\" >616</td>\n",
+              "      <td id=\"T_0f10e_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_0f10e_row9_col3\" class=\"data row9 col3\" >8</td>\n",
+              "      <td id=\"T_0f10e_row9_col4\" class=\"data row9 col4\" >8</td>\n",
+              "      <td id=\"T_0f10e_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
+              "      <td id=\"T_0f10e_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 765
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Compreensão da RN relacionada a CO_ID fazendo agrupamento dos itens de uma mesma compra para uso dem análises posteriores."
+      ],
+      "metadata": {
+        "id": "02Bb65Pk7o5t"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO DE CLIENTES:**"
+      ],
+      "metadata": {
+        "id": "3aAWOi-G7gHq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "clientes = dados_data.groupby(\"CL_ID\",as_index=False).agg(\n",
+        "    GENERO=(\"CL_GENERO\", \"first\"),\n",
+        "    ESTADO_CIVIL=(\"CL_EC\", \"first\"),\n",
+        "    NUMERO_FILHOS=(\"CL_FHL\", \"first\"),\n",
+        "    SEGMENTO_ECONOMICO=(\"CL_SEG\", \"first\")\n",
+        ")\n",
+        "\n",
+        "clientes.head(10).style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 363
+        },
+        "id": "2SNrIJ139z7Q",
+        "outputId": "128ae601-bfa8-42b7-e83f-ca37159aab40"
+      },
+      "execution_count": 766,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27bae9f90>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_5454c\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_5454c_level0_col0\" class=\"col_heading level0 col0\" >CL_ID</th>\n",
+              "      <th id=\"T_5454c_level0_col1\" class=\"col_heading level0 col1\" >GENERO</th>\n",
+              "      <th id=\"T_5454c_level0_col2\" class=\"col_heading level0 col2\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_5454c_level0_col3\" class=\"col_heading level0 col3\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_5454c_level0_col4\" class=\"col_heading level0 col4\" >SEGMENTO_ECONOMICO</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row0_col0\" class=\"data row0 col0\" >1</td>\n",
+              "      <td id=\"T_5454c_row0_col1\" class=\"data row0 col1\" >M</td>\n",
+              "      <td id=\"T_5454c_row0_col2\" class=\"data row0 col2\" >1</td>\n",
+              "      <td id=\"T_5454c_row0_col3\" class=\"data row0 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row0_col4\" class=\"data row0 col4\" >C</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row1_col0\" class=\"data row1 col0\" >2</td>\n",
+              "      <td id=\"T_5454c_row1_col1\" class=\"data row1 col1\" >M</td>\n",
+              "      <td id=\"T_5454c_row1_col2\" class=\"data row1 col2\" >3</td>\n",
+              "      <td id=\"T_5454c_row1_col3\" class=\"data row1 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row1_col4\" class=\"data row1 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row2_col0\" class=\"data row2 col0\" >3</td>\n",
+              "      <td id=\"T_5454c_row2_col1\" class=\"data row2 col1\" >F</td>\n",
+              "      <td id=\"T_5454c_row2_col2\" class=\"data row2 col2\" >4</td>\n",
+              "      <td id=\"T_5454c_row2_col3\" class=\"data row2 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row2_col4\" class=\"data row2 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row3_col0\" class=\"data row3 col0\" >4</td>\n",
+              "      <td id=\"T_5454c_row3_col1\" class=\"data row3 col1\" >M</td>\n",
+              "      <td id=\"T_5454c_row3_col2\" class=\"data row3 col2\" >4</td>\n",
+              "      <td id=\"T_5454c_row3_col3\" class=\"data row3 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row3_col4\" class=\"data row3 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row4_col0\" class=\"data row4 col0\" >5</td>\n",
+              "      <td id=\"T_5454c_row4_col1\" class=\"data row4 col1\" >F</td>\n",
+              "      <td id=\"T_5454c_row4_col2\" class=\"data row4 col2\" >4</td>\n",
+              "      <td id=\"T_5454c_row4_col3\" class=\"data row4 col3\" >3</td>\n",
+              "      <td id=\"T_5454c_row4_col4\" class=\"data row4 col4\" >C</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row5_col0\" class=\"data row5 col0\" >6</td>\n",
+              "      <td id=\"T_5454c_row5_col1\" class=\"data row5 col1\" >F</td>\n",
+              "      <td id=\"T_5454c_row5_col2\" class=\"data row5 col2\" >2</td>\n",
+              "      <td id=\"T_5454c_row5_col3\" class=\"data row5 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row5_col4\" class=\"data row5 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row6_col0\" class=\"data row6 col0\" >7</td>\n",
+              "      <td id=\"T_5454c_row6_col1\" class=\"data row6 col1\" >M</td>\n",
+              "      <td id=\"T_5454c_row6_col2\" class=\"data row6 col2\" >1</td>\n",
+              "      <td id=\"T_5454c_row6_col3\" class=\"data row6 col3\" >3</td>\n",
+              "      <td id=\"T_5454c_row6_col4\" class=\"data row6 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row7_col0\" class=\"data row7 col0\" >8</td>\n",
+              "      <td id=\"T_5454c_row7_col1\" class=\"data row7 col1\" >F</td>\n",
+              "      <td id=\"T_5454c_row7_col2\" class=\"data row7 col2\" >3</td>\n",
+              "      <td id=\"T_5454c_row7_col3\" class=\"data row7 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row7_col4\" class=\"data row7 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row8_col0\" class=\"data row8 col0\" >9</td>\n",
+              "      <td id=\"T_5454c_row8_col1\" class=\"data row8 col1\" >F</td>\n",
+              "      <td id=\"T_5454c_row8_col2\" class=\"data row8 col2\" >2</td>\n",
+              "      <td id=\"T_5454c_row8_col3\" class=\"data row8 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row8_col4\" class=\"data row8 col4\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_5454c_row9_col0\" class=\"data row9 col0\" >10</td>\n",
+              "      <td id=\"T_5454c_row9_col1\" class=\"data row9 col1\" >M</td>\n",
+              "      <td id=\"T_5454c_row9_col2\" class=\"data row9 col2\" >1</td>\n",
+              "      <td id=\"T_5454c_row9_col3\" class=\"data row9 col3\" >0</td>\n",
+              "      <td id=\"T_5454c_row9_col4\" class=\"data row9 col4\" >B</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 766
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO GERAL DOS DADOS COM COMPRAS AGRUPADAS E DADOS DOS CLIENTES:**"
+      ],
+      "metadata": {
+        "id": "QGzMobOgGu_C"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "clientes = clientes.reset_index()\n",
+        "\n",
+        "dados_gerais = pd.merge(\n",
+        "    compras_agrupadas,\n",
+        "    clientes,\n",
+        "    on=\"CL_ID\",\n",
+        "    how=\"left\"\n",
+        ")\n",
+        "dados_gerais.head(10).style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 902
+        },
+        "id": "F8ONYGfJDi8F",
+        "outputId": "b10adbb3-4720-49bb-dadb-9858a90193ca"
+      },
+      "execution_count": 767,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea210>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_39380\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_39380_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
+              "      <th id=\"T_39380_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
+              "      <th id=\"T_39380_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
+              "      <th id=\"T_39380_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
+              "      <th id=\"T_39380_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
+              "      <th id=\"T_39380_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
+              "      <th id=\"T_39380_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
+              "      <th id=\"T_39380_level0_col7\" class=\"col_heading level0 col7\" >index</th>\n",
+              "      <th id=\"T_39380_level0_col8\" class=\"col_heading level0 col8\" >GENERO</th>\n",
+              "      <th id=\"T_39380_level0_col9\" class=\"col_heading level0 col9\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_39380_level0_col10\" class=\"col_heading level0 col10\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_39380_level0_col11\" class=\"col_heading level0 col11\" >SEGMENTO_ECONOMICO</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
+              "      <td id=\"T_39380_row0_col1\" class=\"data row0 col1\" >534</td>\n",
+              "      <td id=\"T_39380_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row0_col3\" class=\"data row0 col3\" >52</td>\n",
+              "      <td id=\"T_39380_row0_col4\" class=\"data row0 col4\" >46</td>\n",
+              "      <td id=\"T_39380_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_39380_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row0_col7\" class=\"data row0 col7\" >533</td>\n",
+              "      <td id=\"T_39380_row0_col8\" class=\"data row0 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row0_col9\" class=\"data row0 col9\" >4</td>\n",
+              "      <td id=\"T_39380_row0_col10\" class=\"data row0 col10\" >1</td>\n",
+              "      <td id=\"T_39380_row0_col11\" class=\"data row0 col11\" >C</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
+              "      <td id=\"T_39380_row1_col1\" class=\"data row1 col1\" >279</td>\n",
+              "      <td id=\"T_39380_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row1_col3\" class=\"data row1 col3\" >15</td>\n",
+              "      <td id=\"T_39380_row1_col4\" class=\"data row1 col4\" >15</td>\n",
+              "      <td id=\"T_39380_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
+              "      <td id=\"T_39380_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row1_col7\" class=\"data row1 col7\" >278</td>\n",
+              "      <td id=\"T_39380_row1_col8\" class=\"data row1 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row1_col9\" class=\"data row1 col9\" >1</td>\n",
+              "      <td id=\"T_39380_row1_col10\" class=\"data row1 col10\" >2</td>\n",
+              "      <td id=\"T_39380_row1_col11\" class=\"data row1 col11\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
+              "      <td id=\"T_39380_row2_col1\" class=\"data row2 col1\" >290</td>\n",
+              "      <td id=\"T_39380_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row2_col3\" class=\"data row2 col3\" >82</td>\n",
+              "      <td id=\"T_39380_row2_col4\" class=\"data row2 col4\" >63</td>\n",
+              "      <td id=\"T_39380_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
+              "      <td id=\"T_39380_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row2_col7\" class=\"data row2 col7\" >289</td>\n",
+              "      <td id=\"T_39380_row2_col8\" class=\"data row2 col8\" >F</td>\n",
+              "      <td id=\"T_39380_row2_col9\" class=\"data row2 col9\" >1</td>\n",
+              "      <td id=\"T_39380_row2_col10\" class=\"data row2 col10\" >0</td>\n",
+              "      <td id=\"T_39380_row2_col11\" class=\"data row2 col11\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
+              "      <td id=\"T_39380_row3_col1\" class=\"data row3 col1\" >323</td>\n",
+              "      <td id=\"T_39380_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row3_col3\" class=\"data row3 col3\" >71</td>\n",
+              "      <td id=\"T_39380_row3_col4\" class=\"data row3 col4\" >62</td>\n",
+              "      <td id=\"T_39380_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_39380_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row3_col7\" class=\"data row3 col7\" >322</td>\n",
+              "      <td id=\"T_39380_row3_col8\" class=\"data row3 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row3_col9\" class=\"data row3 col9\" >1</td>\n",
+              "      <td id=\"T_39380_row3_col10\" class=\"data row3 col10\" >3</td>\n",
+              "      <td id=\"T_39380_row3_col11\" class=\"data row3 col11\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
+              "      <td id=\"T_39380_row4_col1\" class=\"data row4 col1\" >957</td>\n",
+              "      <td id=\"T_39380_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row4_col3\" class=\"data row4 col3\" >6</td>\n",
+              "      <td id=\"T_39380_row4_col4\" class=\"data row4 col4\" >6</td>\n",
+              "      <td id=\"T_39380_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
+              "      <td id=\"T_39380_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row4_col7\" class=\"data row4 col7\" >956</td>\n",
+              "      <td id=\"T_39380_row4_col8\" class=\"data row4 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row4_col9\" class=\"data row4 col9\" >2</td>\n",
+              "      <td id=\"T_39380_row4_col10\" class=\"data row4 col10\" >3</td>\n",
+              "      <td id=\"T_39380_row4_col11\" class=\"data row4 col11\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
+              "      <td id=\"T_39380_row5_col1\" class=\"data row5 col1\" >49</td>\n",
+              "      <td id=\"T_39380_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row5_col3\" class=\"data row5 col3\" >64</td>\n",
+              "      <td id=\"T_39380_row5_col4\" class=\"data row5 col4\" >54</td>\n",
+              "      <td id=\"T_39380_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_39380_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row5_col7\" class=\"data row5 col7\" >48</td>\n",
+              "      <td id=\"T_39380_row5_col8\" class=\"data row5 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row5_col9\" class=\"data row5 col9\" >2</td>\n",
+              "      <td id=\"T_39380_row5_col10\" class=\"data row5 col10\" >0</td>\n",
+              "      <td id=\"T_39380_row5_col11\" class=\"data row5 col11\" >C</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
+              "      <td id=\"T_39380_row6_col1\" class=\"data row6 col1\" >906</td>\n",
+              "      <td id=\"T_39380_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row6_col3\" class=\"data row6 col3\" >78</td>\n",
+              "      <td id=\"T_39380_row6_col4\" class=\"data row6 col4\" >67</td>\n",
+              "      <td id=\"T_39380_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_39380_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row6_col7\" class=\"data row6 col7\" >905</td>\n",
+              "      <td id=\"T_39380_row6_col8\" class=\"data row6 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row6_col9\" class=\"data row6 col9\" >2</td>\n",
+              "      <td id=\"T_39380_row6_col10\" class=\"data row6 col10\" >0</td>\n",
+              "      <td id=\"T_39380_row6_col11\" class=\"data row6 col11\" >A</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
+              "      <td id=\"T_39380_row7_col1\" class=\"data row7 col1\" >653</td>\n",
+              "      <td id=\"T_39380_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row7_col3\" class=\"data row7 col3\" >81</td>\n",
+              "      <td id=\"T_39380_row7_col4\" class=\"data row7 col4\" >70</td>\n",
+              "      <td id=\"T_39380_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
+              "      <td id=\"T_39380_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row7_col7\" class=\"data row7 col7\" >652</td>\n",
+              "      <td id=\"T_39380_row7_col8\" class=\"data row7 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row7_col9\" class=\"data row7 col9\" >2</td>\n",
+              "      <td id=\"T_39380_row7_col10\" class=\"data row7 col10\" >0</td>\n",
+              "      <td id=\"T_39380_row7_col11\" class=\"data row7 col11\" >C</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
+              "      <td id=\"T_39380_row8_col1\" class=\"data row8 col1\" >842</td>\n",
+              "      <td id=\"T_39380_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row8_col3\" class=\"data row8 col3\" >37</td>\n",
+              "      <td id=\"T_39380_row8_col4\" class=\"data row8 col4\" >33</td>\n",
+              "      <td id=\"T_39380_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_39380_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row8_col7\" class=\"data row8 col7\" >841</td>\n",
+              "      <td id=\"T_39380_row8_col8\" class=\"data row8 col8\" >M</td>\n",
+              "      <td id=\"T_39380_row8_col9\" class=\"data row8 col9\" >5</td>\n",
+              "      <td id=\"T_39380_row8_col10\" class=\"data row8 col10\" >2</td>\n",
+              "      <td id=\"T_39380_row8_col11\" class=\"data row8 col11\" >B</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_39380_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
+              "      <td id=\"T_39380_row9_col1\" class=\"data row9 col1\" >616</td>\n",
+              "      <td id=\"T_39380_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row9_col3\" class=\"data row9 col3\" >8</td>\n",
+              "      <td id=\"T_39380_row9_col4\" class=\"data row9 col4\" >8</td>\n",
+              "      <td id=\"T_39380_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
+              "      <td id=\"T_39380_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_39380_row9_col7\" class=\"data row9 col7\" >615</td>\n",
+              "      <td id=\"T_39380_row9_col8\" class=\"data row9 col8\" >F</td>\n",
+              "      <td id=\"T_39380_row9_col9\" class=\"data row9 col9\" >1</td>\n",
+              "      <td id=\"T_39380_row9_col10\" class=\"data row9 col10\" >2</td>\n",
+              "      <td id=\"T_39380_row9_col11\" class=\"data row9 col11\" >C</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 767
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Dados utéis para visualizações gerais como compras por segmento, genero, estado civil e cliente, assim como dados mais detalhados como quantidade de itens totais comprados ou itens diferentes."
+      ],
+      "metadata": {
+        "id": "dMVN0ETeHOmm"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO DE DADOS POR SEGMENTO:**"
+      ],
+      "metadata": {
+        "id": "HnxuzTSMHfy-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resumo_segmento = dados_gerais.groupby(\"SEGMENTO_ECONOMICO\", as_index=False).agg(\n",
+        "    NUMERO_DE_CLIENTES=(\"CL_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_COMPRAS=(\"CO_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_TOTAL_DE_ITENS=(\"QTD_TOTAL_ITENS\", \"sum\")\n",
+        ")\n",
+        "\n",
+        "# Já que produtos foi colocado como list e Produtos unicos não pode ser apenas somado precisamos separar de outra forma\n",
+        "produtos_unicos_segmento = dados_gerais.explode(\"PRODUTOS\").groupby(\n",
+        "    \"SEGMENTO_ECONOMICO\", as_index=False\n",
+        ")[\"PRODUTOS\"].nunique().rename(columns={\"PRODUTOS\": \"QUANTIDADE_DE_ITENS_UNICOS\"})\n",
+        "\n",
+        "# O Número de filhos precisa ser calculado por cliente único, para que não conte o mesmo cliente uma vez por compra que ele fez\n",
+        "clientes_unicos = dados_gerais.drop_duplicates(subset=\"CL_ID\")\n",
+        "filhos_segmento = clientes_unicos.groupby(\"SEGMENTO_ECONOMICO\", as_index=False)[\"NUMERO_FILHOS\"].sum()\n",
+        "\n",
+        "# União dos produtos únicos com os resumo de segmento e número de filhos\n",
+        "dados_segmento = pd.merge(resumo_segmento, produtos_unicos_segmento, on=\"SEGMENTO_ECONOMICO\")\n",
+        "dados_segmento = pd.merge(dados_segmento, filhos_segmento, on=\"SEGMENTO_ECONOMICO\")\n",
+        "dados_segmento.style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 144
+        },
+        "id": "yB3YRwR4AIGI",
+        "outputId": "aa5ff5bc-3023-4c77-fe73-04dd67f01c19"
+      },
+      "execution_count": 768,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea0d0>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_84d64\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_84d64_level0_col0\" class=\"col_heading level0 col0\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_84d64_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_84d64_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_84d64_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_84d64_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_84d64_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_84d64_row0_col0\" class=\"data row0 col0\" >A</td>\n",
+              "      <td id=\"T_84d64_row0_col1\" class=\"data row0 col1\" >84</td>\n",
+              "      <td id=\"T_84d64_row0_col2\" class=\"data row0 col2\" >1492</td>\n",
+              "      <td id=\"T_84d64_row0_col3\" class=\"data row0 col3\" >67736</td>\n",
+              "      <td id=\"T_84d64_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_84d64_row0_col5\" class=\"data row0 col5\" >89</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_84d64_row1_col0\" class=\"data row1 col0\" >B</td>\n",
+              "      <td id=\"T_84d64_row1_col1\" class=\"data row1 col1\" >645</td>\n",
+              "      <td id=\"T_84d64_row1_col2\" class=\"data row1 col2\" >11843</td>\n",
+              "      <td id=\"T_84d64_row1_col3\" class=\"data row1 col3\" >530163</td>\n",
+              "      <td id=\"T_84d64_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_84d64_row1_col5\" class=\"data row1 col5\" >724</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_84d64_row2_col0\" class=\"data row2 col0\" >C</td>\n",
+              "      <td id=\"T_84d64_row2_col1\" class=\"data row2 col1\" >271</td>\n",
+              "      <td id=\"T_84d64_row2_col2\" class=\"data row2 col2\" >5136</td>\n",
+              "      <td id=\"T_84d64_row2_col3\" class=\"data row2 col3\" >232101</td>\n",
+              "      <td id=\"T_84d64_row2_col4\" class=\"data row2 col4\" >118</td>\n",
+              "      <td id=\"T_84d64_row2_col5\" class=\"data row2 col5\" >323</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 768
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Esses dados são extremamente importantes podemos ver informações detalhadas de cada um dos segmentos o que ajuda a entender o cliente alvo/pessoas que mais compram e a importância delas para o varejo."
+      ],
+      "metadata": {
+        "id": "zH0iJcmWMQW2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "total_produtos_catalogo = dados_gerais.explode(\"PRODUTOS\")[\"PRODUTOS\"].nunique()\n",
+        "print(total_produtos_catalogo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W7yG5wzaJpyV",
+        "outputId": "70b011b1-d813-42df-c8a9-4f0a41302a23"
+      },
+      "execution_count": 769,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "118\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Verificação da quantidade total de produtos no catalogo para garantir que a informação recebida em QUANTIDADE_DE_ITENS_UNICOS por segmento esta correta."
+      ],
+      "metadata": {
+        "id": "sv8QpwH1MoTA"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO DE DADOS POR GENERO:**\n"
+      ],
+      "metadata": {
+        "id": "9EcUVcBXM0VL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Mesmo código utilizado em dados de segmento para agilizar o processo de análise\n",
+        "resumo_genero = dados_gerais.groupby(\"GENERO\", as_index=False).agg(\n",
+        "    NUMERO_DE_CLIENTES=(\"CL_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_COMPRAS=(\"CO_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_TOTAL_DE_ITENS=(\"QTD_TOTAL_ITENS\", \"sum\")\n",
+        ")\n",
+        "\n",
+        "produtos_unicos_genero = dados_gerais.explode(\"PRODUTOS\").groupby(\n",
+        "    \"GENERO\", as_index=False\n",
+        ")[\"PRODUTOS\"].nunique().rename(columns={\"PRODUTOS\": \"QUANTIDADE_DE_ITENS_UNICOS\"})\n",
+        "\n",
+        "clientes_unicos_genero = dados_gerais.drop_duplicates(subset=\"CL_ID\")\n",
+        "filhos_genero = clientes_unicos_genero.groupby(\"GENERO\", as_index=False)[\"NUMERO_FILHOS\"].sum()\n",
+        "\n",
+        "# União dos produtos únicos com o resumo de gênero e número de filhos\n",
+        "dados_genero = pd.merge(resumo_genero, produtos_unicos_genero, on=\"GENERO\")\n",
+        "dados_genero = pd.merge(dados_genero, filhos_genero, on=\"GENERO\")\n",
+        "dados_genero.style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 113
+        },
+        "id": "S5kMXaX9M-Qa",
+        "outputId": "55191d20-f8bc-4211-d576-e0627f28bff5"
+      },
+      "execution_count": 770,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea490>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_f215a\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_f215a_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
+              "      <th id=\"T_f215a_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_f215a_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_f215a_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_f215a_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_f215a_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_f215a_row0_col0\" class=\"data row0 col0\" >F</td>\n",
+              "      <td id=\"T_f215a_row0_col1\" class=\"data row0 col1\" >519</td>\n",
+              "      <td id=\"T_f215a_row0_col2\" class=\"data row0 col2\" >9615</td>\n",
+              "      <td id=\"T_f215a_row0_col3\" class=\"data row0 col3\" >432576</td>\n",
+              "      <td id=\"T_f215a_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_f215a_row0_col5\" class=\"data row0 col5\" >561</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_f215a_row1_col0\" class=\"data row1 col0\" >M</td>\n",
+              "      <td id=\"T_f215a_row1_col1\" class=\"data row1 col1\" >481</td>\n",
+              "      <td id=\"T_f215a_row1_col2\" class=\"data row1 col2\" >8856</td>\n",
+              "      <td id=\"T_f215a_row1_col3\" class=\"data row1 col3\" >397424</td>\n",
+              "      <td id=\"T_f215a_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_f215a_row1_col5\" class=\"data row1 col5\" >575</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 770
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Agrupado da mesma forma que SEGMENTO ECONÔMICO facilita na visualização de dados específicos e entendimento dos clientes."
+      ],
+      "metadata": {
+        "id": "Y5SakPRVdDu_"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **AGRUPAMENTO POR ESTADO CIVIL:**"
+      ],
+      "metadata": {
+        "id": "UsHoiNnJbeQP"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Traduzindo estados civis\n",
+        "mapa_estado_civil = {\n",
+        "    1: \"Casado ou União Estável\",\n",
+        "    2: \"Divorciado\",\n",
+        "    3: \"Separado\",\n",
+        "    4: \"Solteiro\",\n",
+        "    5: \"Viúvo\"\n",
+        "}\n",
+        "dados_gerais[\"ESTADO_CIVIL\"] = dados_gerais[\"ESTADO_CIVIL\"].map(mapa_estado_civil)\n",
+        "\n",
+        "resumo_estado_civil = dados_gerais.groupby(\"ESTADO_CIVIL\", as_index=False).agg(\n",
+        "    NUMERO_DE_CLIENTES=(\"CL_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_COMPRAS=(\"CO_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_TOTAL_DE_ITENS=(\"QTD_TOTAL_ITENS\", \"sum\")\n",
+        ")\n",
+        "\n",
+        "produtos_unicos_estado_civil = dados_gerais.explode(\"PRODUTOS\").groupby(\n",
+        "    \"ESTADO_CIVIL\", as_index=False\n",
+        ")[\"PRODUTOS\"].nunique().rename(columns={\"PRODUTOS\": \"QUANTIDADE_DE_ITENS_UNICOS\"})\n",
+        "\n",
+        "clientes_unicos_ec = dados_gerais.drop_duplicates(subset=\"CL_ID\")\n",
+        "filhos_estado_civil = clientes_unicos_ec.groupby(\"ESTADO_CIVIL\", as_index=False)[\"NUMERO_FILHOS\"].sum()\n",
+        "\n",
+        "dados_estado_civil = pd.merge(resumo_estado_civil, produtos_unicos_estado_civil, on=\"ESTADO_CIVIL\")\n",
+        "dados_estado_civil = pd.merge(dados_estado_civil, filhos_estado_civil, on=\"ESTADO_CIVIL\")\n",
+        "dados_estado_civil.style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 207
+        },
+        "id": "Q-1Aq3kXYfoN",
+        "outputId": "00fe8c05-e0b2-457b-f9c9-ac6b4e5f2318"
+      },
+      "execution_count": 771,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea350>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_8f75a\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_8f75a_level0_col0\" class=\"col_heading level0 col0\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_8f75a_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_8f75a_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_8f75a_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_8f75a_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_8f75a_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8f75a_row0_col0\" class=\"data row0 col0\" >Casado ou União Estável</td>\n",
+              "      <td id=\"T_8f75a_row0_col1\" class=\"data row0 col1\" >233</td>\n",
+              "      <td id=\"T_8f75a_row0_col2\" class=\"data row0 col2\" >4290</td>\n",
+              "      <td id=\"T_8f75a_row0_col3\" class=\"data row0 col3\" >194873</td>\n",
+              "      <td id=\"T_8f75a_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_8f75a_row0_col5\" class=\"data row0 col5\" >295</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8f75a_row1_col0\" class=\"data row1 col0\" >Divorciado</td>\n",
+              "      <td id=\"T_8f75a_row1_col1\" class=\"data row1 col1\" >238</td>\n",
+              "      <td id=\"T_8f75a_row1_col2\" class=\"data row1 col2\" >4377</td>\n",
+              "      <td id=\"T_8f75a_row1_col3\" class=\"data row1 col3\" >194990</td>\n",
+              "      <td id=\"T_8f75a_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_8f75a_row1_col5\" class=\"data row1 col5\" >297</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8f75a_row2_col0\" class=\"data row2 col0\" >Separado</td>\n",
+              "      <td id=\"T_8f75a_row2_col1\" class=\"data row2 col1\" >250</td>\n",
+              "      <td id=\"T_8f75a_row2_col2\" class=\"data row2 col2\" >4762</td>\n",
+              "      <td id=\"T_8f75a_row2_col3\" class=\"data row2 col3\" >213742</td>\n",
+              "      <td id=\"T_8f75a_row2_col4\" class=\"data row2 col4\" >118</td>\n",
+              "      <td id=\"T_8f75a_row2_col5\" class=\"data row2 col5\" >299</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8f75a_row3_col0\" class=\"data row3 col0\" >Solteiro</td>\n",
+              "      <td id=\"T_8f75a_row3_col1\" class=\"data row3 col1\" >251</td>\n",
+              "      <td id=\"T_8f75a_row3_col2\" class=\"data row3 col2\" >4551</td>\n",
+              "      <td id=\"T_8f75a_row3_col3\" class=\"data row3 col3\" >202618</td>\n",
+              "      <td id=\"T_8f75a_row3_col4\" class=\"data row3 col4\" >118</td>\n",
+              "      <td id=\"T_8f75a_row3_col5\" class=\"data row3 col5\" >203</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8f75a_row4_col0\" class=\"data row4 col0\" >Viúvo</td>\n",
+              "      <td id=\"T_8f75a_row4_col1\" class=\"data row4 col1\" >28</td>\n",
+              "      <td id=\"T_8f75a_row4_col2\" class=\"data row4 col2\" >491</td>\n",
+              "      <td id=\"T_8f75a_row4_col3\" class=\"data row4 col3\" >23777</td>\n",
+              "      <td id=\"T_8f75a_row4_col4\" class=\"data row4 col4\" >118</td>\n",
+              "      <td id=\"T_8f75a_row4_col5\" class=\"data row4 col5\" >42</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 771
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Agrupamento por estado civil, denovo utilizando mesmo método do agrupamento por genero e do agrupamento por segmento mas dessa vez traduzindo os códigos de estado civil para seus respectivos nomes."
+      ],
+      "metadata": {
+        "id": "NftLoi6hdU0g"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **EVOLUÇÃO DE COMPRAS AO LONGO DO TEMPO (por mês):**"
+      ],
+      "metadata": {
+        "id": "sIJi3-2dbbQJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dados_gerais[\"MES_ANO\"] = dados_gerais[\"DATA_INT\"].dt.to_period(\"M\")\n",
+        "\n",
+        "resumo_mensal = dados_gerais.groupby(\"MES_ANO\", as_index=False).agg(\n",
+        "    QUANTIDADE_COMPRAS=(\"CO_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_TOTAL_DE_ITENS=(\"QTD_TOTAL_ITENS\", \"sum\")\n",
+        ")\n",
+        "\n",
+        "resumo_mensal.head(10).style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 363
+        },
+        "id": "--42KWUYYizU",
+        "outputId": "0ee25754-c2bf-427f-d77f-a6fdd6494134"
+      },
+      "execution_count": 772,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea710>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_040e4\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_040e4_level0_col0\" class=\"col_heading level0 col0\" >MES_ANO</th>\n",
+              "      <th id=\"T_040e4_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_040e4_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row0_col0\" class=\"data row0 col0\" >2019-01</td>\n",
+              "      <td id=\"T_040e4_row0_col1\" class=\"data row0 col1\" >171</td>\n",
+              "      <td id=\"T_040e4_row0_col2\" class=\"data row0 col2\" >7368</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row1_col0\" class=\"data row1 col0\" >2019-02</td>\n",
+              "      <td id=\"T_040e4_row1_col1\" class=\"data row1 col1\" >402</td>\n",
+              "      <td id=\"T_040e4_row1_col2\" class=\"data row1 col2\" >18336</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row2_col0\" class=\"data row2 col0\" >2019-03</td>\n",
+              "      <td id=\"T_040e4_row2_col1\" class=\"data row2 col1\" >257</td>\n",
+              "      <td id=\"T_040e4_row2_col2\" class=\"data row2 col2\" >11051</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row3_col0\" class=\"data row3 col0\" >2019-04</td>\n",
+              "      <td id=\"T_040e4_row3_col1\" class=\"data row3 col1\" >410</td>\n",
+              "      <td id=\"T_040e4_row3_col2\" class=\"data row3 col2\" >18337</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row4_col0\" class=\"data row4 col0\" >2019-05</td>\n",
+              "      <td id=\"T_040e4_row4_col1\" class=\"data row4 col1\" >711</td>\n",
+              "      <td id=\"T_040e4_row4_col2\" class=\"data row4 col2\" >31811</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row5_col0\" class=\"data row5 col0\" >2019-06</td>\n",
+              "      <td id=\"T_040e4_row5_col1\" class=\"data row5 col1\" >493</td>\n",
+              "      <td id=\"T_040e4_row5_col2\" class=\"data row5 col2\" >22084</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row6_col0\" class=\"data row6 col0\" >2019-07</td>\n",
+              "      <td id=\"T_040e4_row6_col1\" class=\"data row6 col1\" >274</td>\n",
+              "      <td id=\"T_040e4_row6_col2\" class=\"data row6 col2\" >12184</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row7_col0\" class=\"data row7 col0\" >2019-08</td>\n",
+              "      <td id=\"T_040e4_row7_col1\" class=\"data row7 col1\" >420</td>\n",
+              "      <td id=\"T_040e4_row7_col2\" class=\"data row7 col2\" >17900</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row8_col0\" class=\"data row8 col0\" >2019-09</td>\n",
+              "      <td id=\"T_040e4_row8_col1\" class=\"data row8 col1\" >436</td>\n",
+              "      <td id=\"T_040e4_row8_col2\" class=\"data row8 col2\" >19122</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_040e4_row9_col0\" class=\"data row9 col0\" >2019-10</td>\n",
+              "      <td id=\"T_040e4_row9_col1\" class=\"data row9 col1\" >242</td>\n",
+              "      <td id=\"T_040e4_row9_col2\" class=\"data row9 col2\" >10245</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 772
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Tabela de evolução da compra ao longo dos meses, muito util para criação de gráficos e compreender oque mudou nas vendar do estabelecimento ou empresa como um todo."
+      ],
+      "metadata": {
+        "id": "C4R5C74ddjGF"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **PRODUTOS MAIS VENDIDOS (ranking geral):**"
+      ],
+      "metadata": {
+        "id": "Iy2NzQArbWlB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "produtos_explodido = dados_gerais.explode(\"PRODUTOS\")\n",
+        "\n",
+        "top_10_produtos = produtos_explodido.groupby(\"PRODUTOS\", as_index=False).agg(\n",
+        "    QUANTIDADE_VENDIDA=(\"CO_ID\", \"count\")   # quantas vezes aquele produto apareceu em compras\n",
+        ").sort_values(\"QUANTIDADE_VENDIDA\", ascending=False).head(10)\n",
+        "\n",
+        "top_10_produtos.style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 363
+        },
+        "id": "7udpP-cZYkLF",
+        "outputId": "668a4c0b-040f-4898-db21-4606416de568"
+      },
+      "execution_count": 773,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea850>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_ff555\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_ff555_level0_col0\" class=\"col_heading level0 col0\" >PRODUTOS</th>\n",
+              "      <th id=\"T_ff555_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_VENDIDA</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row0_col0\" class=\"data row0 col0\" >PRESUNTO COZIDO</td>\n",
+              "      <td id=\"T_ff555_row0_col1\" class=\"data row0 col1\" >12719</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row1_col0\" class=\"data row1 col0\" >SARDINHA</td>\n",
+              "      <td id=\"T_ff555_row1_col1\" class=\"data row1 col1\" >6610</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row2_col0\" class=\"data row2 col0\" >BANANA</td>\n",
+              "      <td id=\"T_ff555_row2_col1\" class=\"data row2 col1\" >6518</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row3_col0\" class=\"data row3 col0\" >ESCOVA DE DENTE</td>\n",
+              "      <td id=\"T_ff555_row3_col1\" class=\"data row3 col1\" >6518</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row4_col0\" class=\"data row4 col0\" >GEL</td>\n",
+              "      <td id=\"T_ff555_row4_col1\" class=\"data row4 col1\" >6517</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row5_col0\" class=\"data row5 col0\" >PAPINHA INFANTIL</td>\n",
+              "      <td id=\"T_ff555_row5_col1\" class=\"data row5 col1\" >6515</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row6_col0\" class=\"data row6 col0\" >MODELADOR</td>\n",
+              "      <td id=\"T_ff555_row6_col1\" class=\"data row6 col1\" >6505</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row7_col0\" class=\"data row7 col0\" >CERA</td>\n",
+              "      <td id=\"T_ff555_row7_col1\" class=\"data row7 col1\" >6502</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row8_col0\" class=\"data row8 col0\" >CEBOLA</td>\n",
+              "      <td id=\"T_ff555_row8_col1\" class=\"data row8 col1\" >6501</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_ff555_row9_col0\" class=\"data row9 col0\" >LIMPADOR PERFUMADO</td>\n",
+              "      <td id=\"T_ff555_row9_col1\" class=\"data row9 col1\" >6501</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 773
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Bom para saber o que mais gira dentro do estoque."
+      ],
+      "metadata": {
+        "id": "zr50nuW3d77L"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### **TICKET MÉDIO (itens por compra) POR GÊNERO E SEGMENTO JUNTOS:**"
+      ],
+      "metadata": {
+        "id": "1nj5unzLbSQW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "resumo_genero_segmento = dados_gerais.groupby(\n",
+        "    [\"GENERO\", \"SEGMENTO_ECONOMICO\"], as_index=False\n",
+        ").agg(\n",
+        "    QUANTIDADE_COMPRAS=(\"CO_ID\", \"nunique\"),\n",
+        "    QUANTIDADE_TOTAL_DE_ITENS=(\"QTD_TOTAL_ITENS\", \"sum\")\n",
+        ")\n",
+        "\n",
+        "# Calcula o ticket médio (itens por compra) como coluna nova\n",
+        "resumo_genero_segmento[\"MEDIA_ITENS_POR_COMPRA\"] = (\n",
+        "    resumo_genero_segmento[\"QUANTIDADE_TOTAL_DE_ITENS\"] / resumo_genero_segmento[\"QUANTIDADE_COMPRAS\"]\n",
+        ").round(2)\n",
+        "\n",
+        "resumo_genero_segmento.style.hide(axis=\"index\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 238
+        },
+        "id": "w8jV-dwJYlX5",
+        "outputId": "5c5881ca-ba15-45ca-9ecf-a2aca2310dce"
+      },
+      "execution_count": 774,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<pandas.io.formats.style.Styler at 0x7da27baea990>"
+            ],
+            "text/html": [
+              "<style type=\"text/css\">\n",
+              "</style>\n",
+              "<table id=\"T_8286f\" class=\"dataframe\">\n",
+              "  <thead>\n",
+              "    <tr>\n",
+              "      <th id=\"T_8286f_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
+              "      <th id=\"T_8286f_level0_col1\" class=\"col_heading level0 col1\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_8286f_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_8286f_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_8286f_level0_col4\" class=\"col_heading level0 col4\" >MEDIA_ITENS_POR_COMPRA</th>\n",
+              "    </tr>\n",
+              "  </thead>\n",
+              "  <tbody>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row0_col0\" class=\"data row0 col0\" >F</td>\n",
+              "      <td id=\"T_8286f_row0_col1\" class=\"data row0 col1\" >A</td>\n",
+              "      <td id=\"T_8286f_row0_col2\" class=\"data row0 col2\" >700</td>\n",
+              "      <td id=\"T_8286f_row0_col3\" class=\"data row0 col3\" >32875</td>\n",
+              "      <td id=\"T_8286f_row0_col4\" class=\"data row0 col4\" >46.960000</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row1_col0\" class=\"data row1 col0\" >F</td>\n",
+              "      <td id=\"T_8286f_row1_col1\" class=\"data row1 col1\" >B</td>\n",
+              "      <td id=\"T_8286f_row1_col2\" class=\"data row1 col2\" >5946</td>\n",
+              "      <td id=\"T_8286f_row1_col3\" class=\"data row1 col3\" >264308</td>\n",
+              "      <td id=\"T_8286f_row1_col4\" class=\"data row1 col4\" >44.450000</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row2_col0\" class=\"data row2 col0\" >F</td>\n",
+              "      <td id=\"T_8286f_row2_col1\" class=\"data row2 col1\" >C</td>\n",
+              "      <td id=\"T_8286f_row2_col2\" class=\"data row2 col2\" >2969</td>\n",
+              "      <td id=\"T_8286f_row2_col3\" class=\"data row2 col3\" >135393</td>\n",
+              "      <td id=\"T_8286f_row2_col4\" class=\"data row2 col4\" >45.600000</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row3_col0\" class=\"data row3 col0\" >M</td>\n",
+              "      <td id=\"T_8286f_row3_col1\" class=\"data row3 col1\" >A</td>\n",
+              "      <td id=\"T_8286f_row3_col2\" class=\"data row3 col2\" >792</td>\n",
+              "      <td id=\"T_8286f_row3_col3\" class=\"data row3 col3\" >34861</td>\n",
+              "      <td id=\"T_8286f_row3_col4\" class=\"data row3 col4\" >44.020000</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row4_col0\" class=\"data row4 col0\" >M</td>\n",
+              "      <td id=\"T_8286f_row4_col1\" class=\"data row4 col1\" >B</td>\n",
+              "      <td id=\"T_8286f_row4_col2\" class=\"data row4 col2\" >5897</td>\n",
+              "      <td id=\"T_8286f_row4_col3\" class=\"data row4 col3\" >265855</td>\n",
+              "      <td id=\"T_8286f_row4_col4\" class=\"data row4 col4\" >45.080000</td>\n",
+              "    </tr>\n",
+              "    <tr>\n",
+              "      <td id=\"T_8286f_row5_col0\" class=\"data row5 col0\" >M</td>\n",
+              "      <td id=\"T_8286f_row5_col1\" class=\"data row5 col1\" >C</td>\n",
+              "      <td id=\"T_8286f_row5_col2\" class=\"data row5 col2\" >2167</td>\n",
+              "      <td id=\"T_8286f_row5_col3\" class=\"data row5 col3\" >96708</td>\n",
+              "      <td id=\"T_8286f_row5_col4\" class=\"data row5 col4\" >44.630000</td>\n",
+              "    </tr>\n",
+              "  </tbody>\n",
+              "</table>\n"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 774
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Ótimo para entender quanto cada tipo de cliente normalmente compra. Por essa tabela, vemos que o ticket\n",
+        "médio entre os grupos é bastante parecido, ainda assim o Segmento Econômico A do gênero Feminino se\n",
+        "destaca com o maior ticket médio, chegando a quase 47 itens por compra. Como a Classe A representa a\n",
+        "faixa de maior renda entre as três (segundo a segmentação econômica da base), isso sugere que clientes\n",
+        "de maior poder aquisitivo tendem a comprar mais itens por vez. Por outro lado, na mesma tabela vemos que\n",
+        "a quantidade de compras efetuadas pelo Segmento A é a menor entre os três grupos, ou seja, esse\n",
+        "segmento compra com menos frequência, porém em maior volume por compra, um padrão coerente com um\n",
+        "perfil de consumidor de maior renda que concentra suas compras em vez de fracioná-las."
+      ],
+      "metadata": {
+        "id": "8LmJIIbyeCGr"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Agora que agrupamos alguns valores importantes podemos seguir e visualizar as informações estatísticas da coluna de número de filhos."
+      ],
+      "metadata": {
+        "id": "5oJAf-vnXLRW"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# **7 - Estatísticas**"
+      ],
+      "metadata": {
+        "id": "jPGDBWiGX9Ge"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Estatísticas descritivas da coluna NUMERO_FILHOS, calculadas a partir de clientes únicos\n",
+        "filhos = clientes[\"NUMERO_FILHOS\"]\n",
+        "\n",
+        "media = filhos.mean()\n",
+        "mediana = filhos.median()\n",
+        "desvio_padrao = filhos.std()\n",
+        "moda = filhos.mode()[0]        # mode() pode retornar mais de um valor se houver empate, pega o primeiro\n",
+        "maximo = filhos.max()\n",
+        "minimo = filhos.min()\n",
+        "contagem = filhos.count()\n",
+        "q1 = filhos.quantile(0.25)\n",
+        "q2 = filhos.quantile(0.50)\n",
+        "q3 = filhos.quantile(0.75)\n",
+        "\n",
+        "print(f\"Média: {media:.2f}\")\n",
+        "print(f\"Mediana: {mediana}\")\n",
+        "print(f\"Desvio Padrão: {desvio_padrao:.2f}\")\n",
+        "print(f\"Moda: {moda}\")\n",
+        "print(f\"Máximo: {maximo}\")\n",
+        "print(f\"Mínimo: {minimo}\")\n",
+        "print(f\"Contagem: {contagem}\")\n",
+        "print(f\"1º Quartil (25%): {q1}\")\n",
+        "print(f\"2º Quartil (50%): {q2}\")\n",
+        "print(f\"3º Quartil (75%): {q3}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "rtdEjUSBXdpB",
+        "outputId": "1c9b78bb-fe72-4678-aab0-2aa004541c12"
+      },
+      "execution_count": 775,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Média: 1.14\n",
+            "Mediana: 0.0\n",
+            "Desvio Padrão: 1.41\n",
+            "Moda: 0\n",
+            "Máximo: 4\n",
+            "Mínimo: 0\n",
+            "Contagem: 1000\n",
+            "1º Quartil (25%): 0.0\n",
+            "2º Quartil (50%): 0.0\n",
+            "3º Quartil (75%): 2.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Essas estatísticas poderiam ter sido feitas utilizando apenas o .describe(), mas para fins de melhor\n",
+        "visualização e para incluir a moda (que o .describe() não calcula), preferi separar valor por valor com print."
+      ],
+      "metadata": {
+        "id": "Kxf4gVQCXg8o"
+      }
+    }
+  ]
+}
