@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyP7O5KvR8EmaZmGObr0Dqjg",
+      "authorship_tag": "ABX9TyMzGTio8RK6UX6E5CHElnOj",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -37,7 +37,7 @@
     },
     {
       "cell_type": "code",
-      "execution_count": 741,
+      "execution_count": 1,
       "metadata": {
         "id": "xYQZIpp_Qk8A"
       },
@@ -72,7 +72,7 @@
       "metadata": {
         "id": "CyQS-LsMQ7xB"
       },
-      "execution_count": 742,
+      "execution_count": 2,
       "outputs": []
     },
     {
@@ -104,9 +104,9 @@
           "height": 991
         },
         "id": "_uZHDHBdScWl",
-        "outputId": "6b1bd2ca-5c7b-474e-d59e-1c2578e46213"
+        "outputId": "7b269184-280c-4ea4-bea5-73f440f7a336"
       },
-      "execution_count": 743,
+      "execution_count": 3,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -210,7 +210,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-11ee77a7-ab45-4f2d-b99c-f6e989e4d564\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -762,7 +762,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-11ee77a7-ab45-4f2d-b99c-f6e989e4d564')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -814,12 +814,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188 button.colab-df-convert');\n",
+              "        document.querySelector('#df-11ee77a7-ab45-4f2d-b99c-f6e989e4d564 button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-bf3e1246-4d26-4d07-80a7-dcb53ac6c188');\n",
+              "        const element = document.querySelector('#df-11ee77a7-ab45-4f2d-b99c-f6e989e4d564');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -848,7 +848,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 743
+          "execution_count": 3
         }
       ]
     },
@@ -873,9 +873,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "yTAyrzKlS0Wy",
-        "outputId": "f8638189-dd47-4397-f67e-02b6944e1b62"
+        "outputId": "5c42d15e-1e60-432b-d80e-aeb2d3c23004"
       },
-      "execution_count": 744,
+      "execution_count": 4,
       "outputs": [
         {
           "output_type": "stream",
@@ -944,9 +944,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "Q1hZdqq8Sh_U",
-        "outputId": "306076aa-3fa5-4ffa-a91e-8d1c16333462"
+        "outputId": "4981d101-3768-45b3-bf81-14edacd1863b"
       },
-      "execution_count": 745,
+      "execution_count": 5,
       "outputs": [
         {
           "output_type": "stream",
@@ -1003,7 +1003,7 @@
       "metadata": {
         "id": "3VM05EqR1jnl"
       },
-      "execution_count": 746,
+      "execution_count": 6,
       "outputs": []
     },
     {
@@ -1035,9 +1035,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "QToTzakz2nJ9",
-        "outputId": "8df562ce-14d6-497b-ca99-617cc7ec1511"
+        "outputId": "49f7a99f-4b9f-4bfd-fc54-03d88cd2ac54"
       },
-      "execution_count": 747,
+      "execution_count": 7,
       "outputs": [
         {
           "output_type": "stream",
@@ -1068,9 +1068,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "Kle1l8Rpnax9",
-        "outputId": "3bbffd42-2905-413d-ae42-c30e8b2c2957"
+        "outputId": "872733e5-510d-49bf-9923-e78e88db9b99"
       },
-      "execution_count": 748,
+      "execution_count": 8,
       "outputs": [
         {
           "output_type": "stream",
@@ -1112,9 +1112,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "EyvJj9d4oz3B",
-        "outputId": "fe740b85-2c19-4890-9a29-33f15033526f"
+        "outputId": "c04d9ac0-0bfa-4f2c-80c5-4be2dd17174f"
       },
-      "execution_count": 749,
+      "execution_count": 9,
       "outputs": [
         {
           "output_type": "stream",
@@ -1163,7 +1163,7 @@
       "metadata": {
         "id": "a7yXT6hjta0-"
       },
-      "execution_count": 750,
+      "execution_count": 10,
       "outputs": []
     },
     {
@@ -1186,7 +1186,7 @@
       "metadata": {
         "id": "l51nSGM07b3o"
       },
-      "execution_count": 751,
+      "execution_count": 11,
       "outputs": []
     },
     {
@@ -1200,9 +1200,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "UznbbEE_7eQZ",
-        "outputId": "360a72cc-8599-4b0e-ab0b-2c6d9b6316cd"
+        "outputId": "758c7d31-988b-45df-e2da-2dfc07323012"
       },
-      "execution_count": 752,
+      "execution_count": 12,
       "outputs": [
         {
           "output_type": "stream",
@@ -1224,9 +1224,9 @@
           "height": 424
         },
         "id": "VTFD3WgiuAGt",
-        "outputId": "7cf889fa-ef65-44a7-8213-07177c63544a"
+        "outputId": "561629fe-cf3b-432d-b4e4-e497572009aa"
       },
-      "execution_count": 753,
+      "execution_count": 13,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1262,7 +1262,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-6875d8be-627b-4fc2-a40e-962f174aa1a0\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -1456,7 +1456,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-6875d8be-627b-4fc2-a40e-962f174aa1a0')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -1508,12 +1508,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9 button.colab-df-convert');\n",
+              "        document.querySelector('#df-6875d8be-627b-4fc2-a40e-962f174aa1a0 button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-d93dd4ea-bc5f-4cff-a2c5-c454651877e9');\n",
+              "        const element = document.querySelector('#df-6875d8be-627b-4fc2-a40e-962f174aa1a0');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -1533,7 +1533,7 @@
               "  </div>\n",
               "\n",
               "\n",
-              "  <div id=\"id_a0569e60-3d11-43f2-84cd-17e30065293a\">\n",
+              "  <div id=\"id_ee90f133-1800-4824-8b2c-f82db1c80b0d\">\n",
               "    <style>\n",
               "      .colab-df-generate {\n",
               "        background-color: #E8F0FE;\n",
@@ -1577,7 +1577,7 @@
               "    <script>\n",
               "      (() => {\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#id_a0569e60-3d11-43f2-84cd-17e30065293a button.colab-df-generate');\n",
+              "        document.querySelector('#id_ee90f133-1800-4824-8b2c-f82db1c80b0d button.colab-df-generate');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
@@ -1597,13 +1597,15 @@
             }
           },
           "metadata": {},
-          "execution_count": 753
+          "execution_count": 13
         }
       ]
     },
     {
       "cell_type": "markdown",
       "source": [
+        "A junção dos valores duplicados se deve principalmente pela Regra De Negócio que diz que cada linha é um item comprado, por conta disso nenhuma linha duplicada é inútil e todas devem ser análisadas. Para facilitar essa análise fiz as escolhas vistas acima.\n",
+        "\n",
         "Feita a limpeza agrupamento e remoção das linhas duplicadas agora seguimos para\n",
         "a validação de valores nulos."
       ],
@@ -1631,9 +1633,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "xLMQhQPS4EaV",
-        "outputId": "42397a02-0140-4af9-c7ca-d3b42301db0f"
+        "outputId": "6f93fe8e-7738-45c5-a5b1-d3d8fa290370"
       },
-      "execution_count": 754,
+      "execution_count": 14,
       "outputs": [
         {
           "output_type": "stream",
@@ -1675,7 +1677,7 @@
       "metadata": {
         "id": "26Qwgn-T9Vd8"
       },
-      "execution_count": 755,
+      "execution_count": 15,
       "outputs": []
     },
     {
@@ -1703,9 +1705,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "wmKOOELr9X5e",
-        "outputId": "e64b10b0-393f-4881-9d7f-1c5d5d5004c4"
+        "outputId": "265f9058-a4e9-4609-e5f7-3b71f0ecbd03"
       },
-      "execution_count": 756,
+      "execution_count": 16,
       "outputs": [
         {
           "output_type": "stream",
@@ -1733,9 +1735,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "77kULYCYAb3o",
-        "outputId": "2107bd84-638f-4414-88a7-9669cf873cad"
+        "outputId": "78fd5929-f1c8-4b26-86a7-02edd04714fd"
       },
-      "execution_count": 757,
+      "execution_count": 17,
       "outputs": [
         {
           "output_type": "stream",
@@ -1770,9 +1772,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "DqgaeYB9-KTd",
-        "outputId": "0ee535de-9b0a-40b3-912a-36a5fa17bfb5"
+        "outputId": "8ef7b0e8-d113-45f0-bebb-a41e4a827d54"
       },
-      "execution_count": 758,
+      "execution_count": 18,
       "outputs": [
         {
           "output_type": "stream",
@@ -1826,9 +1828,9 @@
         "colab": {
           "base_uri": "https://localhost:8080/"
         },
-        "outputId": "ea2122dc-4773-4cea-c413-ad3f07c14789"
+        "outputId": "bbf7d0e0-ebd9-47f3-9056-2940b04205f8"
       },
-      "execution_count": 759,
+      "execution_count": 19,
       "outputs": [
         {
           "output_type": "stream",
@@ -1861,9 +1863,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "WO_IHwWb2IoS",
-        "outputId": "1f03c5d2-af5a-4d5f-965d-7c91efc519d6"
+        "outputId": "2afd597a-a471-4485-bec8-28e4a8b83b77"
       },
-      "execution_count": 760,
+      "execution_count": 20,
       "outputs": [
         {
           "output_type": "stream",
@@ -1890,9 +1892,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "iHUNVH7J7ofc",
-        "outputId": "7a2c69d6-5d1f-4d96-988f-fcfa41fcca3e"
+        "outputId": "c945c5a7-67d2-4b27-c350-08377501577b"
       },
-      "execution_count": 761,
+      "execution_count": 21,
       "outputs": [
         {
           "output_type": "stream",
@@ -1943,7 +1945,7 @@
       "metadata": {
         "id": "YWd_ueLVD1tb"
       },
-      "execution_count": 762,
+      "execution_count": 22,
       "outputs": []
     },
     {
@@ -1957,9 +1959,9 @@
           "height": 144
         },
         "id": "w-IEaWYBEQR1",
-        "outputId": "f0856b51-132f-46a4-9518-0db2fe969470"
+        "outputId": "c0ca143b-7766-45b0-92d8-8676de6533ca"
       },
-      "execution_count": 763,
+      "execution_count": 23,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -1977,7 +1979,7 @@
             ],
             "text/html": [
               "\n",
-              "  <div id=\"df-f70ea81a-c377-48cd-8efd-9aac7b7578c2\" class=\"colab-df-container\">\n",
+              "  <div id=\"df-dc03df22-dbe6-42d5-b416-c49ec810a2c4\" class=\"colab-df-container\">\n",
               "    <div>\n",
               "<style scoped>\n",
               "    .dataframe tbody tr th:only-of-type {\n",
@@ -2062,7 +2064,7 @@
               "    <div class=\"colab-df-buttons\">\n",
               "\n",
               "  <div class=\"colab-df-container\">\n",
-              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-f70ea81a-c377-48cd-8efd-9aac7b7578c2')\"\n",
+              "    <button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-dc03df22-dbe6-42d5-b416-c49ec810a2c4')\"\n",
               "            title=\"Convert this dataframe to an interactive table.\"\n",
               "            style=\"display:none;\">\n",
               "\n",
@@ -2114,12 +2116,12 @@
               "\n",
               "    <script>\n",
               "      const buttonEl =\n",
-              "        document.querySelector('#df-f70ea81a-c377-48cd-8efd-9aac7b7578c2 button.colab-df-convert');\n",
+              "        document.querySelector('#df-dc03df22-dbe6-42d5-b416-c49ec810a2c4 button.colab-df-convert');\n",
               "      buttonEl.style.display =\n",
               "        google.colab.kernel.accessAllowed ? 'block' : 'none';\n",
               "\n",
               "      async function convertToInteractive(key) {\n",
-              "        const element = document.querySelector('#df-f70ea81a-c377-48cd-8efd-9aac7b7578c2');\n",
+              "        const element = document.querySelector('#df-dc03df22-dbe6-42d5-b416-c49ec810a2c4');\n",
               "        const dataTable =\n",
               "          await google.colab.kernel.invokeFunction('convertToInteractive',\n",
               "                                                    [key], {});\n",
@@ -2148,7 +2150,7 @@
             }
           },
           "metadata": {},
-          "execution_count": 763
+          "execution_count": 23
         }
       ]
     },
@@ -2163,9 +2165,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "bHVyvG15EIva",
-        "outputId": "aee7e2f6-f1ce-421a-bc19-636d322aea43"
+        "outputId": "e68541c2-2f7d-4e98-cdf1-81555f515a96"
       },
-      "execution_count": 764,
+      "execution_count": 24,
       "outputs": [
         {
           "output_type": "stream",
@@ -2220,131 +2222,131 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 780
+          "height": 746
         },
         "id": "F8KP9PTsDqwA",
-        "outputId": "726058e4-b8ba-4c07-b633-8bc5e7d5b62c"
+        "outputId": "b7c01822-b825-43b3-8501-02f5f16ee25a"
       },
-      "execution_count": 765,
+      "execution_count": 25,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27bae9e50>"
+              "<pandas.io.formats.style.Styler at 0x7af49b4916a0>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_0f10e\" class=\"dataframe\">\n",
+              "<table id=\"T_60422\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_0f10e_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
-              "      <th id=\"T_0f10e_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
-              "      <th id=\"T_0f10e_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
-              "      <th id=\"T_0f10e_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
-              "      <th id=\"T_0f10e_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
-              "      <th id=\"T_0f10e_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
-              "      <th id=\"T_0f10e_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
+              "      <th id=\"T_60422_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
+              "      <th id=\"T_60422_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
+              "      <th id=\"T_60422_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
+              "      <th id=\"T_60422_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
+              "      <th id=\"T_60422_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
+              "      <th id=\"T_60422_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
+              "      <th id=\"T_60422_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
-              "      <td id=\"T_0f10e_row0_col1\" class=\"data row0 col1\" >534</td>\n",
-              "      <td id=\"T_0f10e_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row0_col3\" class=\"data row0 col3\" >52</td>\n",
-              "      <td id=\"T_0f10e_row0_col4\" class=\"data row0 col4\" >46</td>\n",
-              "      <td id=\"T_0f10e_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
-              "      <td id=\"T_0f10e_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
+              "      <td id=\"T_60422_row0_col1\" class=\"data row0 col1\" >534</td>\n",
+              "      <td id=\"T_60422_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row0_col3\" class=\"data row0 col3\" >52</td>\n",
+              "      <td id=\"T_60422_row0_col4\" class=\"data row0 col4\" >46</td>\n",
+              "      <td id=\"T_60422_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_60422_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
-              "      <td id=\"T_0f10e_row1_col1\" class=\"data row1 col1\" >279</td>\n",
-              "      <td id=\"T_0f10e_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row1_col3\" class=\"data row1 col3\" >15</td>\n",
-              "      <td id=\"T_0f10e_row1_col4\" class=\"data row1 col4\" >15</td>\n",
-              "      <td id=\"T_0f10e_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
-              "      <td id=\"T_0f10e_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
+              "      <td id=\"T_60422_row1_col1\" class=\"data row1 col1\" >279</td>\n",
+              "      <td id=\"T_60422_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row1_col3\" class=\"data row1 col3\" >15</td>\n",
+              "      <td id=\"T_60422_row1_col4\" class=\"data row1 col4\" >15</td>\n",
+              "      <td id=\"T_60422_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
+              "      <td id=\"T_60422_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
-              "      <td id=\"T_0f10e_row2_col1\" class=\"data row2 col1\" >290</td>\n",
-              "      <td id=\"T_0f10e_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row2_col3\" class=\"data row2 col3\" >82</td>\n",
-              "      <td id=\"T_0f10e_row2_col4\" class=\"data row2 col4\" >63</td>\n",
-              "      <td id=\"T_0f10e_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
-              "      <td id=\"T_0f10e_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
+              "      <td id=\"T_60422_row2_col1\" class=\"data row2 col1\" >290</td>\n",
+              "      <td id=\"T_60422_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row2_col3\" class=\"data row2 col3\" >82</td>\n",
+              "      <td id=\"T_60422_row2_col4\" class=\"data row2 col4\" >63</td>\n",
+              "      <td id=\"T_60422_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
+              "      <td id=\"T_60422_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
-              "      <td id=\"T_0f10e_row3_col1\" class=\"data row3 col1\" >323</td>\n",
-              "      <td id=\"T_0f10e_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row3_col3\" class=\"data row3 col3\" >71</td>\n",
-              "      <td id=\"T_0f10e_row3_col4\" class=\"data row3 col4\" >62</td>\n",
-              "      <td id=\"T_0f10e_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
-              "      <td id=\"T_0f10e_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
+              "      <td id=\"T_60422_row3_col1\" class=\"data row3 col1\" >323</td>\n",
+              "      <td id=\"T_60422_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row3_col3\" class=\"data row3 col3\" >71</td>\n",
+              "      <td id=\"T_60422_row3_col4\" class=\"data row3 col4\" >62</td>\n",
+              "      <td id=\"T_60422_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_60422_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
-              "      <td id=\"T_0f10e_row4_col1\" class=\"data row4 col1\" >957</td>\n",
-              "      <td id=\"T_0f10e_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row4_col3\" class=\"data row4 col3\" >6</td>\n",
-              "      <td id=\"T_0f10e_row4_col4\" class=\"data row4 col4\" >6</td>\n",
-              "      <td id=\"T_0f10e_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
-              "      <td id=\"T_0f10e_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
+              "      <td id=\"T_60422_row4_col1\" class=\"data row4 col1\" >957</td>\n",
+              "      <td id=\"T_60422_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row4_col3\" class=\"data row4 col3\" >6</td>\n",
+              "      <td id=\"T_60422_row4_col4\" class=\"data row4 col4\" >6</td>\n",
+              "      <td id=\"T_60422_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
+              "      <td id=\"T_60422_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
-              "      <td id=\"T_0f10e_row5_col1\" class=\"data row5 col1\" >49</td>\n",
-              "      <td id=\"T_0f10e_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row5_col3\" class=\"data row5 col3\" >64</td>\n",
-              "      <td id=\"T_0f10e_row5_col4\" class=\"data row5 col4\" >54</td>\n",
-              "      <td id=\"T_0f10e_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_0f10e_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
+              "      <td id=\"T_60422_row5_col1\" class=\"data row5 col1\" >49</td>\n",
+              "      <td id=\"T_60422_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row5_col3\" class=\"data row5 col3\" >64</td>\n",
+              "      <td id=\"T_60422_row5_col4\" class=\"data row5 col4\" >54</td>\n",
+              "      <td id=\"T_60422_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_60422_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
-              "      <td id=\"T_0f10e_row6_col1\" class=\"data row6 col1\" >906</td>\n",
-              "      <td id=\"T_0f10e_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row6_col3\" class=\"data row6 col3\" >78</td>\n",
-              "      <td id=\"T_0f10e_row6_col4\" class=\"data row6 col4\" >67</td>\n",
-              "      <td id=\"T_0f10e_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_0f10e_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
+              "      <td id=\"T_60422_row6_col1\" class=\"data row6 col1\" >906</td>\n",
+              "      <td id=\"T_60422_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row6_col3\" class=\"data row6 col3\" >78</td>\n",
+              "      <td id=\"T_60422_row6_col4\" class=\"data row6 col4\" >67</td>\n",
+              "      <td id=\"T_60422_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_60422_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
-              "      <td id=\"T_0f10e_row7_col1\" class=\"data row7 col1\" >653</td>\n",
-              "      <td id=\"T_0f10e_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row7_col3\" class=\"data row7 col3\" >81</td>\n",
-              "      <td id=\"T_0f10e_row7_col4\" class=\"data row7 col4\" >70</td>\n",
-              "      <td id=\"T_0f10e_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
-              "      <td id=\"T_0f10e_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
+              "      <td id=\"T_60422_row7_col1\" class=\"data row7 col1\" >653</td>\n",
+              "      <td id=\"T_60422_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row7_col3\" class=\"data row7 col3\" >81</td>\n",
+              "      <td id=\"T_60422_row7_col4\" class=\"data row7 col4\" >70</td>\n",
+              "      <td id=\"T_60422_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
+              "      <td id=\"T_60422_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
-              "      <td id=\"T_0f10e_row8_col1\" class=\"data row8 col1\" >842</td>\n",
-              "      <td id=\"T_0f10e_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row8_col3\" class=\"data row8 col3\" >37</td>\n",
-              "      <td id=\"T_0f10e_row8_col4\" class=\"data row8 col4\" >33</td>\n",
-              "      <td id=\"T_0f10e_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_0f10e_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
+              "      <td id=\"T_60422_row8_col1\" class=\"data row8 col1\" >842</td>\n",
+              "      <td id=\"T_60422_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row8_col3\" class=\"data row8 col3\" >37</td>\n",
+              "      <td id=\"T_60422_row8_col4\" class=\"data row8 col4\" >33</td>\n",
+              "      <td id=\"T_60422_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_60422_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_0f10e_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
-              "      <td id=\"T_0f10e_row9_col1\" class=\"data row9 col1\" >616</td>\n",
-              "      <td id=\"T_0f10e_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_0f10e_row9_col3\" class=\"data row9 col3\" >8</td>\n",
-              "      <td id=\"T_0f10e_row9_col4\" class=\"data row9 col4\" >8</td>\n",
-              "      <td id=\"T_0f10e_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
-              "      <td id=\"T_0f10e_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
+              "      <td id=\"T_60422_row9_col1\" class=\"data row9 col1\" >616</td>\n",
+              "      <td id=\"T_60422_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_60422_row9_col3\" class=\"data row9 col3\" >8</td>\n",
+              "      <td id=\"T_60422_row9_col4\" class=\"data row9 col4\" >8</td>\n",
+              "      <td id=\"T_60422_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
+              "      <td id=\"T_60422_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 765
+          "execution_count": 25
         }
       ]
     },
@@ -2384,106 +2386,106 @@
           "height": 363
         },
         "id": "2SNrIJ139z7Q",
-        "outputId": "128ae601-bfa8-42b7-e83f-ca37159aab40"
+        "outputId": "bf6def85-f8c0-4810-f730-82ba6701c4b5"
       },
-      "execution_count": 766,
+      "execution_count": 26,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27bae9f90>"
+              "<pandas.io.formats.style.Styler at 0x7af49b74b390>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_5454c\" class=\"dataframe\">\n",
+              "<table id=\"T_97aeb\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_5454c_level0_col0\" class=\"col_heading level0 col0\" >CL_ID</th>\n",
-              "      <th id=\"T_5454c_level0_col1\" class=\"col_heading level0 col1\" >GENERO</th>\n",
-              "      <th id=\"T_5454c_level0_col2\" class=\"col_heading level0 col2\" >ESTADO_CIVIL</th>\n",
-              "      <th id=\"T_5454c_level0_col3\" class=\"col_heading level0 col3\" >NUMERO_FILHOS</th>\n",
-              "      <th id=\"T_5454c_level0_col4\" class=\"col_heading level0 col4\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_97aeb_level0_col0\" class=\"col_heading level0 col0\" >CL_ID</th>\n",
+              "      <th id=\"T_97aeb_level0_col1\" class=\"col_heading level0 col1\" >GENERO</th>\n",
+              "      <th id=\"T_97aeb_level0_col2\" class=\"col_heading level0 col2\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_97aeb_level0_col3\" class=\"col_heading level0 col3\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_97aeb_level0_col4\" class=\"col_heading level0 col4\" >SEGMENTO_ECONOMICO</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row0_col0\" class=\"data row0 col0\" >1</td>\n",
-              "      <td id=\"T_5454c_row0_col1\" class=\"data row0 col1\" >M</td>\n",
-              "      <td id=\"T_5454c_row0_col2\" class=\"data row0 col2\" >1</td>\n",
-              "      <td id=\"T_5454c_row0_col3\" class=\"data row0 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row0_col4\" class=\"data row0 col4\" >C</td>\n",
+              "      <td id=\"T_97aeb_row0_col0\" class=\"data row0 col0\" >1</td>\n",
+              "      <td id=\"T_97aeb_row0_col1\" class=\"data row0 col1\" >M</td>\n",
+              "      <td id=\"T_97aeb_row0_col2\" class=\"data row0 col2\" >1</td>\n",
+              "      <td id=\"T_97aeb_row0_col3\" class=\"data row0 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row0_col4\" class=\"data row0 col4\" >C</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row1_col0\" class=\"data row1 col0\" >2</td>\n",
-              "      <td id=\"T_5454c_row1_col1\" class=\"data row1 col1\" >M</td>\n",
-              "      <td id=\"T_5454c_row1_col2\" class=\"data row1 col2\" >3</td>\n",
-              "      <td id=\"T_5454c_row1_col3\" class=\"data row1 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row1_col4\" class=\"data row1 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row1_col0\" class=\"data row1 col0\" >2</td>\n",
+              "      <td id=\"T_97aeb_row1_col1\" class=\"data row1 col1\" >M</td>\n",
+              "      <td id=\"T_97aeb_row1_col2\" class=\"data row1 col2\" >3</td>\n",
+              "      <td id=\"T_97aeb_row1_col3\" class=\"data row1 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row1_col4\" class=\"data row1 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row2_col0\" class=\"data row2 col0\" >3</td>\n",
-              "      <td id=\"T_5454c_row2_col1\" class=\"data row2 col1\" >F</td>\n",
-              "      <td id=\"T_5454c_row2_col2\" class=\"data row2 col2\" >4</td>\n",
-              "      <td id=\"T_5454c_row2_col3\" class=\"data row2 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row2_col4\" class=\"data row2 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row2_col0\" class=\"data row2 col0\" >3</td>\n",
+              "      <td id=\"T_97aeb_row2_col1\" class=\"data row2 col1\" >F</td>\n",
+              "      <td id=\"T_97aeb_row2_col2\" class=\"data row2 col2\" >4</td>\n",
+              "      <td id=\"T_97aeb_row2_col3\" class=\"data row2 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row2_col4\" class=\"data row2 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row3_col0\" class=\"data row3 col0\" >4</td>\n",
-              "      <td id=\"T_5454c_row3_col1\" class=\"data row3 col1\" >M</td>\n",
-              "      <td id=\"T_5454c_row3_col2\" class=\"data row3 col2\" >4</td>\n",
-              "      <td id=\"T_5454c_row3_col3\" class=\"data row3 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row3_col4\" class=\"data row3 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row3_col0\" class=\"data row3 col0\" >4</td>\n",
+              "      <td id=\"T_97aeb_row3_col1\" class=\"data row3 col1\" >M</td>\n",
+              "      <td id=\"T_97aeb_row3_col2\" class=\"data row3 col2\" >4</td>\n",
+              "      <td id=\"T_97aeb_row3_col3\" class=\"data row3 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row3_col4\" class=\"data row3 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row4_col0\" class=\"data row4 col0\" >5</td>\n",
-              "      <td id=\"T_5454c_row4_col1\" class=\"data row4 col1\" >F</td>\n",
-              "      <td id=\"T_5454c_row4_col2\" class=\"data row4 col2\" >4</td>\n",
-              "      <td id=\"T_5454c_row4_col3\" class=\"data row4 col3\" >3</td>\n",
-              "      <td id=\"T_5454c_row4_col4\" class=\"data row4 col4\" >C</td>\n",
+              "      <td id=\"T_97aeb_row4_col0\" class=\"data row4 col0\" >5</td>\n",
+              "      <td id=\"T_97aeb_row4_col1\" class=\"data row4 col1\" >F</td>\n",
+              "      <td id=\"T_97aeb_row4_col2\" class=\"data row4 col2\" >4</td>\n",
+              "      <td id=\"T_97aeb_row4_col3\" class=\"data row4 col3\" >3</td>\n",
+              "      <td id=\"T_97aeb_row4_col4\" class=\"data row4 col4\" >C</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row5_col0\" class=\"data row5 col0\" >6</td>\n",
-              "      <td id=\"T_5454c_row5_col1\" class=\"data row5 col1\" >F</td>\n",
-              "      <td id=\"T_5454c_row5_col2\" class=\"data row5 col2\" >2</td>\n",
-              "      <td id=\"T_5454c_row5_col3\" class=\"data row5 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row5_col4\" class=\"data row5 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row5_col0\" class=\"data row5 col0\" >6</td>\n",
+              "      <td id=\"T_97aeb_row5_col1\" class=\"data row5 col1\" >F</td>\n",
+              "      <td id=\"T_97aeb_row5_col2\" class=\"data row5 col2\" >2</td>\n",
+              "      <td id=\"T_97aeb_row5_col3\" class=\"data row5 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row5_col4\" class=\"data row5 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row6_col0\" class=\"data row6 col0\" >7</td>\n",
-              "      <td id=\"T_5454c_row6_col1\" class=\"data row6 col1\" >M</td>\n",
-              "      <td id=\"T_5454c_row6_col2\" class=\"data row6 col2\" >1</td>\n",
-              "      <td id=\"T_5454c_row6_col3\" class=\"data row6 col3\" >3</td>\n",
-              "      <td id=\"T_5454c_row6_col4\" class=\"data row6 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row6_col0\" class=\"data row6 col0\" >7</td>\n",
+              "      <td id=\"T_97aeb_row6_col1\" class=\"data row6 col1\" >M</td>\n",
+              "      <td id=\"T_97aeb_row6_col2\" class=\"data row6 col2\" >1</td>\n",
+              "      <td id=\"T_97aeb_row6_col3\" class=\"data row6 col3\" >3</td>\n",
+              "      <td id=\"T_97aeb_row6_col4\" class=\"data row6 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row7_col0\" class=\"data row7 col0\" >8</td>\n",
-              "      <td id=\"T_5454c_row7_col1\" class=\"data row7 col1\" >F</td>\n",
-              "      <td id=\"T_5454c_row7_col2\" class=\"data row7 col2\" >3</td>\n",
-              "      <td id=\"T_5454c_row7_col3\" class=\"data row7 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row7_col4\" class=\"data row7 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row7_col0\" class=\"data row7 col0\" >8</td>\n",
+              "      <td id=\"T_97aeb_row7_col1\" class=\"data row7 col1\" >F</td>\n",
+              "      <td id=\"T_97aeb_row7_col2\" class=\"data row7 col2\" >3</td>\n",
+              "      <td id=\"T_97aeb_row7_col3\" class=\"data row7 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row7_col4\" class=\"data row7 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row8_col0\" class=\"data row8 col0\" >9</td>\n",
-              "      <td id=\"T_5454c_row8_col1\" class=\"data row8 col1\" >F</td>\n",
-              "      <td id=\"T_5454c_row8_col2\" class=\"data row8 col2\" >2</td>\n",
-              "      <td id=\"T_5454c_row8_col3\" class=\"data row8 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row8_col4\" class=\"data row8 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row8_col0\" class=\"data row8 col0\" >9</td>\n",
+              "      <td id=\"T_97aeb_row8_col1\" class=\"data row8 col1\" >F</td>\n",
+              "      <td id=\"T_97aeb_row8_col2\" class=\"data row8 col2\" >2</td>\n",
+              "      <td id=\"T_97aeb_row8_col3\" class=\"data row8 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row8_col4\" class=\"data row8 col4\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_5454c_row9_col0\" class=\"data row9 col0\" >10</td>\n",
-              "      <td id=\"T_5454c_row9_col1\" class=\"data row9 col1\" >M</td>\n",
-              "      <td id=\"T_5454c_row9_col2\" class=\"data row9 col2\" >1</td>\n",
-              "      <td id=\"T_5454c_row9_col3\" class=\"data row9 col3\" >0</td>\n",
-              "      <td id=\"T_5454c_row9_col4\" class=\"data row9 col4\" >B</td>\n",
+              "      <td id=\"T_97aeb_row9_col0\" class=\"data row9 col0\" >10</td>\n",
+              "      <td id=\"T_97aeb_row9_col1\" class=\"data row9 col1\" >M</td>\n",
+              "      <td id=\"T_97aeb_row9_col2\" class=\"data row9 col2\" >1</td>\n",
+              "      <td id=\"T_97aeb_row9_col3\" class=\"data row9 col3\" >0</td>\n",
+              "      <td id=\"T_97aeb_row9_col4\" class=\"data row9 col4\" >B</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 766
+          "execution_count": 26
         }
       ]
     },
@@ -2512,186 +2514,186 @@
       "metadata": {
         "colab": {
           "base_uri": "https://localhost:8080/",
-          "height": 902
+          "height": 867
         },
         "id": "F8ONYGfJDi8F",
-        "outputId": "b10adbb3-4720-49bb-dadb-9858a90193ca"
+        "outputId": "bee8a2da-d67a-4ca2-d070-e248ea170299"
       },
-      "execution_count": 767,
+      "execution_count": 27,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea210>"
+              "<pandas.io.formats.style.Styler at 0x7af49b6139d0>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_39380\" class=\"dataframe\">\n",
+              "<table id=\"T_3403f\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_39380_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
-              "      <th id=\"T_39380_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
-              "      <th id=\"T_39380_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
-              "      <th id=\"T_39380_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
-              "      <th id=\"T_39380_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
-              "      <th id=\"T_39380_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
-              "      <th id=\"T_39380_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
-              "      <th id=\"T_39380_level0_col7\" class=\"col_heading level0 col7\" >index</th>\n",
-              "      <th id=\"T_39380_level0_col8\" class=\"col_heading level0 col8\" >GENERO</th>\n",
-              "      <th id=\"T_39380_level0_col9\" class=\"col_heading level0 col9\" >ESTADO_CIVIL</th>\n",
-              "      <th id=\"T_39380_level0_col10\" class=\"col_heading level0 col10\" >NUMERO_FILHOS</th>\n",
-              "      <th id=\"T_39380_level0_col11\" class=\"col_heading level0 col11\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_3403f_level0_col0\" class=\"col_heading level0 col0\" >CO_ID</th>\n",
+              "      <th id=\"T_3403f_level0_col1\" class=\"col_heading level0 col1\" >CL_ID</th>\n",
+              "      <th id=\"T_3403f_level0_col2\" class=\"col_heading level0 col2\" >DATA_INT</th>\n",
+              "      <th id=\"T_3403f_level0_col3\" class=\"col_heading level0 col3\" >QTD_TOTAL_ITENS</th>\n",
+              "      <th id=\"T_3403f_level0_col4\" class=\"col_heading level0 col4\" >QTD_PRODUTOS_DIFERENTES</th>\n",
+              "      <th id=\"T_3403f_level0_col5\" class=\"col_heading level0 col5\" >PRODUTOS</th>\n",
+              "      <th id=\"T_3403f_level0_col6\" class=\"col_heading level0 col6\" >DATA_COMPRA</th>\n",
+              "      <th id=\"T_3403f_level0_col7\" class=\"col_heading level0 col7\" >index</th>\n",
+              "      <th id=\"T_3403f_level0_col8\" class=\"col_heading level0 col8\" >GENERO</th>\n",
+              "      <th id=\"T_3403f_level0_col9\" class=\"col_heading level0 col9\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_3403f_level0_col10\" class=\"col_heading level0 col10\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_3403f_level0_col11\" class=\"col_heading level0 col11\" >SEGMENTO_ECONOMICO</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
-              "      <td id=\"T_39380_row0_col1\" class=\"data row0 col1\" >534</td>\n",
-              "      <td id=\"T_39380_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row0_col3\" class=\"data row0 col3\" >52</td>\n",
-              "      <td id=\"T_39380_row0_col4\" class=\"data row0 col4\" >46</td>\n",
-              "      <td id=\"T_39380_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
-              "      <td id=\"T_39380_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row0_col7\" class=\"data row0 col7\" >533</td>\n",
-              "      <td id=\"T_39380_row0_col8\" class=\"data row0 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row0_col9\" class=\"data row0 col9\" >4</td>\n",
-              "      <td id=\"T_39380_row0_col10\" class=\"data row0 col10\" >1</td>\n",
-              "      <td id=\"T_39380_row0_col11\" class=\"data row0 col11\" >C</td>\n",
+              "      <td id=\"T_3403f_row0_col0\" class=\"data row0 col0\" >1000</td>\n",
+              "      <td id=\"T_3403f_row0_col1\" class=\"data row0 col1\" >534</td>\n",
+              "      <td id=\"T_3403f_row0_col2\" class=\"data row0 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row0_col3\" class=\"data row0 col3\" >52</td>\n",
+              "      <td id=\"T_3403f_row0_col4\" class=\"data row0 col4\" >46</td>\n",
+              "      <td id=\"T_3403f_row0_col5\" class=\"data row0 col5\" >['ABACAXI', 'AZEITE', 'BANANA', 'COGUMELOS', 'COPA SUINA', 'CORACAO DE FRANGO', 'PATE', 'QUEIJO MUSSARELA', 'SARDINHA', 'UVA', 'REFRIGERANTE COLA', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'PAPEL HIGIENICO', 'PRESERVATIVO', 'REPELENTE', 'AMACIANTE', 'REMOVEDOR', 'UVA', 'TIRA MANCHA', 'SABONETE', 'RODO', 'RICOTA', 'REFRIGERANTE GUARANA', 'QUEIJO MUSSARELA', 'PATE', 'PALMITO', 'MORTADELA', 'LIMPADOR MULTIUSO', 'LIMPA VIDROS', 'LENCO UMEDECIDO', 'LATA DE ERVILHA', 'KETCHUP', 'HASTES FLEXIVEIS', 'GRANOLA', 'FRALDA', 'ENERGETICO', 'DETERGENTE', 'COGUMELOS', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ INTEGRAL', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_3403f_row0_col6\" class=\"data row0 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row0_col7\" class=\"data row0 col7\" >533</td>\n",
+              "      <td id=\"T_3403f_row0_col8\" class=\"data row0 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row0_col9\" class=\"data row0 col9\" >4</td>\n",
+              "      <td id=\"T_3403f_row0_col10\" class=\"data row0 col10\" >1</td>\n",
+              "      <td id=\"T_3403f_row0_col11\" class=\"data row0 col11\" >C</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
-              "      <td id=\"T_39380_row1_col1\" class=\"data row1 col1\" >279</td>\n",
-              "      <td id=\"T_39380_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row1_col3\" class=\"data row1 col3\" >15</td>\n",
-              "      <td id=\"T_39380_row1_col4\" class=\"data row1 col4\" >15</td>\n",
-              "      <td id=\"T_39380_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
-              "      <td id=\"T_39380_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row1_col7\" class=\"data row1 col7\" >278</td>\n",
-              "      <td id=\"T_39380_row1_col8\" class=\"data row1 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row1_col9\" class=\"data row1 col9\" >1</td>\n",
-              "      <td id=\"T_39380_row1_col10\" class=\"data row1 col10\" >2</td>\n",
-              "      <td id=\"T_39380_row1_col11\" class=\"data row1 col11\" >B</td>\n",
+              "      <td id=\"T_3403f_row1_col0\" class=\"data row1 col0\" >1040</td>\n",
+              "      <td id=\"T_3403f_row1_col1\" class=\"data row1 col1\" >279</td>\n",
+              "      <td id=\"T_3403f_row1_col2\" class=\"data row1 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row1_col3\" class=\"data row1 col3\" >15</td>\n",
+              "      <td id=\"T_3403f_row1_col4\" class=\"data row1 col4\" >15</td>\n",
+              "      <td id=\"T_3403f_row1_col5\" class=\"data row1 col5\" >['CAFE', 'LEITE CONDENSADO', 'MAMAO PAPAYA', 'OVOS', 'SALGADINHOS DE MILHO', 'ESCOVA DE DENTE', 'ALCOOL', 'AMACIANTE', 'LUSTRA MOVEIS', 'SABAO', 'RACAO UMIDA PARA GATOS', 'QUEIJO MUSSARELA', 'MORDEDOR', 'LEITE', 'CONDICIONADOR']</td>\n",
+              "      <td id=\"T_3403f_row1_col6\" class=\"data row1 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row1_col7\" class=\"data row1 col7\" >278</td>\n",
+              "      <td id=\"T_3403f_row1_col8\" class=\"data row1 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row1_col9\" class=\"data row1 col9\" >1</td>\n",
+              "      <td id=\"T_3403f_row1_col10\" class=\"data row1 col10\" >2</td>\n",
+              "      <td id=\"T_3403f_row1_col11\" class=\"data row1 col11\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
-              "      <td id=\"T_39380_row2_col1\" class=\"data row2 col1\" >290</td>\n",
-              "      <td id=\"T_39380_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row2_col3\" class=\"data row2 col3\" >82</td>\n",
-              "      <td id=\"T_39380_row2_col4\" class=\"data row2 col4\" >63</td>\n",
-              "      <td id=\"T_39380_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
-              "      <td id=\"T_39380_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row2_col7\" class=\"data row2 col7\" >289</td>\n",
-              "      <td id=\"T_39380_row2_col8\" class=\"data row2 col8\" >F</td>\n",
-              "      <td id=\"T_39380_row2_col9\" class=\"data row2 col9\" >1</td>\n",
-              "      <td id=\"T_39380_row2_col10\" class=\"data row2 col10\" >0</td>\n",
-              "      <td id=\"T_39380_row2_col11\" class=\"data row2 col11\" >B</td>\n",
+              "      <td id=\"T_3403f_row2_col0\" class=\"data row2 col0\" >1078</td>\n",
+              "      <td id=\"T_3403f_row2_col1\" class=\"data row2 col1\" >290</td>\n",
+              "      <td id=\"T_3403f_row2_col2\" class=\"data row2 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row2_col3\" class=\"data row2 col3\" >82</td>\n",
+              "      <td id=\"T_3403f_row2_col4\" class=\"data row2 col4\" >63</td>\n",
+              "      <td id=\"T_3403f_row2_col5\" class=\"data row2 col5\" >['CHUPETA', 'ACHOCOLATADO', 'ALHO', 'BANANA', 'BATATA', 'BISCOITO', 'CAFE', 'CENOURA', 'CHA', 'COGUMELOS', 'CORACAO DE FRANGO', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LATA DE MILHO', 'LIMAO', 'MAMAO', 'OVOS', 'PALMITO', 'QUEIJO MUSSARELA', 'SALGADINHO', 'SNACKS', 'TOMATE', 'FIO DENTAL', 'HIDRATANTE', 'LENCO UMEDECIDO', 'PAPEL HIGIENICO', 'SHAMPOO', 'AGUA SANITARIA', 'DESINFETANTE', 'LIMPA VIDROS', 'LUSTRA MOVEIS', 'ODORIZADOR', 'Sem Nome', 'RODO', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA CAES', 'TOMATE', 'TIRA MANCHA', 'TINTURAS', 'SARDINHA', 'RICOTA', 'REQUEIJAO', 'REFRIGERANTE COLA', 'RACAO UMIDA PARA GATOS', 'QUEIJO DE CABRA', 'PROTETOR SOLAR', 'PATE', 'PASTA DE DENTE', 'PALMITO', 'ODORIZADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'GEL', 'FRALDA', 'FIXADOR', 'DETERGENTE', 'CHUPETA', 'CENOURA', 'CAFE', 'ATUM']</td>\n",
+              "      <td id=\"T_3403f_row2_col6\" class=\"data row2 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row2_col7\" class=\"data row2 col7\" >289</td>\n",
+              "      <td id=\"T_3403f_row2_col8\" class=\"data row2 col8\" >F</td>\n",
+              "      <td id=\"T_3403f_row2_col9\" class=\"data row2 col9\" >1</td>\n",
+              "      <td id=\"T_3403f_row2_col10\" class=\"data row2 col10\" >0</td>\n",
+              "      <td id=\"T_3403f_row2_col11\" class=\"data row2 col11\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
-              "      <td id=\"T_39380_row3_col1\" class=\"data row3 col1\" >323</td>\n",
-              "      <td id=\"T_39380_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row3_col3\" class=\"data row3 col3\" >71</td>\n",
-              "      <td id=\"T_39380_row3_col4\" class=\"data row3 col4\" >62</td>\n",
-              "      <td id=\"T_39380_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
-              "      <td id=\"T_39380_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row3_col7\" class=\"data row3 col7\" >322</td>\n",
-              "      <td id=\"T_39380_row3_col8\" class=\"data row3 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row3_col9\" class=\"data row3 col9\" >1</td>\n",
-              "      <td id=\"T_39380_row3_col10\" class=\"data row3 col10\" >3</td>\n",
-              "      <td id=\"T_39380_row3_col11\" class=\"data row3 col11\" >B</td>\n",
+              "      <td id=\"T_3403f_row3_col0\" class=\"data row3 col0\" >1082</td>\n",
+              "      <td id=\"T_3403f_row3_col1\" class=\"data row3 col1\" >323</td>\n",
+              "      <td id=\"T_3403f_row3_col2\" class=\"data row3 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row3_col3\" class=\"data row3 col3\" >71</td>\n",
+              "      <td id=\"T_3403f_row3_col4\" class=\"data row3 col4\" >62</td>\n",
+              "      <td id=\"T_3403f_row3_col5\" class=\"data row3 col5\" >['ALMONDEGA', 'AZEITE', 'CAFE', 'DANETTE', 'FILE DE PEIXE', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'MACARRAO INSTANTANEO', 'MAMAO', 'OVOS', 'PAPINHA INFANTIL', 'PATE', 'PRESUNTO COZIDO', 'PRESUNTO COZIDO', 'SALGADINHO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE LIMaO', 'REFRIGERANTE OUTROS', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PAPEL HIGIENICO', 'PASTA DE DENTE', 'ALCOOL', 'AMACIANTE', 'CERA', 'DESENGORDURANTE', 'SABAO', 'SABAO EM PO', 'TIRA MANCHA', 'VASSOURA', 'RACAO SECA PARA GATOS', 'TOMATE', 'TIRA LIMO', 'TINTURAS', 'TALCO', 'SABAO', 'RODO', 'REFRIGERANTE LIMaO', 'REFRIGERANTE LARANJA', 'REFRIGERANTE GUARANA', 'RACAO UMIDA PARA CAES', 'PRESERVATIVO', 'PASTA DE DENTE', 'PAPINHA INFANTIL', 'PALMITO', 'MODELADOR', 'LUSTRA MOVEIS', 'LINGUICA', 'LEITE', 'INSETICIDA', 'HASTES FLEXIVEIS', 'GEL', 'FEIJAO', 'ENERGETICO', 'DESINFETANTE', 'CREME', 'CERA', 'CENOURA', 'BATATA', 'AMACIANTE', 'ALMONDEGA']</td>\n",
+              "      <td id=\"T_3403f_row3_col6\" class=\"data row3 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row3_col7\" class=\"data row3 col7\" >322</td>\n",
+              "      <td id=\"T_3403f_row3_col8\" class=\"data row3 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row3_col9\" class=\"data row3 col9\" >1</td>\n",
+              "      <td id=\"T_3403f_row3_col10\" class=\"data row3 col10\" >3</td>\n",
+              "      <td id=\"T_3403f_row3_col11\" class=\"data row3 col11\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
-              "      <td id=\"T_39380_row4_col1\" class=\"data row4 col1\" >957</td>\n",
-              "      <td id=\"T_39380_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row4_col3\" class=\"data row4 col3\" >6</td>\n",
-              "      <td id=\"T_39380_row4_col4\" class=\"data row4 col4\" >6</td>\n",
-              "      <td id=\"T_39380_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
-              "      <td id=\"T_39380_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row4_col7\" class=\"data row4 col7\" >956</td>\n",
-              "      <td id=\"T_39380_row4_col8\" class=\"data row4 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row4_col9\" class=\"data row4 col9\" >2</td>\n",
-              "      <td id=\"T_39380_row4_col10\" class=\"data row4 col10\" >3</td>\n",
-              "      <td id=\"T_39380_row4_col11\" class=\"data row4 col11\" >B</td>\n",
+              "      <td id=\"T_3403f_row4_col0\" class=\"data row4 col0\" >1103</td>\n",
+              "      <td id=\"T_3403f_row4_col1\" class=\"data row4 col1\" >957</td>\n",
+              "      <td id=\"T_3403f_row4_col2\" class=\"data row4 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row4_col3\" class=\"data row4 col3\" >6</td>\n",
+              "      <td id=\"T_3403f_row4_col4\" class=\"data row4 col4\" >6</td>\n",
+              "      <td id=\"T_3403f_row4_col5\" class=\"data row4 col5\" >['BATATA DOCE', 'DANETTE', 'DOCE', 'PROTETOR SOLAR', 'Sem Nome', 'LATA DE ERVILHA']</td>\n",
+              "      <td id=\"T_3403f_row4_col6\" class=\"data row4 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row4_col7\" class=\"data row4 col7\" >956</td>\n",
+              "      <td id=\"T_3403f_row4_col8\" class=\"data row4 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row4_col9\" class=\"data row4 col9\" >2</td>\n",
+              "      <td id=\"T_3403f_row4_col10\" class=\"data row4 col10\" >3</td>\n",
+              "      <td id=\"T_3403f_row4_col11\" class=\"data row4 col11\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
-              "      <td id=\"T_39380_row5_col1\" class=\"data row5 col1\" >49</td>\n",
-              "      <td id=\"T_39380_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row5_col3\" class=\"data row5 col3\" >64</td>\n",
-              "      <td id=\"T_39380_row5_col4\" class=\"data row5 col4\" >54</td>\n",
-              "      <td id=\"T_39380_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_39380_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row5_col7\" class=\"data row5 col7\" >48</td>\n",
-              "      <td id=\"T_39380_row5_col8\" class=\"data row5 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row5_col9\" class=\"data row5 col9\" >2</td>\n",
-              "      <td id=\"T_39380_row5_col10\" class=\"data row5 col10\" >0</td>\n",
-              "      <td id=\"T_39380_row5_col11\" class=\"data row5 col11\" >C</td>\n",
+              "      <td id=\"T_3403f_row5_col0\" class=\"data row5 col0\" >1121</td>\n",
+              "      <td id=\"T_3403f_row5_col1\" class=\"data row5 col1\" >49</td>\n",
+              "      <td id=\"T_3403f_row5_col2\" class=\"data row5 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row5_col3\" class=\"data row5 col3\" >64</td>\n",
+              "      <td id=\"T_3403f_row5_col4\" class=\"data row5 col4\" >54</td>\n",
+              "      <td id=\"T_3403f_row5_col5\" class=\"data row5 col5\" >['ABACAXI', 'AZEITONA', 'BATATA DOCE', 'BROCOLIS', 'CENOURA', 'COPA SUINA', 'DOCE', 'HAMBUGUER', 'LATA DE MILHO', 'MAMAO PAPAYA', 'PAO DE FORMA', 'PATE', 'UVA', 'ENERGETICO', 'ESCOVA DE DENTE', 'HASTES FLEXIVEIS', 'LENCO UMEDECIDO', 'PROTETOR SOLAR', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'BALDE', 'DESINFETANTE', 'DETERGENTE', 'LIMPA VIDROS', 'REMOVEDOR', 'VASSOURA', 'RACAO SECA PARA CAES', 'RACAO UMIDA PARA GATOS', 'TIRA MANCHA', 'TINTURAS', 'SHAMPOO', 'SARDINHA', 'RACAO UMIDA PARA CAES', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PAO DE FORMA', 'PALMITO', 'OVOS', 'MORDEDOR', 'MAMAO', 'MACARRAO', 'LINGUICA', 'LIMPADOR PERFUMADO', 'LEITE', 'IOGURTE', 'INSETICIDA', 'COPA SUINA', 'COGUMELOS', 'BISCOITO', 'BATATA', 'BALDE', 'AZEITONA', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_3403f_row5_col6\" class=\"data row5 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row5_col7\" class=\"data row5 col7\" >48</td>\n",
+              "      <td id=\"T_3403f_row5_col8\" class=\"data row5 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row5_col9\" class=\"data row5 col9\" >2</td>\n",
+              "      <td id=\"T_3403f_row5_col10\" class=\"data row5 col10\" >0</td>\n",
+              "      <td id=\"T_3403f_row5_col11\" class=\"data row5 col11\" >C</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
-              "      <td id=\"T_39380_row6_col1\" class=\"data row6 col1\" >906</td>\n",
-              "      <td id=\"T_39380_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row6_col3\" class=\"data row6 col3\" >78</td>\n",
-              "      <td id=\"T_39380_row6_col4\" class=\"data row6 col4\" >67</td>\n",
-              "      <td id=\"T_39380_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_39380_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row6_col7\" class=\"data row6 col7\" >905</td>\n",
-              "      <td id=\"T_39380_row6_col8\" class=\"data row6 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row6_col9\" class=\"data row6 col9\" >2</td>\n",
-              "      <td id=\"T_39380_row6_col10\" class=\"data row6 col10\" >0</td>\n",
-              "      <td id=\"T_39380_row6_col11\" class=\"data row6 col11\" >A</td>\n",
+              "      <td id=\"T_3403f_row6_col0\" class=\"data row6 col0\" >1188</td>\n",
+              "      <td id=\"T_3403f_row6_col1\" class=\"data row6 col1\" >906</td>\n",
+              "      <td id=\"T_3403f_row6_col2\" class=\"data row6 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row6_col3\" class=\"data row6 col3\" >78</td>\n",
+              "      <td id=\"T_3403f_row6_col4\" class=\"data row6 col4\" >67</td>\n",
+              "      <td id=\"T_3403f_row6_col5\" class=\"data row6 col5\" >['CHUPETA', 'ABACAXI', 'BROCOLIS', 'CAFE', 'CORACAO DE FRANGO', 'DANETTE', 'FEIJAO', 'LATA DE ERVILHA', 'LEITE CONDENSADO', 'LIMAO', 'MACARRAO', 'MAMAO', 'PALMITO', 'PAO DE FORMA', 'QUEIJO DE CABRA', 'QUEIJO MUSSARELA', 'REQUEIJAO', 'SALGADINHOS DE MILHO', 'SNACKS', 'UVA', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIO DENTAL', 'FRALDA', 'HASTES FLEXIVEIS', 'PRESERVATIVO', 'PROTETOR SOLAR', 'SHAMPOO', 'TALCO', 'TINTURAS', 'AGUA SANITARIA', 'AMACIANTE', 'BALDE', 'INSETICIDA', 'LIMPADOR MULTIUSO', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'UVA', 'SABONETE', 'SABAO', 'RODO', 'RICOTA', 'REPELENTE', 'REFRIGERANTE OUTROS', 'RACAO UMIDA PARA GATOS', 'RACAO SECA PARA CAES', 'PALMITO', 'OVOS', 'MORTADELA', 'MACARRAO INSTANTANEO', 'LIMPADOR MULTIUSO', 'LIMAO', 'KETCHUP', 'HIDRATANTE', 'FIO DENTAL', 'FEIJAO', 'ENXAGUANTE BUCAL', 'ENERGETICO', 'DOCE', 'DESENGORDURANTE', 'CORACAO DE FRANGO', 'COPA SUINA', 'CEBOLA', 'BROCOLIS', 'BATATA DOCE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_3403f_row6_col6\" class=\"data row6 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row6_col7\" class=\"data row6 col7\" >905</td>\n",
+              "      <td id=\"T_3403f_row6_col8\" class=\"data row6 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row6_col9\" class=\"data row6 col9\" >2</td>\n",
+              "      <td id=\"T_3403f_row6_col10\" class=\"data row6 col10\" >0</td>\n",
+              "      <td id=\"T_3403f_row6_col11\" class=\"data row6 col11\" >A</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
-              "      <td id=\"T_39380_row7_col1\" class=\"data row7 col1\" >653</td>\n",
-              "      <td id=\"T_39380_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row7_col3\" class=\"data row7 col3\" >81</td>\n",
-              "      <td id=\"T_39380_row7_col4\" class=\"data row7 col4\" >70</td>\n",
-              "      <td id=\"T_39380_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
-              "      <td id=\"T_39380_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row7_col7\" class=\"data row7 col7\" >652</td>\n",
-              "      <td id=\"T_39380_row7_col8\" class=\"data row7 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row7_col9\" class=\"data row7 col9\" >2</td>\n",
-              "      <td id=\"T_39380_row7_col10\" class=\"data row7 col10\" >0</td>\n",
-              "      <td id=\"T_39380_row7_col11\" class=\"data row7 col11\" >C</td>\n",
+              "      <td id=\"T_3403f_row7_col0\" class=\"data row7 col0\" >1200</td>\n",
+              "      <td id=\"T_3403f_row7_col1\" class=\"data row7 col1\" >653</td>\n",
+              "      <td id=\"T_3403f_row7_col2\" class=\"data row7 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row7_col3\" class=\"data row7 col3\" >81</td>\n",
+              "      <td id=\"T_3403f_row7_col4\" class=\"data row7 col4\" >70</td>\n",
+              "      <td id=\"T_3403f_row7_col5\" class=\"data row7 col5\" >['CHUPETA', 'ABACATE', 'ABACAXI', 'ALMONDEGA', 'AZEITONA', 'COGUMELOS', 'CORACAO DE FRANGO', 'COXA E SOBRECOXA DE FRANGO', 'KETCHUP', 'LATA DE ERVILHA', 'LINGUICA', 'MACARRAO', 'MACARRAO INSTANTANEO', 'MAMAO', 'MANGA', 'MORTADELA', 'OVOS', 'PRESUNTO COZIDO', 'SALGADINHOS DE MILHO', 'REFRIGERANTE GUARANA', 'REFRIGERANTE LARANJA', 'ABSORVENTE', 'CONDICIONADOR', 'ESCOVA DE DENTE', 'FIXADOR', 'FRALDA', 'GEL', 'PAPEL HIGIENICO', 'PROTETOR SOLAR', 'REPELENTE', 'TINTURAS', 'ALCOOL', 'AMACIANTE', 'DESENGORDURANTE', 'LIMPA VIDROS', 'LIMPADOR PERFUMADO', 'REMOVEDOR', 'TIRA MANCHA', 'RACAO SECA PARA CAES', 'UVA', 'TALCO', 'SHAMPOO', 'SARDINHA', 'SALGADINHOS DE MILHO', 'SABONETE', 'SABAO', 'REFRIGERANTE LARANJA', 'PAO DE FORMA', 'PALMITO', 'MAMAO PAPAYA', 'LINGUICA', 'LIMAO', 'LEITE', 'LATA DE ERVILHA', 'IOGURTE', 'INSETICIDA', 'HIDRATANTE', 'GRANOLA', 'GEL', 'FIXADOR', 'FIO DENTAL', 'FILE DE PEIXE', 'DETERGENTE', 'COXA E SOBRECOXA DE FRANGO', 'CEBOLA', 'BIFE DE COXAO MOLE', 'BANANA', 'ATUM', 'ARROZ', 'AMACIANTE']</td>\n",
+              "      <td id=\"T_3403f_row7_col6\" class=\"data row7 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row7_col7\" class=\"data row7 col7\" >652</td>\n",
+              "      <td id=\"T_3403f_row7_col8\" class=\"data row7 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row7_col9\" class=\"data row7 col9\" >2</td>\n",
+              "      <td id=\"T_3403f_row7_col10\" class=\"data row7 col10\" >0</td>\n",
+              "      <td id=\"T_3403f_row7_col11\" class=\"data row7 col11\" >C</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
-              "      <td id=\"T_39380_row8_col1\" class=\"data row8 col1\" >842</td>\n",
-              "      <td id=\"T_39380_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row8_col3\" class=\"data row8 col3\" >37</td>\n",
-              "      <td id=\"T_39380_row8_col4\" class=\"data row8 col4\" >33</td>\n",
-              "      <td id=\"T_39380_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
-              "      <td id=\"T_39380_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row8_col7\" class=\"data row8 col7\" >841</td>\n",
-              "      <td id=\"T_39380_row8_col8\" class=\"data row8 col8\" >M</td>\n",
-              "      <td id=\"T_39380_row8_col9\" class=\"data row8 col9\" >5</td>\n",
-              "      <td id=\"T_39380_row8_col10\" class=\"data row8 col10\" >2</td>\n",
-              "      <td id=\"T_39380_row8_col11\" class=\"data row8 col11\" >B</td>\n",
+              "      <td id=\"T_3403f_row8_col0\" class=\"data row8 col0\" >1240</td>\n",
+              "      <td id=\"T_3403f_row8_col1\" class=\"data row8 col1\" >842</td>\n",
+              "      <td id=\"T_3403f_row8_col2\" class=\"data row8 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row8_col3\" class=\"data row8 col3\" >37</td>\n",
+              "      <td id=\"T_3403f_row8_col4\" class=\"data row8 col4\" >33</td>\n",
+              "      <td id=\"T_3403f_row8_col5\" class=\"data row8 col5\" >['ABACAXI', 'BISCOITO', 'CHA', 'PATE', 'SNACKS', 'ENERGETICO', 'REFRIGERANTE LARANJA', 'PASTA DE DENTE', 'ALCOOL', 'BALDE', 'LIMPADOR PERFUMADO', 'LUSTRA MOVEIS', 'ALIMENTO PARA PASSARO', 'RACAO SECA PARA GATOS', 'RACAO UMIDA PARA GATOS', 'TINTURAS', 'SABAO', 'RICOTA', 'REMOVEDOR', 'RACAO SECA PARA CAES', 'PROTETOR SOLAR', 'PRESUNTO COZIDO', 'OVOS', 'MODELADOR', 'LUSTRA MOVEIS', 'LIMPADOR MULTIUSO', 'LATA DE ERVILHA', 'ENXAGUANTE BUCAL', 'CREME', 'CONDICIONADOR', 'BISCOITO', 'BIFE DE COXAO MOLE', 'ARROZ INTEGRAL']</td>\n",
+              "      <td id=\"T_3403f_row8_col6\" class=\"data row8 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row8_col7\" class=\"data row8 col7\" >841</td>\n",
+              "      <td id=\"T_3403f_row8_col8\" class=\"data row8 col8\" >M</td>\n",
+              "      <td id=\"T_3403f_row8_col9\" class=\"data row8 col9\" >5</td>\n",
+              "      <td id=\"T_3403f_row8_col10\" class=\"data row8 col10\" >2</td>\n",
+              "      <td id=\"T_3403f_row8_col11\" class=\"data row8 col11\" >B</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_39380_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
-              "      <td id=\"T_39380_row9_col1\" class=\"data row9 col1\" >616</td>\n",
-              "      <td id=\"T_39380_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row9_col3\" class=\"data row9 col3\" >8</td>\n",
-              "      <td id=\"T_39380_row9_col4\" class=\"data row9 col4\" >8</td>\n",
-              "      <td id=\"T_39380_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
-              "      <td id=\"T_39380_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
-              "      <td id=\"T_39380_row9_col7\" class=\"data row9 col7\" >615</td>\n",
-              "      <td id=\"T_39380_row9_col8\" class=\"data row9 col8\" >F</td>\n",
-              "      <td id=\"T_39380_row9_col9\" class=\"data row9 col9\" >1</td>\n",
-              "      <td id=\"T_39380_row9_col10\" class=\"data row9 col10\" >2</td>\n",
-              "      <td id=\"T_39380_row9_col11\" class=\"data row9 col11\" >C</td>\n",
+              "      <td id=\"T_3403f_row9_col0\" class=\"data row9 col0\" >1293</td>\n",
+              "      <td id=\"T_3403f_row9_col1\" class=\"data row9 col1\" >616</td>\n",
+              "      <td id=\"T_3403f_row9_col2\" class=\"data row9 col2\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row9_col3\" class=\"data row9 col3\" >8</td>\n",
+              "      <td id=\"T_3403f_row9_col4\" class=\"data row9 col4\" >8</td>\n",
+              "      <td id=\"T_3403f_row9_col5\" class=\"data row9 col5\" >['ACHOCOLATADO', 'LATA DE ERVILHA', 'MAMAO PAPAYA', 'ENERGETICO', 'CERA', 'TALCO', 'SHAMPOO', 'LEITE CONDENSADO']</td>\n",
+              "      <td id=\"T_3403f_row9_col6\" class=\"data row9 col6\" >2019-02-01 00:00:00</td>\n",
+              "      <td id=\"T_3403f_row9_col7\" class=\"data row9 col7\" >615</td>\n",
+              "      <td id=\"T_3403f_row9_col8\" class=\"data row9 col8\" >F</td>\n",
+              "      <td id=\"T_3403f_row9_col9\" class=\"data row9 col9\" >1</td>\n",
+              "      <td id=\"T_3403f_row9_col10\" class=\"data row9 col10\" >2</td>\n",
+              "      <td id=\"T_3403f_row9_col11\" class=\"data row9 col11\" >C</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 767
+          "execution_count": 27
         }
       ]
     },
@@ -2742,61 +2744,61 @@
           "height": 144
         },
         "id": "yB3YRwR4AIGI",
-        "outputId": "aa5ff5bc-3023-4c77-fe73-04dd67f01c19"
+        "outputId": "1e063f3b-bf1b-4db0-e5c7-bb4c87e323af"
       },
-      "execution_count": 768,
+      "execution_count": 28,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea0d0>"
+              "<pandas.io.formats.style.Styler at 0x7af49b613890>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_84d64\" class=\"dataframe\">\n",
+              "<table id=\"T_8924e\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_84d64_level0_col0\" class=\"col_heading level0 col0\" >SEGMENTO_ECONOMICO</th>\n",
-              "      <th id=\"T_84d64_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
-              "      <th id=\"T_84d64_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
-              "      <th id=\"T_84d64_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
-              "      <th id=\"T_84d64_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
-              "      <th id=\"T_84d64_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_8924e_level0_col0\" class=\"col_heading level0 col0\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_8924e_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_8924e_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_8924e_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_8924e_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_8924e_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_84d64_row0_col0\" class=\"data row0 col0\" >A</td>\n",
-              "      <td id=\"T_84d64_row0_col1\" class=\"data row0 col1\" >84</td>\n",
-              "      <td id=\"T_84d64_row0_col2\" class=\"data row0 col2\" >1492</td>\n",
-              "      <td id=\"T_84d64_row0_col3\" class=\"data row0 col3\" >67736</td>\n",
-              "      <td id=\"T_84d64_row0_col4\" class=\"data row0 col4\" >118</td>\n",
-              "      <td id=\"T_84d64_row0_col5\" class=\"data row0 col5\" >89</td>\n",
+              "      <td id=\"T_8924e_row0_col0\" class=\"data row0 col0\" >A</td>\n",
+              "      <td id=\"T_8924e_row0_col1\" class=\"data row0 col1\" >84</td>\n",
+              "      <td id=\"T_8924e_row0_col2\" class=\"data row0 col2\" >1492</td>\n",
+              "      <td id=\"T_8924e_row0_col3\" class=\"data row0 col3\" >67736</td>\n",
+              "      <td id=\"T_8924e_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_8924e_row0_col5\" class=\"data row0 col5\" >89</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_84d64_row1_col0\" class=\"data row1 col0\" >B</td>\n",
-              "      <td id=\"T_84d64_row1_col1\" class=\"data row1 col1\" >645</td>\n",
-              "      <td id=\"T_84d64_row1_col2\" class=\"data row1 col2\" >11843</td>\n",
-              "      <td id=\"T_84d64_row1_col3\" class=\"data row1 col3\" >530163</td>\n",
-              "      <td id=\"T_84d64_row1_col4\" class=\"data row1 col4\" >118</td>\n",
-              "      <td id=\"T_84d64_row1_col5\" class=\"data row1 col5\" >724</td>\n",
+              "      <td id=\"T_8924e_row1_col0\" class=\"data row1 col0\" >B</td>\n",
+              "      <td id=\"T_8924e_row1_col1\" class=\"data row1 col1\" >645</td>\n",
+              "      <td id=\"T_8924e_row1_col2\" class=\"data row1 col2\" >11843</td>\n",
+              "      <td id=\"T_8924e_row1_col3\" class=\"data row1 col3\" >530163</td>\n",
+              "      <td id=\"T_8924e_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_8924e_row1_col5\" class=\"data row1 col5\" >724</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_84d64_row2_col0\" class=\"data row2 col0\" >C</td>\n",
-              "      <td id=\"T_84d64_row2_col1\" class=\"data row2 col1\" >271</td>\n",
-              "      <td id=\"T_84d64_row2_col2\" class=\"data row2 col2\" >5136</td>\n",
-              "      <td id=\"T_84d64_row2_col3\" class=\"data row2 col3\" >232101</td>\n",
-              "      <td id=\"T_84d64_row2_col4\" class=\"data row2 col4\" >118</td>\n",
-              "      <td id=\"T_84d64_row2_col5\" class=\"data row2 col5\" >323</td>\n",
+              "      <td id=\"T_8924e_row2_col0\" class=\"data row2 col0\" >C</td>\n",
+              "      <td id=\"T_8924e_row2_col1\" class=\"data row2 col1\" >271</td>\n",
+              "      <td id=\"T_8924e_row2_col2\" class=\"data row2 col2\" >5136</td>\n",
+              "      <td id=\"T_8924e_row2_col3\" class=\"data row2 col3\" >232101</td>\n",
+              "      <td id=\"T_8924e_row2_col4\" class=\"data row2 col4\" >118</td>\n",
+              "      <td id=\"T_8924e_row2_col5\" class=\"data row2 col5\" >323</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 768
+          "execution_count": 28
         }
       ]
     },
@@ -2820,9 +2822,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "W7yG5wzaJpyV",
-        "outputId": "70b011b1-d813-42df-c8a9-4f0a41302a23"
+        "outputId": "c6c74ab9-70e6-424a-9bef-f804ae462ed0"
       },
-      "execution_count": 769,
+      "execution_count": 29,
       "outputs": [
         {
           "output_type": "stream",
@@ -2879,53 +2881,53 @@
           "height": 113
         },
         "id": "S5kMXaX9M-Qa",
-        "outputId": "55191d20-f8bc-4211-d576-e0627f28bff5"
+        "outputId": "6923a148-0e1d-4504-82e0-1a5e312957ae"
       },
-      "execution_count": 770,
+      "execution_count": 30,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea490>"
+              "<pandas.io.formats.style.Styler at 0x7af49b6134d0>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_f215a\" class=\"dataframe\">\n",
+              "<table id=\"T_6c448\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_f215a_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
-              "      <th id=\"T_f215a_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
-              "      <th id=\"T_f215a_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
-              "      <th id=\"T_f215a_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
-              "      <th id=\"T_f215a_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
-              "      <th id=\"T_f215a_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_6c448_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
+              "      <th id=\"T_6c448_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_6c448_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_6c448_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_6c448_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_6c448_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_f215a_row0_col0\" class=\"data row0 col0\" >F</td>\n",
-              "      <td id=\"T_f215a_row0_col1\" class=\"data row0 col1\" >519</td>\n",
-              "      <td id=\"T_f215a_row0_col2\" class=\"data row0 col2\" >9615</td>\n",
-              "      <td id=\"T_f215a_row0_col3\" class=\"data row0 col3\" >432576</td>\n",
-              "      <td id=\"T_f215a_row0_col4\" class=\"data row0 col4\" >118</td>\n",
-              "      <td id=\"T_f215a_row0_col5\" class=\"data row0 col5\" >561</td>\n",
+              "      <td id=\"T_6c448_row0_col0\" class=\"data row0 col0\" >F</td>\n",
+              "      <td id=\"T_6c448_row0_col1\" class=\"data row0 col1\" >519</td>\n",
+              "      <td id=\"T_6c448_row0_col2\" class=\"data row0 col2\" >9615</td>\n",
+              "      <td id=\"T_6c448_row0_col3\" class=\"data row0 col3\" >432576</td>\n",
+              "      <td id=\"T_6c448_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_6c448_row0_col5\" class=\"data row0 col5\" >561</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_f215a_row1_col0\" class=\"data row1 col0\" >M</td>\n",
-              "      <td id=\"T_f215a_row1_col1\" class=\"data row1 col1\" >481</td>\n",
-              "      <td id=\"T_f215a_row1_col2\" class=\"data row1 col2\" >8856</td>\n",
-              "      <td id=\"T_f215a_row1_col3\" class=\"data row1 col3\" >397424</td>\n",
-              "      <td id=\"T_f215a_row1_col4\" class=\"data row1 col4\" >118</td>\n",
-              "      <td id=\"T_f215a_row1_col5\" class=\"data row1 col5\" >575</td>\n",
+              "      <td id=\"T_6c448_row1_col0\" class=\"data row1 col0\" >M</td>\n",
+              "      <td id=\"T_6c448_row1_col1\" class=\"data row1 col1\" >481</td>\n",
+              "      <td id=\"T_6c448_row1_col2\" class=\"data row1 col2\" >8856</td>\n",
+              "      <td id=\"T_6c448_row1_col3\" class=\"data row1 col3\" >397424</td>\n",
+              "      <td id=\"T_6c448_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_6c448_row1_col5\" class=\"data row1 col5\" >575</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 770
+          "execution_count": 30
         }
       ]
     },
@@ -2983,77 +2985,77 @@
           "height": 207
         },
         "id": "Q-1Aq3kXYfoN",
-        "outputId": "00fe8c05-e0b2-457b-f9c9-ac6b4e5f2318"
+        "outputId": "ca96aab1-02c9-441f-adc0-18bc17fcaae7"
       },
-      "execution_count": 771,
+      "execution_count": 31,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea350>"
+              "<pandas.io.formats.style.Styler at 0x7af49b613b10>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_8f75a\" class=\"dataframe\">\n",
+              "<table id=\"T_3e659\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_8f75a_level0_col0\" class=\"col_heading level0 col0\" >ESTADO_CIVIL</th>\n",
-              "      <th id=\"T_8f75a_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
-              "      <th id=\"T_8f75a_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
-              "      <th id=\"T_8f75a_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
-              "      <th id=\"T_8f75a_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
-              "      <th id=\"T_8f75a_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
+              "      <th id=\"T_3e659_level0_col0\" class=\"col_heading level0 col0\" >ESTADO_CIVIL</th>\n",
+              "      <th id=\"T_3e659_level0_col1\" class=\"col_heading level0 col1\" >NUMERO_DE_CLIENTES</th>\n",
+              "      <th id=\"T_3e659_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_3e659_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_3e659_level0_col4\" class=\"col_heading level0 col4\" >QUANTIDADE_DE_ITENS_UNICOS</th>\n",
+              "      <th id=\"T_3e659_level0_col5\" class=\"col_heading level0 col5\" >NUMERO_FILHOS</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_8f75a_row0_col0\" class=\"data row0 col0\" >Casado ou União Estável</td>\n",
-              "      <td id=\"T_8f75a_row0_col1\" class=\"data row0 col1\" >233</td>\n",
-              "      <td id=\"T_8f75a_row0_col2\" class=\"data row0 col2\" >4290</td>\n",
-              "      <td id=\"T_8f75a_row0_col3\" class=\"data row0 col3\" >194873</td>\n",
-              "      <td id=\"T_8f75a_row0_col4\" class=\"data row0 col4\" >118</td>\n",
-              "      <td id=\"T_8f75a_row0_col5\" class=\"data row0 col5\" >295</td>\n",
+              "      <td id=\"T_3e659_row0_col0\" class=\"data row0 col0\" >Casado ou União Estável</td>\n",
+              "      <td id=\"T_3e659_row0_col1\" class=\"data row0 col1\" >233</td>\n",
+              "      <td id=\"T_3e659_row0_col2\" class=\"data row0 col2\" >4290</td>\n",
+              "      <td id=\"T_3e659_row0_col3\" class=\"data row0 col3\" >194873</td>\n",
+              "      <td id=\"T_3e659_row0_col4\" class=\"data row0 col4\" >118</td>\n",
+              "      <td id=\"T_3e659_row0_col5\" class=\"data row0 col5\" >295</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8f75a_row1_col0\" class=\"data row1 col0\" >Divorciado</td>\n",
-              "      <td id=\"T_8f75a_row1_col1\" class=\"data row1 col1\" >238</td>\n",
-              "      <td id=\"T_8f75a_row1_col2\" class=\"data row1 col2\" >4377</td>\n",
-              "      <td id=\"T_8f75a_row1_col3\" class=\"data row1 col3\" >194990</td>\n",
-              "      <td id=\"T_8f75a_row1_col4\" class=\"data row1 col4\" >118</td>\n",
-              "      <td id=\"T_8f75a_row1_col5\" class=\"data row1 col5\" >297</td>\n",
+              "      <td id=\"T_3e659_row1_col0\" class=\"data row1 col0\" >Divorciado</td>\n",
+              "      <td id=\"T_3e659_row1_col1\" class=\"data row1 col1\" >238</td>\n",
+              "      <td id=\"T_3e659_row1_col2\" class=\"data row1 col2\" >4377</td>\n",
+              "      <td id=\"T_3e659_row1_col3\" class=\"data row1 col3\" >194990</td>\n",
+              "      <td id=\"T_3e659_row1_col4\" class=\"data row1 col4\" >118</td>\n",
+              "      <td id=\"T_3e659_row1_col5\" class=\"data row1 col5\" >297</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8f75a_row2_col0\" class=\"data row2 col0\" >Separado</td>\n",
-              "      <td id=\"T_8f75a_row2_col1\" class=\"data row2 col1\" >250</td>\n",
-              "      <td id=\"T_8f75a_row2_col2\" class=\"data row2 col2\" >4762</td>\n",
-              "      <td id=\"T_8f75a_row2_col3\" class=\"data row2 col3\" >213742</td>\n",
-              "      <td id=\"T_8f75a_row2_col4\" class=\"data row2 col4\" >118</td>\n",
-              "      <td id=\"T_8f75a_row2_col5\" class=\"data row2 col5\" >299</td>\n",
+              "      <td id=\"T_3e659_row2_col0\" class=\"data row2 col0\" >Separado</td>\n",
+              "      <td id=\"T_3e659_row2_col1\" class=\"data row2 col1\" >250</td>\n",
+              "      <td id=\"T_3e659_row2_col2\" class=\"data row2 col2\" >4762</td>\n",
+              "      <td id=\"T_3e659_row2_col3\" class=\"data row2 col3\" >213742</td>\n",
+              "      <td id=\"T_3e659_row2_col4\" class=\"data row2 col4\" >118</td>\n",
+              "      <td id=\"T_3e659_row2_col5\" class=\"data row2 col5\" >299</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8f75a_row3_col0\" class=\"data row3 col0\" >Solteiro</td>\n",
-              "      <td id=\"T_8f75a_row3_col1\" class=\"data row3 col1\" >251</td>\n",
-              "      <td id=\"T_8f75a_row3_col2\" class=\"data row3 col2\" >4551</td>\n",
-              "      <td id=\"T_8f75a_row3_col3\" class=\"data row3 col3\" >202618</td>\n",
-              "      <td id=\"T_8f75a_row3_col4\" class=\"data row3 col4\" >118</td>\n",
-              "      <td id=\"T_8f75a_row3_col5\" class=\"data row3 col5\" >203</td>\n",
+              "      <td id=\"T_3e659_row3_col0\" class=\"data row3 col0\" >Solteiro</td>\n",
+              "      <td id=\"T_3e659_row3_col1\" class=\"data row3 col1\" >251</td>\n",
+              "      <td id=\"T_3e659_row3_col2\" class=\"data row3 col2\" >4551</td>\n",
+              "      <td id=\"T_3e659_row3_col3\" class=\"data row3 col3\" >202618</td>\n",
+              "      <td id=\"T_3e659_row3_col4\" class=\"data row3 col4\" >118</td>\n",
+              "      <td id=\"T_3e659_row3_col5\" class=\"data row3 col5\" >203</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8f75a_row4_col0\" class=\"data row4 col0\" >Viúvo</td>\n",
-              "      <td id=\"T_8f75a_row4_col1\" class=\"data row4 col1\" >28</td>\n",
-              "      <td id=\"T_8f75a_row4_col2\" class=\"data row4 col2\" >491</td>\n",
-              "      <td id=\"T_8f75a_row4_col3\" class=\"data row4 col3\" >23777</td>\n",
-              "      <td id=\"T_8f75a_row4_col4\" class=\"data row4 col4\" >118</td>\n",
-              "      <td id=\"T_8f75a_row4_col5\" class=\"data row4 col5\" >42</td>\n",
+              "      <td id=\"T_3e659_row4_col0\" class=\"data row4 col0\" >Viúvo</td>\n",
+              "      <td id=\"T_3e659_row4_col1\" class=\"data row4 col1\" >28</td>\n",
+              "      <td id=\"T_3e659_row4_col2\" class=\"data row4 col2\" >491</td>\n",
+              "      <td id=\"T_3e659_row4_col3\" class=\"data row4 col3\" >23777</td>\n",
+              "      <td id=\"T_3e659_row4_col4\" class=\"data row4 col4\" >118</td>\n",
+              "      <td id=\"T_3e659_row4_col5\" class=\"data row4 col5\" >42</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 771
+          "execution_count": 31
         }
       ]
     },
@@ -3093,84 +3095,84 @@
           "height": 363
         },
         "id": "--42KWUYYizU",
-        "outputId": "0ee25754-c2bf-427f-d77f-a6fdd6494134"
+        "outputId": "b6a682f2-a2bf-4660-c5cc-c529d018d6a6"
       },
-      "execution_count": 772,
+      "execution_count": 32,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea710>"
+              "<pandas.io.formats.style.Styler at 0x7af49b4e42d0>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_040e4\" class=\"dataframe\">\n",
+              "<table id=\"T_f10fd\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_040e4_level0_col0\" class=\"col_heading level0 col0\" >MES_ANO</th>\n",
-              "      <th id=\"T_040e4_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_COMPRAS</th>\n",
-              "      <th id=\"T_040e4_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_f10fd_level0_col0\" class=\"col_heading level0 col0\" >MES_ANO</th>\n",
+              "      <th id=\"T_f10fd_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_f10fd_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row0_col0\" class=\"data row0 col0\" >2019-01</td>\n",
-              "      <td id=\"T_040e4_row0_col1\" class=\"data row0 col1\" >171</td>\n",
-              "      <td id=\"T_040e4_row0_col2\" class=\"data row0 col2\" >7368</td>\n",
+              "      <td id=\"T_f10fd_row0_col0\" class=\"data row0 col0\" >2019-01</td>\n",
+              "      <td id=\"T_f10fd_row0_col1\" class=\"data row0 col1\" >171</td>\n",
+              "      <td id=\"T_f10fd_row0_col2\" class=\"data row0 col2\" >7368</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row1_col0\" class=\"data row1 col0\" >2019-02</td>\n",
-              "      <td id=\"T_040e4_row1_col1\" class=\"data row1 col1\" >402</td>\n",
-              "      <td id=\"T_040e4_row1_col2\" class=\"data row1 col2\" >18336</td>\n",
+              "      <td id=\"T_f10fd_row1_col0\" class=\"data row1 col0\" >2019-02</td>\n",
+              "      <td id=\"T_f10fd_row1_col1\" class=\"data row1 col1\" >402</td>\n",
+              "      <td id=\"T_f10fd_row1_col2\" class=\"data row1 col2\" >18336</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row2_col0\" class=\"data row2 col0\" >2019-03</td>\n",
-              "      <td id=\"T_040e4_row2_col1\" class=\"data row2 col1\" >257</td>\n",
-              "      <td id=\"T_040e4_row2_col2\" class=\"data row2 col2\" >11051</td>\n",
+              "      <td id=\"T_f10fd_row2_col0\" class=\"data row2 col0\" >2019-03</td>\n",
+              "      <td id=\"T_f10fd_row2_col1\" class=\"data row2 col1\" >257</td>\n",
+              "      <td id=\"T_f10fd_row2_col2\" class=\"data row2 col2\" >11051</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row3_col0\" class=\"data row3 col0\" >2019-04</td>\n",
-              "      <td id=\"T_040e4_row3_col1\" class=\"data row3 col1\" >410</td>\n",
-              "      <td id=\"T_040e4_row3_col2\" class=\"data row3 col2\" >18337</td>\n",
+              "      <td id=\"T_f10fd_row3_col0\" class=\"data row3 col0\" >2019-04</td>\n",
+              "      <td id=\"T_f10fd_row3_col1\" class=\"data row3 col1\" >410</td>\n",
+              "      <td id=\"T_f10fd_row3_col2\" class=\"data row3 col2\" >18337</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row4_col0\" class=\"data row4 col0\" >2019-05</td>\n",
-              "      <td id=\"T_040e4_row4_col1\" class=\"data row4 col1\" >711</td>\n",
-              "      <td id=\"T_040e4_row4_col2\" class=\"data row4 col2\" >31811</td>\n",
+              "      <td id=\"T_f10fd_row4_col0\" class=\"data row4 col0\" >2019-05</td>\n",
+              "      <td id=\"T_f10fd_row4_col1\" class=\"data row4 col1\" >711</td>\n",
+              "      <td id=\"T_f10fd_row4_col2\" class=\"data row4 col2\" >31811</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row5_col0\" class=\"data row5 col0\" >2019-06</td>\n",
-              "      <td id=\"T_040e4_row5_col1\" class=\"data row5 col1\" >493</td>\n",
-              "      <td id=\"T_040e4_row5_col2\" class=\"data row5 col2\" >22084</td>\n",
+              "      <td id=\"T_f10fd_row5_col0\" class=\"data row5 col0\" >2019-06</td>\n",
+              "      <td id=\"T_f10fd_row5_col1\" class=\"data row5 col1\" >493</td>\n",
+              "      <td id=\"T_f10fd_row5_col2\" class=\"data row5 col2\" >22084</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row6_col0\" class=\"data row6 col0\" >2019-07</td>\n",
-              "      <td id=\"T_040e4_row6_col1\" class=\"data row6 col1\" >274</td>\n",
-              "      <td id=\"T_040e4_row6_col2\" class=\"data row6 col2\" >12184</td>\n",
+              "      <td id=\"T_f10fd_row6_col0\" class=\"data row6 col0\" >2019-07</td>\n",
+              "      <td id=\"T_f10fd_row6_col1\" class=\"data row6 col1\" >274</td>\n",
+              "      <td id=\"T_f10fd_row6_col2\" class=\"data row6 col2\" >12184</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row7_col0\" class=\"data row7 col0\" >2019-08</td>\n",
-              "      <td id=\"T_040e4_row7_col1\" class=\"data row7 col1\" >420</td>\n",
-              "      <td id=\"T_040e4_row7_col2\" class=\"data row7 col2\" >17900</td>\n",
+              "      <td id=\"T_f10fd_row7_col0\" class=\"data row7 col0\" >2019-08</td>\n",
+              "      <td id=\"T_f10fd_row7_col1\" class=\"data row7 col1\" >420</td>\n",
+              "      <td id=\"T_f10fd_row7_col2\" class=\"data row7 col2\" >17900</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row8_col0\" class=\"data row8 col0\" >2019-09</td>\n",
-              "      <td id=\"T_040e4_row8_col1\" class=\"data row8 col1\" >436</td>\n",
-              "      <td id=\"T_040e4_row8_col2\" class=\"data row8 col2\" >19122</td>\n",
+              "      <td id=\"T_f10fd_row8_col0\" class=\"data row8 col0\" >2019-09</td>\n",
+              "      <td id=\"T_f10fd_row8_col1\" class=\"data row8 col1\" >436</td>\n",
+              "      <td id=\"T_f10fd_row8_col2\" class=\"data row8 col2\" >19122</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_040e4_row9_col0\" class=\"data row9 col0\" >2019-10</td>\n",
-              "      <td id=\"T_040e4_row9_col1\" class=\"data row9 col1\" >242</td>\n",
-              "      <td id=\"T_040e4_row9_col2\" class=\"data row9 col2\" >10245</td>\n",
+              "      <td id=\"T_f10fd_row9_col0\" class=\"data row9 col0\" >2019-10</td>\n",
+              "      <td id=\"T_f10fd_row9_col1\" class=\"data row9 col1\" >242</td>\n",
+              "      <td id=\"T_f10fd_row9_col2\" class=\"data row9 col2\" >10245</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 772
+          "execution_count": 32
         }
       ]
     },
@@ -3209,73 +3211,73 @@
           "height": 363
         },
         "id": "7udpP-cZYkLF",
-        "outputId": "668a4c0b-040f-4898-db21-4606416de568"
+        "outputId": "2c37a70f-850d-4b16-a79a-e3a369750985"
       },
-      "execution_count": 773,
+      "execution_count": 33,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea850>"
+              "<pandas.io.formats.style.Styler at 0x7af49b4e4190>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_ff555\" class=\"dataframe\">\n",
+              "<table id=\"T_79feb\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_ff555_level0_col0\" class=\"col_heading level0 col0\" >PRODUTOS</th>\n",
-              "      <th id=\"T_ff555_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_VENDIDA</th>\n",
+              "      <th id=\"T_79feb_level0_col0\" class=\"col_heading level0 col0\" >PRODUTOS</th>\n",
+              "      <th id=\"T_79feb_level0_col1\" class=\"col_heading level0 col1\" >QUANTIDADE_VENDIDA</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row0_col0\" class=\"data row0 col0\" >PRESUNTO COZIDO</td>\n",
-              "      <td id=\"T_ff555_row0_col1\" class=\"data row0 col1\" >12719</td>\n",
+              "      <td id=\"T_79feb_row0_col0\" class=\"data row0 col0\" >PRESUNTO COZIDO</td>\n",
+              "      <td id=\"T_79feb_row0_col1\" class=\"data row0 col1\" >12719</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row1_col0\" class=\"data row1 col0\" >SARDINHA</td>\n",
-              "      <td id=\"T_ff555_row1_col1\" class=\"data row1 col1\" >6610</td>\n",
+              "      <td id=\"T_79feb_row1_col0\" class=\"data row1 col0\" >SARDINHA</td>\n",
+              "      <td id=\"T_79feb_row1_col1\" class=\"data row1 col1\" >6610</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row2_col0\" class=\"data row2 col0\" >BANANA</td>\n",
-              "      <td id=\"T_ff555_row2_col1\" class=\"data row2 col1\" >6518</td>\n",
+              "      <td id=\"T_79feb_row2_col0\" class=\"data row2 col0\" >BANANA</td>\n",
+              "      <td id=\"T_79feb_row2_col1\" class=\"data row2 col1\" >6518</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row3_col0\" class=\"data row3 col0\" >ESCOVA DE DENTE</td>\n",
-              "      <td id=\"T_ff555_row3_col1\" class=\"data row3 col1\" >6518</td>\n",
+              "      <td id=\"T_79feb_row3_col0\" class=\"data row3 col0\" >ESCOVA DE DENTE</td>\n",
+              "      <td id=\"T_79feb_row3_col1\" class=\"data row3 col1\" >6518</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row4_col0\" class=\"data row4 col0\" >GEL</td>\n",
-              "      <td id=\"T_ff555_row4_col1\" class=\"data row4 col1\" >6517</td>\n",
+              "      <td id=\"T_79feb_row4_col0\" class=\"data row4 col0\" >GEL</td>\n",
+              "      <td id=\"T_79feb_row4_col1\" class=\"data row4 col1\" >6517</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row5_col0\" class=\"data row5 col0\" >PAPINHA INFANTIL</td>\n",
-              "      <td id=\"T_ff555_row5_col1\" class=\"data row5 col1\" >6515</td>\n",
+              "      <td id=\"T_79feb_row5_col0\" class=\"data row5 col0\" >PAPINHA INFANTIL</td>\n",
+              "      <td id=\"T_79feb_row5_col1\" class=\"data row5 col1\" >6515</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row6_col0\" class=\"data row6 col0\" >MODELADOR</td>\n",
-              "      <td id=\"T_ff555_row6_col1\" class=\"data row6 col1\" >6505</td>\n",
+              "      <td id=\"T_79feb_row6_col0\" class=\"data row6 col0\" >MODELADOR</td>\n",
+              "      <td id=\"T_79feb_row6_col1\" class=\"data row6 col1\" >6505</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row7_col0\" class=\"data row7 col0\" >CERA</td>\n",
-              "      <td id=\"T_ff555_row7_col1\" class=\"data row7 col1\" >6502</td>\n",
+              "      <td id=\"T_79feb_row7_col0\" class=\"data row7 col0\" >CERA</td>\n",
+              "      <td id=\"T_79feb_row7_col1\" class=\"data row7 col1\" >6502</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row8_col0\" class=\"data row8 col0\" >CEBOLA</td>\n",
-              "      <td id=\"T_ff555_row8_col1\" class=\"data row8 col1\" >6501</td>\n",
+              "      <td id=\"T_79feb_row8_col0\" class=\"data row8 col0\" >CEBOLA</td>\n",
+              "      <td id=\"T_79feb_row8_col1\" class=\"data row8 col1\" >6501</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_ff555_row9_col0\" class=\"data row9 col0\" >LIMPADOR PERFUMADO</td>\n",
-              "      <td id=\"T_ff555_row9_col1\" class=\"data row9 col1\" >6501</td>\n",
+              "      <td id=\"T_79feb_row9_col0\" class=\"data row9 col0\" >LIMPADOR PERFUMADO</td>\n",
+              "      <td id=\"T_79feb_row9_col1\" class=\"data row9 col1\" >6501</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 773
+          "execution_count": 33
         }
       ]
     },
@@ -3320,78 +3322,78 @@
           "height": 238
         },
         "id": "w8jV-dwJYlX5",
-        "outputId": "5c5881ca-ba15-45ca-9ecf-a2aca2310dce"
+        "outputId": "356b0734-1d15-465d-cb9c-14b2929825f6"
       },
-      "execution_count": 774,
+      "execution_count": 34,
       "outputs": [
         {
           "output_type": "execute_result",
           "data": {
             "text/plain": [
-              "<pandas.io.formats.style.Styler at 0x7da27baea990>"
+              "<pandas.io.formats.style.Styler at 0x7af49b4e4550>"
             ],
             "text/html": [
               "<style type=\"text/css\">\n",
               "</style>\n",
-              "<table id=\"T_8286f\" class=\"dataframe\">\n",
+              "<table id=\"T_8728b\" class=\"dataframe\">\n",
               "  <thead>\n",
               "    <tr>\n",
-              "      <th id=\"T_8286f_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
-              "      <th id=\"T_8286f_level0_col1\" class=\"col_heading level0 col1\" >SEGMENTO_ECONOMICO</th>\n",
-              "      <th id=\"T_8286f_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
-              "      <th id=\"T_8286f_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
-              "      <th id=\"T_8286f_level0_col4\" class=\"col_heading level0 col4\" >MEDIA_ITENS_POR_COMPRA</th>\n",
+              "      <th id=\"T_8728b_level0_col0\" class=\"col_heading level0 col0\" >GENERO</th>\n",
+              "      <th id=\"T_8728b_level0_col1\" class=\"col_heading level0 col1\" >SEGMENTO_ECONOMICO</th>\n",
+              "      <th id=\"T_8728b_level0_col2\" class=\"col_heading level0 col2\" >QUANTIDADE_COMPRAS</th>\n",
+              "      <th id=\"T_8728b_level0_col3\" class=\"col_heading level0 col3\" >QUANTIDADE_TOTAL_DE_ITENS</th>\n",
+              "      <th id=\"T_8728b_level0_col4\" class=\"col_heading level0 col4\" >MEDIA_ITENS_POR_COMPRA</th>\n",
               "    </tr>\n",
               "  </thead>\n",
               "  <tbody>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row0_col0\" class=\"data row0 col0\" >F</td>\n",
-              "      <td id=\"T_8286f_row0_col1\" class=\"data row0 col1\" >A</td>\n",
-              "      <td id=\"T_8286f_row0_col2\" class=\"data row0 col2\" >700</td>\n",
-              "      <td id=\"T_8286f_row0_col3\" class=\"data row0 col3\" >32875</td>\n",
-              "      <td id=\"T_8286f_row0_col4\" class=\"data row0 col4\" >46.960000</td>\n",
+              "      <td id=\"T_8728b_row0_col0\" class=\"data row0 col0\" >F</td>\n",
+              "      <td id=\"T_8728b_row0_col1\" class=\"data row0 col1\" >A</td>\n",
+              "      <td id=\"T_8728b_row0_col2\" class=\"data row0 col2\" >700</td>\n",
+              "      <td id=\"T_8728b_row0_col3\" class=\"data row0 col3\" >32875</td>\n",
+              "      <td id=\"T_8728b_row0_col4\" class=\"data row0 col4\" >46.960000</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row1_col0\" class=\"data row1 col0\" >F</td>\n",
-              "      <td id=\"T_8286f_row1_col1\" class=\"data row1 col1\" >B</td>\n",
-              "      <td id=\"T_8286f_row1_col2\" class=\"data row1 col2\" >5946</td>\n",
-              "      <td id=\"T_8286f_row1_col3\" class=\"data row1 col3\" >264308</td>\n",
-              "      <td id=\"T_8286f_row1_col4\" class=\"data row1 col4\" >44.450000</td>\n",
+              "      <td id=\"T_8728b_row1_col0\" class=\"data row1 col0\" >F</td>\n",
+              "      <td id=\"T_8728b_row1_col1\" class=\"data row1 col1\" >B</td>\n",
+              "      <td id=\"T_8728b_row1_col2\" class=\"data row1 col2\" >5946</td>\n",
+              "      <td id=\"T_8728b_row1_col3\" class=\"data row1 col3\" >264308</td>\n",
+              "      <td id=\"T_8728b_row1_col4\" class=\"data row1 col4\" >44.450000</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row2_col0\" class=\"data row2 col0\" >F</td>\n",
-              "      <td id=\"T_8286f_row2_col1\" class=\"data row2 col1\" >C</td>\n",
-              "      <td id=\"T_8286f_row2_col2\" class=\"data row2 col2\" >2969</td>\n",
-              "      <td id=\"T_8286f_row2_col3\" class=\"data row2 col3\" >135393</td>\n",
-              "      <td id=\"T_8286f_row2_col4\" class=\"data row2 col4\" >45.600000</td>\n",
+              "      <td id=\"T_8728b_row2_col0\" class=\"data row2 col0\" >F</td>\n",
+              "      <td id=\"T_8728b_row2_col1\" class=\"data row2 col1\" >C</td>\n",
+              "      <td id=\"T_8728b_row2_col2\" class=\"data row2 col2\" >2969</td>\n",
+              "      <td id=\"T_8728b_row2_col3\" class=\"data row2 col3\" >135393</td>\n",
+              "      <td id=\"T_8728b_row2_col4\" class=\"data row2 col4\" >45.600000</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row3_col0\" class=\"data row3 col0\" >M</td>\n",
-              "      <td id=\"T_8286f_row3_col1\" class=\"data row3 col1\" >A</td>\n",
-              "      <td id=\"T_8286f_row3_col2\" class=\"data row3 col2\" >792</td>\n",
-              "      <td id=\"T_8286f_row3_col3\" class=\"data row3 col3\" >34861</td>\n",
-              "      <td id=\"T_8286f_row3_col4\" class=\"data row3 col4\" >44.020000</td>\n",
+              "      <td id=\"T_8728b_row3_col0\" class=\"data row3 col0\" >M</td>\n",
+              "      <td id=\"T_8728b_row3_col1\" class=\"data row3 col1\" >A</td>\n",
+              "      <td id=\"T_8728b_row3_col2\" class=\"data row3 col2\" >792</td>\n",
+              "      <td id=\"T_8728b_row3_col3\" class=\"data row3 col3\" >34861</td>\n",
+              "      <td id=\"T_8728b_row3_col4\" class=\"data row3 col4\" >44.020000</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row4_col0\" class=\"data row4 col0\" >M</td>\n",
-              "      <td id=\"T_8286f_row4_col1\" class=\"data row4 col1\" >B</td>\n",
-              "      <td id=\"T_8286f_row4_col2\" class=\"data row4 col2\" >5897</td>\n",
-              "      <td id=\"T_8286f_row4_col3\" class=\"data row4 col3\" >265855</td>\n",
-              "      <td id=\"T_8286f_row4_col4\" class=\"data row4 col4\" >45.080000</td>\n",
+              "      <td id=\"T_8728b_row4_col0\" class=\"data row4 col0\" >M</td>\n",
+              "      <td id=\"T_8728b_row4_col1\" class=\"data row4 col1\" >B</td>\n",
+              "      <td id=\"T_8728b_row4_col2\" class=\"data row4 col2\" >5897</td>\n",
+              "      <td id=\"T_8728b_row4_col3\" class=\"data row4 col3\" >265855</td>\n",
+              "      <td id=\"T_8728b_row4_col4\" class=\"data row4 col4\" >45.080000</td>\n",
               "    </tr>\n",
               "    <tr>\n",
-              "      <td id=\"T_8286f_row5_col0\" class=\"data row5 col0\" >M</td>\n",
-              "      <td id=\"T_8286f_row5_col1\" class=\"data row5 col1\" >C</td>\n",
-              "      <td id=\"T_8286f_row5_col2\" class=\"data row5 col2\" >2167</td>\n",
-              "      <td id=\"T_8286f_row5_col3\" class=\"data row5 col3\" >96708</td>\n",
-              "      <td id=\"T_8286f_row5_col4\" class=\"data row5 col4\" >44.630000</td>\n",
+              "      <td id=\"T_8728b_row5_col0\" class=\"data row5 col0\" >M</td>\n",
+              "      <td id=\"T_8728b_row5_col1\" class=\"data row5 col1\" >C</td>\n",
+              "      <td id=\"T_8728b_row5_col2\" class=\"data row5 col2\" >2167</td>\n",
+              "      <td id=\"T_8728b_row5_col3\" class=\"data row5 col3\" >96708</td>\n",
+              "      <td id=\"T_8728b_row5_col4\" class=\"data row5 col4\" >44.630000</td>\n",
               "    </tr>\n",
               "  </tbody>\n",
               "</table>\n"
             ]
           },
           "metadata": {},
-          "execution_count": 774
+          "execution_count": 34
         }
       ]
     },
@@ -3452,7 +3454,7 @@
         "print(f\"Moda: {moda}\")\n",
         "print(f\"Máximo: {maximo}\")\n",
         "print(f\"Mínimo: {minimo}\")\n",
-        "print(f\"Contagem: {contagem}\")\n",
+        "print(f\"Número de clientes: {contagem}\")\n",
         "print(f\"1º Quartil (25%): {q1}\")\n",
         "print(f\"2º Quartil (50%): {q2}\")\n",
         "print(f\"3º Quartil (75%): {q3}\")"
@@ -3462,9 +3464,9 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "rtdEjUSBXdpB",
-        "outputId": "1c9b78bb-fe72-4678-aab0-2aa004541c12"
+        "outputId": "e089a114-b0fe-4b74-8222-92d005c5d90d"
       },
-      "execution_count": 775,
+      "execution_count": 35,
       "outputs": [
         {
           "output_type": "stream",
@@ -3476,7 +3478,7 @@
             "Moda: 0\n",
             "Máximo: 4\n",
             "Mínimo: 0\n",
-            "Contagem: 1000\n",
+            "Número de clientes: 1000\n",
             "1º Quartil (25%): 0.0\n",
             "2º Quartil (50%): 0.0\n",
             "3º Quartil (75%): 2.0\n"
@@ -3493,6 +3495,61 @@
       "metadata": {
         "id": "Kxf4gVQCXg8o"
       }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Estatísticas descritivas da coluna NUMERO_FILHOS, calculadas a partir de clientes únicos\n",
+        "estatisticas_compra_segmento = dados_segmento[\"QUANTIDADE_COMPRAS\"]\n",
+        "\n",
+        "media = estatisticas_compra_segmento.mean()\n",
+        "mediana = estatisticas_compra_segmento.median()\n",
+        "desvio_padrao = estatisticas_compra_segmento.std()\n",
+        "moda = estatisticas_compra_segmento.mode()[0]        # mode() pode retornar mais de um valor se houver empate, pega o primeiro\n",
+        "maximo = estatisticas_compra_segmento.max()\n",
+        "minimo = estatisticas_compra_segmento.min()\n",
+        "contagem = estatisticas_compra_segmento.count()\n",
+        "q1 = estatisticas_compra_segmento.quantile(0.25)\n",
+        "q2 = estatisticas_compra_segmento.quantile(0.50)\n",
+        "q3 = estatisticas_compra_segmento.quantile(0.75)\n",
+        "\n",
+        "print(f\"Média de compras por Segmento: {media:.2f}\")\n",
+        "print(f\"Mediana: {mediana}\")\n",
+        "print(f\"Desvio Padrão: {desvio_padrao:.2f}\")\n",
+        "print(f\"Moda: {moda}\")\n",
+        "print(f\"Máximo: {maximo}\")\n",
+        "print(f\"Mínimo: {minimo}\")\n",
+        "print(f\"Número de segmentos: {contagem}\")\n",
+        "print(f\"1º Quartil (25%): {q1}\")\n",
+        "print(f\"2º Quartil (50%): {q2}\")\n",
+        "print(f\"3º Quartil (75%): {q3}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nk8zhkGiMFsB",
+        "outputId": "46634f95-4491-4dcc-c0e9-0b926355e0ba"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Média de compras por Segmento: 6157.00\n",
+            "Mediana: 5136.0\n",
+            "Desvio Padrão: 5250.49\n",
+            "Moda: 1492\n",
+            "Máximo: 11843\n",
+            "Mínimo: 1492\n",
+            "Número de segmentos: 3\n",
+            "1º Quartil (25%): 3314.0\n",
+            "2º Quartil (50%): 5136.0\n",
+            "3º Quartil (75%): 8489.5\n"
+          ]
+        }
+      ]
     }
   ]
 }
