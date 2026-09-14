@@ -1,6 +1,22 @@
 # Analise de Dados com Python  MINI-Projeto Avaliativo  Módulo 01 Semana 07
 
-_Notas: Commits feitas salvando copia do .ipynb usando o próprio Google Collab, .py adicionado somente a partir da etapa 7 do notebook de Análise dos Dados._ 
+#INSIGHTS
+## **1. Falha Sistêmica Crítica na Governança de Dados (Setembro/2022)**
 
+A queda drástica nas vendas em setembro de 2022 afetou todas as categorias de produtos de maneira idêntica e simultânea. O gráfico comparativo anual prova que este comportamento não decorre de uma questão sazonal, e sim de um problema interno da empresa (como um apagão sistêmico nos registros dos caixas ou falha grave na exportação do banco de dados). Essa hipótese é reforçada pelo histórico de desorganização da base, que continha colunas vazias, duplicidades e registros sem nome.
 
+## **2. Classe B como Motor do Volume de Vendas**
 
+O segmento econômico B é o verdadeiro pilar de sustentação do faturamento em massa da organização. Ele concentra a grande maioria dos clientes únicos e o maior volume total de notas fiscais emitidas. Campanhas de marketing e ações de fidelidade devem priorizar este público para garantir a estabilidade do fluxo de caixa diário.
+
+## **3. Classe A: Consumo de Alto Volume por Visita (Comportamento de Concentração)**
+
+Embora os clientes da Classe A façam poucas compras no ano (baixo volume de notas fiscais), eles registram o maior ticket médio da empresa, chegando a quase 47 itens por carrinho no público feminino. Esse perfil indica um consumidor de alta renda que prefere concentrar as compras em grandes abastecimentos mensais em vez de fracioná-las. A estratégia ideal para este grupo é a oferta de kits e descontos por volume.
+
+## **4. Estabilidade Comportamental entre Gêneros e Estados Civis**
+
+A média de itens por compra é muito parecida para quase todos os estados civis (ficando entre 44 e 45 itens). O grupo de viúvos apresenta uma média maior, chegando a quase 48 itens, porém é um grupo muito pequeno na base (apenas 28 clientes) para ditar uma tendência geral. No fim, a grande massa de consumidores compra praticamente a mesma quantidade de produtos para abastecer a casa o que mostra que nenhum grupo especifico deve ser prioridade e sim táticas que atingam clientes de todos os grupos.
+
+## **5. Presunto Cozido como Produto "Isca" e Giro de Estoque**
+
+O ranking geral de produtos revelou que o Presunto Cozido possui um volume de saída isolado (12.719 unidades), vendendo quase o dobro do segundo colocado (Sardinha). Por ser um produto de altíssimo giro e apelo popular, ele funciona como um item "isca". A empresa deve utilizá-lo estrategicamente em promoções para atrair fluxo de pessoas para as lojas e garantir que nunca haja ruptura (falta) desse item no estoque.
