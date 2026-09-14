@@ -1,11 +1,11 @@
 # Analise de Dados com Python  MINI-Projeto Avaliativo  Módulo 01 Semana 07
 
-Mini projeto elaborado ao decorrer de aproximadamente 4 dias fazendo a análise exploratória dos dados da [Base Varejo](https://www.kaggle.com/datasets/namespaiva/base-varejo/data).
+Mini projeto elaborado no decorrer de aproximadamente 4 dias fazendo a análise exploratória dos dados da [Base Varejo](https://www.kaggle.com/datasets/namespaiva/base-varejo/data).
 
 Trabalho feito por: Arthur Henrique Kochan
 
 Turma SCTEC: Análise de Dados com Python - T6
-Data de Entrega do trbalho: 2026/09/14
+Data de Entrega do trabalho: 2026/09/14
 
 
 # NOTAS
@@ -38,7 +38,7 @@ Embora os clientes da Classe A façam poucas compras no ano (baixo volume de not
 
 **4. Estabilidade Comportamental entre Gêneros e Estados Civis**
 
-A média de itens por compra é muito parecida para quase todos os estados civis (ficando entre 44 e 45 itens). O grupo de viúvos apresenta uma média maior, chegando a quase 48 itens, porém é um grupo muito pequeno na base (apenas 28 clientes) para ditar uma tendência geral. No fim, a grande massa de consumidores compra praticamente a mesma quantidade de produtos para abastecer a casa o que mostra que nenhum grupo especifico deve ser prioridade e sim táticas que atingam clientes de todos os grupos.
+A média de itens por compra é muito parecida para quase todos os estados civis (ficando entre 44 e 45 itens). O grupo de viúvos apresenta uma média maior, chegando a quase 48 itens, porém esse é um grupo muito pequeno na base (apenas 28 clientes) para ditar uma tendência geral. No fim, a grande massa de consumidores compra praticamente a mesma quantidade de produtos para abastecer a casa, o que mostra que nenhum grupo especifico deve ser prioridade e sim táticas que atingam clientes de todos os grupos.
 
  **5. Presunto Cozido como Produto "Isca" e Giro de Estoque**
 
