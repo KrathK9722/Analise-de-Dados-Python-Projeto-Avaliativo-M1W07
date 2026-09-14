@@ -5,6 +5,7 @@ Mini projeto elaborado no decorrer de aproximadamente 4 dias fazendo a análise 
 Trabalho feito por: Arthur Henrique Kochan
 
 Turma SCTEC: Análise de Dados com Python - T6
+
 Data de Entrega do trabalho: 2026/09/14
 
 
