@@ -11,10 +11,13 @@ Data de Entrega do trabalho: 2026/09/14
 # NOTAS
 
 Sobre o data frame limpo:
+
 Durante minha análise exploratória utilizei principalmente 2 dataframes, 1 dataframe limpo principalmente para dados relacionados a compras e clientes unicos e 1 dataframe limpo com os itens separados 1 em cada linha assim como o dataframe original.
+
 Por conta do tamanho do data frame de itens separados não foi possível fazer upload do mesmo no github.
 
 Download Data Frame compras (Itens unidos em suas respectivas compras): [Link](https://drive.google.com/file/d/1zSaLdgTYFe-gmfMNWCnOtvP-y0GqLnKh/view?usp=sharing)
+
 Download Data Frame itens separados por linha: [Link](https://drive.google.com/file/d/1xT3AHg4wqfsY8--Nx02tfot23mR67Cqw/view?usp=sharing)
 
 [Link google COLAB](https://colab.research.google.com/drive/11dHcnosqvZFcxZgY-A6UTZruNc1c2GJc#scrollTo=Abw9Xsbtqg6e)
