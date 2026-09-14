@@ -14,7 +14,6 @@ Data de Entrega do trabalho: 2026/09/14
 Sobre o data frame limpo:
 
 Durante minha análise exploratória utilizei principalmente 2 dataframes, 1 dataframe limpo principalmente para dados relacionados a compras e clientes unicos e 1 dataframe limpo com os itens separados 1 em cada linha assim como o dataframe original.
-
 Por conta do tamanho do data frame de itens separados não foi possível fazer upload do mesmo no github.
 
 Download Data Frame compras (Itens unidos em suas respectivas compras): [Link](https://drive.google.com/file/d/1zSaLdgTYFe-gmfMNWCnOtvP-y0GqLnKh/view?usp=sharing)
