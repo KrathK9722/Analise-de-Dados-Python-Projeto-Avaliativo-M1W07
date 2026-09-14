@@ -1,6 +1,6 @@
 # Analise de Dados com Python  MINI-Projeto Avaliativo  Módulo 01 Semana 07
 
-#INSIGHTS
+# INSIGHTS
 ## **1. Falha Sistêmica Crítica na Governança de Dados (Setembro/2022)**
 
 A queda drástica nas vendas em setembro de 2022 afetou todas as categorias de produtos de maneira idêntica e simultânea. O gráfico comparativo anual prova que este comportamento não decorre de uma questão sazonal, e sim de um problema interno da empresa (como um apagão sistêmico nos registros dos caixas ou falha grave na exportação do banco de dados). Essa hipótese é reforçada pelo histórico de desorganização da base, que continha colunas vazias, duplicidades e registros sem nome.
