@@ -3,6 +3,7 @@
 Mini projeto elaborado ao decorrer de aproximadamente 4 dias fazendo a análise exploratória dos dados da [Base Varejo](https://www.kaggle.com/datasets/namespaiva/base-varejo/data).
 
 Trabalho feito por: Arthur Henrique Kochan
+
 Turma SCTEC: Análise de Dados com Python - T6
 Data de Entrega do trbalho: 2026/09/14
 
